@@ -8,7 +8,7 @@
    <title>Ringo - Furniture production site</title>
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-   <!-- <style>
+   <style>
       body {
          background-color: rgb(207, 231, 200);
          font-family: 'Raleway', sans-serif;
@@ -18,10 +18,33 @@
          object-fit: cover;
       }
 
-      .advantages li {
+      .backdrop {
+         position: fixed;
+         bottom: 0;
+         left: 0;
          width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.8);
+         backdrop-filter: blur(2.5px);
       }
-   </style> -->
+
+      .backdrop.is-hidden {
+         opacity: 0;
+         pointer-events: none;
+      }
+
+      .modal {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         height: 660px;
+         width: 450px;
+         background: #3D4A39;
+         box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+
+      }
+   </style>
 </head>
 
 
@@ -30,7 +53,7 @@
       <nav>
          <a href="">
             <svg width="122" height="53">
-               <use href="/images/svg-sprite/svg-file.svg#icon-logo">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-logo">
                </use>
             </svg>
          </a>
@@ -44,19 +67,19 @@
       <div>
          <a href="" aria-label="посилання на інстаграм">
             <svg width=" 24" height="24">
-               <use href="/images/svg-sprite/svg-file.svg#icon-instagram">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-instagram">
                </use>
             </svg>
          </a>
          <a href="" aria-label="посилання на фейсбук">
             <svg width="24" height="24" aria-label="">
-               <use href="/images/svg-sprite/svg-file.svg#icon-facebook">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-facebook">
                </use>
             </svg>
          </a>
          <a href="tel:+380676615415">
             <svg width="22" height="22">
-               <use href="/images/svg-sprite/svg-file.svg#icon-phone">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-phone">
                </use>
             </svg>
             +380 67661 5415
@@ -72,11 +95,11 @@
          <button>Обговорити проект</button>
          <div>
             <svg width="20" height="20">
-               <use href="/images/svg-sprite/svg-file.svg#icon-arrow-left">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-arrow-left">
                </use>
             </svg>
             <svg width="20" height="24">
-               <use href="/images/svg-sprite/svg-file.svg#icon-arrow-rigth">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-arrow-rigth">
                </use>
             </svg>
          </div>
@@ -87,17 +110,18 @@
             <li>
                <span>01</span>
                <h3>Дизайн інтерєру</h3>
-               <img src="/images/directions/interior-design.jpg" alt="на фото дизайн інтерєру від компанії">
+               <img src="/files/images/directions/interior-design.jpg" alt="на фото дизайн інтерєру від компанії">
             </li>
             <li>
                <span>02</span>
                <h3>Виробництво меблів</h3>
-               <img src="/images/directions/furniture-production.jpg" alt="на фото виробництво меблів від компанії">
+               <img src="/files/images/directions/furniture-production.jpg"
+                  alt="на фото виробництво меблів від компанії">
             </li>
             <li>
                <span>03</span>
                <h3>Комплексне меблювання</h3>
-               <img src="/images/directions/complex-decoration.jpg" alt="на фото дизайн інтерєру від компанії">
+               <img src="/files/images/directions/complex-decoration.jpg" alt="на фото дизайн інтерєру від компанії">
             </li>
          </ul>
       </section>
@@ -106,35 +130,35 @@
          <ul>
             <li>
                <svg width="66" height="66">
-                  <use href="/images/svg-sprite/svg-file.svg#icon-furniture">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-furniture">
                   </use>
                </svg>
                <h3>Меблями</h3>
             </li>
             <li>
                <svg width="46" height="69">
-                  <use href="/images/svg-sprite/svg-file.svg#icon-lighting">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-lighting">
                   </use>
                </svg>
                <h3>Освітленням</h3>
             </li>
             <li>
                <svg width="63" height="63">
-                  <use href="/images/svg-sprite/svg-file.svg#icon-household-appliances">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-household-appliances">
                   </use>
                </svg>
                <h3>Побутовою технікою</h3>
             </li>
             <li>
                <svg width="68" height="68">
-                  <use href="/images/svg-sprite/svg-file.svg#icon-door">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-door">
                   </use>
                </svg>
                <h3>Дверима</h3>
             </li>
             <li>
                <svg width="68" height="68">
-                  <use href="/images/svg-sprite/svg-file.svg#icon-wall-panels">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-wall-panels">
                   </use>
                </svg>
                <h3>Стіновими панелями та
@@ -142,7 +166,7 @@
             </li>
             <li>
                <svg width="66" height="66">
-                  <use href="/images/svg-sprite/svg-file.svg#icon-designing">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-designing">
                   </use>
                </svg>
                <h3> Проектуванням</h3>
@@ -150,19 +174,20 @@
          </ul>
       </section>
       <section class="about">
-         <h2>Проект Рінго Україна - створений виконувати об`єктні задачі комплексного меблювання житлових та комерційних
+         <h2>Проект Рінго Україна - створений виконувати об`єктні задачі комплексного меблювання
+            житлових та комерційних
             приміщень.</h2>
          <div>
             <video width="160" height="200" autoplay loop>
-               <source src="/images/about-video/Bedroom.mp4" type="video/mp4">
-               <source src="/images/about-video/bedroom.ogv" type="video/ogv">
-               <source src="/images/about-video/bedroom.webm" type="video/webm">
+               <source src="/files/images/about-video/Bedroom.mp4" type="video/mp4">
+               <source src="/files/images/about-video/bedroom.ogv" type="video/ogv">
+               <source src="/files/images/about-video/bedroom.webm" type="video/webm">
                Your browser does not support the video tag.
             </video>
             <video width="160" height="200" autoplay loop>
-               <source src="/images/about-video/room.mp4" type="video/mp4">
-               <source src="/images/about-video/room.ogv" type="video/ogv">
-               <source src="/images/about-video/room.webm" type="video/webm">
+               <source src="/files/images/about-video/room.mp4" type="video/mp4">
+               <source src="/files/images/about-video/room.ogv" type="video/ogv">
+               <source src="/files/images/about-video/room.webm" type="video/webm">
                Your browser does not support the video tag.
             </video>
          </div>
@@ -185,31 +210,31 @@
          <ul>
             <li>
                <span>01</span>
-               <img src="/images/advantages/mobility.png" alt="мобільність в роботі з кліентами">
+               <img src="/files/images/advantages/mobility.png" alt="мобільність в роботі з кліентами">
                <h3>Мобільність</h3>
                <p>Проводимо зустрічі на об`єктах в затишних закладах Києва</p>
             </li>
             <li>
                <span>02</span>
-               <img src="/images/advantages/reliability.png" alt="надійність роботи">
+               <img src="/files/images/advantages/reliability.png" alt="надійність роботи">
                <h3>Надійність</h3>
                <p>Система нашої роботи зосереджена на якості та термінах завершення проекту</p>
             </li>
             <li>
                <span>03</span>
-               <img src="/images/advantages/quality.png" alt="якість роботи">
+               <img src="/files/images/advantages/quality.png" alt="якість роботи">
                <h3>Якість</h3>
                <p>Виготовляємо виключно з перевірених європейських брендів</p>
             </li>
             <li>
                <span>04</span>
-               <img src="/images/advantages/professionalism.png" alt="високий профсіоналізм">
+               <img src="/files/images/advantages/professionalism.png" alt="високий профсіоналізм">
                <h3>Професіоналізм</h3>
                <p>Наша команда - це клуб професіоналів, об`єднаних в одній компанії</p>
             </li>
             <li>
                <span>05</span>
-               <img src="/images/advantages/benefit.png" alt="вигідні умови">
+               <img src="/files/images/advantages/benefit.png" alt="вигідні умови">
                <h3>Вигідність</h3>
                <p>Ми відмовились від шоу-руму та офісу на користь вартості та мобільності</p>
             </li>
@@ -219,6 +244,23 @@
          <div>
             <h2>Обговоримо ваш проект?</h2>
             <p>Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
+            <form action="/files/sendmail/sendmail.php/files/files" method="post" class="js-speaker-form">
+               <ul>
+                  <li>
+                     <input autocomplete="off" type="text" data-error="Ошибка" placeholder="Ім'я" class="name">
+                  </li>
+                  <li>
+                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" placeholder="Номер телефону">
+                  </li>
+                  <li>
+                     <input type="file" name="" id="file">
+                     <label for="file">Прикріпити проект</label>
+                  </li>
+               </ul>
+               <button type="submit">Відправити</button>
+               <input type="checkbox" name="" id="check">
+               <label for="check">Даю згоду на оброблення персональних даних</label>
+            </form>
          </div>
       </section>
       <section class="stages">
@@ -252,16 +294,16 @@
       </section>
       <section class="works">
          <h2>Зараз в роботі</h2>
-         <img src="/images/works/works1.jpg" alt="на фото робота компанії">
-         <img src="/images/works/works2.jpg" alt="на фото робота компанії">
-         <img src="/images/works/works3.jpg" alt="на фото робота компанії">
+         <img src="/files/images/works/works1.jpg" alt="на фото робота компанії">
+         <img src="/files/images/works/works2.jpg" alt="на фото робота компанії">
+         <img src="/files/images/works/works3.jpg" alt="на фото робота компанії">
          <div>
             <svg width="60" height="60">
-               <use href="/images/svg-sprite/svg-file.svg#icon-circul-arrow-left">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-left">
                </use>
             </svg>
             <svg width="60" height="60">
-               <use href="/images/svg-sprite/svg-file.svg#icon-circul-arrow-right">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-right">
                </use>
             </svg>
          </div>
@@ -272,12 +314,12 @@
          <h2>Рінго роздає подарунки!</h2>
          <div>
             <svg width="18" height="18">
-               <use href="/images/svg-sprite/svg-file.svg#icon-gift">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
                </use>
             </svg>
             <span>Подарунок</span>
             <svg width="18" height="18">
-               <use href="/images/svg-sprite/svg-file.svg#icon-gift">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
                </use>
             </svg>
             <span>Подарунок</span>
@@ -286,23 +328,23 @@
             <img src="/images/present/microwave.png" alt="на фото мікрохвильова піч"> -->
          </div>
          <p>При замовленні до нового року, отримай цінний подарунок для свого комфорту</p>
-         <button>Хочу подарунок</button>
+         <button type="button" data-open>Хочу подарунок</button>
       </section>
       <section class="clients">
          <h2>Наші партнери</h2>
          <div>
-            <img src="/images/partners/client-franke.png" alt="на фото логотип наших партнерів">
-            <img src="/images/partners/client-hafele.png" alt="на фото логотип наших партнерів">
-            <img src="/images/partners/client-zerkalo.png" alt="на фото логотип наших партнерів">
-            <img src="/images/partners/client-emir.png" alt="на фото логотип наших партнерів">
+            <img src="/files/images/partners/client-franke.png" alt="на фото логотип наших партнерів">
+            <img src="/files/images/partners/client-hafele.png" alt="на фото логотип наших партнерів">
+            <img src="/files/images/partners/client-zerkalo.png" alt="на фото логотип наших партнерів">
+            <img src="/files/images/partners/client-emir.png" alt="на фото логотип наших партнерів">
          </div>
          <div>
             <svg width="60" height="60">
-               <use href="/images/svg-sprite/svg-file.svg#icon-circul-arrow-left">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-left">
                </use>
             </svg>
             <svg width="60" height="60">
-               <use href="/images/svg-sprite/svg-file.svg#icon-circul-arrow-right">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-right">
                </use>
             </svg>
          </div>
@@ -310,27 +352,48 @@
       <section class="feedback">
          <!-- !зробити форму  -->
          <h2>Залишилися питання?</h2>
-         <p>Отримай безкоштовну консультацію менеджера та прорахунок проекту</p>
+         <form action="/files/sendmail/sendmail.php/files/files" method="post" class="js-speaker-form">
+            <div role="group" class="group">
+               <h3>Заповніть форму і найближчим часом ми зв'яжемося з вами!</h3>
+               <ul>
+                  <li>
+                     <input autocomplete="off" type="text" data-error="Ошибка" placeholder="Ім'я" class="name">
+                  </li>
+                  <li>
+                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" placeholder="Номер телефону">
+                  </li>
+                  <li>
+                     <input type="file" name="" id="file">
+                     <label for="file">Прикріпити проект</label>
+                  </li>
+               </ul>
+            </div>
+            <button type="submit">Відправити</button>
+            <div class="policy-form">
+               <input type="checkbox" name="" id="policy">
+               <label for="policy">Даю згоду на оброблення персональних даних</label>
+            </div>
+         </form>
       </section>
    </main>
    <footer>
       <div>
          <a href="" aria-label="посилання на лого компанії">
             <svg width="122" height="53">
-               <use href=" /images/svg-sprite/svg-file.svg#icon-logo">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-logo">
                </use>
             </svg>
          </a>
          <span>Соцмережі:</span>
          <a href="" aria-label="посилання на інстаграм">
             <svg width=" 24" height="24">
-               <use href="/images/svg-sprite/svg-file.svg#icon-instagram">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-instagram">
                </use>
             </svg>
          </a>
          <a href="" aria-label="посилання на фейсбук">
             <svg width="24" height="24" aria-label="">
-               <use href="/images/svg-sprite/svg-file.svg#icon-facebook">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-facebook">
                </use>
             </svg>
          </a>
@@ -346,29 +409,128 @@
          </ul>
          <a href="tel:+380676615415">
             <svg width="22" height="22">
-               <use href="/images/svg-sprite/svg-file.svg#icon-phone">
+               <use href="/files/images/svg-sprite/svg-file.svg#icon-phone">
                </use>
             </svg>
             +380 67661 5415
          </a>
-         <button>На каву з менеджером!</button>
+         <button type="button" data-modal-open>На каву з менеджером!</button>
       </div>
       <div>
          <p>Бренди комплектуючих</p>
-         <img src="/images/brands/franke.png" alt="на фото бренд комплектуючих">
-         <img src="/images/brands/halele.png" alt="на фото бренд комплектуючих">
-         <img src="/images/brands/egeer.png" alt="на фото бренд комплектуючих">
-         <img src="/images/brands/linken.png" alt="на фото бренд комплектуючих">
-         <img src="/images/brands/Inoxa.png" alt="на фото бренд комплектуючих">
-         <img src="/images/brands/cleaf.png" alt="на фото бренд комплектуючих">
-         <img src="/images/brands/samsung.png" alt="на фото бренд комплектуючих">
-         <img src="/images/brands/blum.png" alt="на фото бренд комплектуючих">
+         <img src="/files/images/brands/franke.png" alt="на фото бренд комплектуючих">
+         <img src="/files/images/brands/halele.png" alt="на фото бренд комплектуючих">
+         <img src="/files/images/brands/egeer.png" alt="на фото бренд комплектуючих">
+         <img src="/files/images/brands/linken.png" alt="на фото бренд комплектуючих">
+         <img src="/files/images/brands/Inoxa.png" alt="на фото бренд комплектуючих">
+         <img src="/files/images/brands/cleaf.png" alt="на фото бренд комплектуючих">
+         <img src="/files/images/brands/samsung.png" alt="на фото бренд комплектуючих">
+         <img src="/files/images/brands/blum.png" alt="на фото бренд комплектуючих">
       </div>
       <div>
          <p>&#169; 2021 Ringo</p>
          <p>Дизайн сайту</p>
       </div>
    </footer>
+   <!-- ! popup gift -->
+   <div class="backdrop is-hidden" modal>
+      <div class="modal">
+         <h2>Хочете отримати подарунок?</h2>
+         <button type="button" data-close>Закрыть</button>
+         <form action="/files/sendmail/sendmail.php/files/files" method="post">
+            <div role="group" class="group">
+               <h3>Заповніть форму, і ми звяжемося та розповімо про умови акції</h3>
+               <ul>
+                  <li>
+                     <input autocomplete="off" type="text" data-error="Ошибка" placeholder="Ім'я" class="name">
+                  </li>
+                  <li>
+                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" placeholder="Номер телефону">
+                  </li>
+               </ul>
+            </div>
+            <button type="submit">Відправити</button>
+            <div class="policy-form">
+               <input type="checkbox" name="" id="policy">
+               <label for="policy">Даю згоду на оброблення персональних даних</label>
+            </div>
+         </form>
+      </div>
+   </div>
+   <!-- !popup footer -->
+   <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+         <h2>Хочете стати нашим партнером?</h2>
+         <button type="button" data-modal-close>Закрыть</button>
+         <form action="/files/sendmail/sendmail.php/files/files" method="post">
+            <div role="group" class="group">
+               <h3>Заповніть форму, і ми звяжемося та обговоримо з вами усі деталі</h3>
+               <ul>
+                  <li>
+                     <input autocomplete="off" type="text" data-error="Ошибка" placeholder="Ім'я" class="name">
+                  </li>
+                  <li>
+                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" placeholder="Номер телефону">
+                  </li>
+                  <li>
+                     <textarea name="" id="" cols="30" rows="10" placeholder="Коротко про себе"></textarea>
+                  </li>
+               </ul>
+            </div>
+            <button type="submit">Відправити</button>
+            <div class="policy-form">
+               <input type="checkbox" name="" id="policy">
+               <label for="policy">Даю згоду на оброблення персональних даних</label>
+            </div>
+         </form>
+      </div>
+   </div>
+   <script>
+      (() => {
+         document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+               console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+         });
+      })();
+      // popup gifts
+      (() => {
+         const refs = {
+            openModalBtn: document.querySelector("[data-open]"),
+            closeModalBtn: document.querySelector("[data-close]"),
+            modal: document.querySelector("[modal]"),
+         };
+
+         refs.openModalBtn.addEventListener("click", toggleModal);
+         refs.closeModalBtn.addEventListener("click", toggleModal);
+
+         function toggleModal() {
+            // document.body.classList.toggle("modal-open");
+            refs.modal.classList.toggle("is-hidden");
+         }
+      })();
+      //!popup partner
+      (() => {
+         const refs = {
+            openModalBtn: document.querySelector("[data-modal-open]"),
+            closeModalBtn: document.querySelector("[data-modal-close]"),
+            modal: document.querySelector("[data-modal]"),
+         };
+
+         refs.openModalBtn.addEventListener("click", toggleModal);
+         refs.closeModalBtn.addEventListener("click", toggleModal);
+
+         function toggleModal() {
+            // document.body.classList.toggle("modal-open");
+            refs.modal.classList.toggle("is-hidden");
+         }
+      })();
+
+   </script>
 </body>
 
 </html>
