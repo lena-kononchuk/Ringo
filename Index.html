@@ -18,6 +18,8 @@
          object-fit: cover;
       }
 
+      /* --------------------------------------------- */
+      /* модалка */
       .backdrop {
          position: fixed;
          bottom: 0;
@@ -44,6 +46,55 @@
          box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
 
       }
+
+      /* --------------------------------------------- */
+      /* ------------------ */
+      .formfield {
+         position: relative;
+         display: block;
+
+      }
+
+      /* --------------------------------------------- */
+      /* костиль для плавного поднятия метки формы */
+      /* .forminput::placeholder {
+         opacity: 0;
+      } */
+
+      .label {
+         position: absolute;
+         top: 50%;
+         left: 10px;
+         transform: translateY(-50%);
+         transition: transform 250ms linear;
+      }
+
+      .forminput:focus+.label,
+      .forminput:not(:placeholder-shown)+.label {
+         transform: translateY(-30px);
+      }
+
+      /* --------------------------------------------- */
+      /* кастомный input file */
+      .inputfile,
+      .checkbox {
+         width: 0.1px;
+         height: 0.1px;
+         opacity: 0;
+         position: absolute;
+         z-index: -1;
+      }
+
+      .icon {
+         fill: blue;
+      }
+
+      .checkbox:checked+.icon {
+         fill: red;
+      }
+
+
+      /* кастомный input file */
    </style>
 </head>
 
@@ -243,24 +294,33 @@
          <div>
             <h2>Обговоримо ваш проект?</h2>
             <p>Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
-            <form action="/files/sendmail/sendmail.php/files/files" method="post" class="js-speaker-form">
-               <ul>
-                  <li>
-                     <label for="username">Ім'я</label>
-                     <input autocomplete="off" type="text" data-error="Ошибка" class="name" id="rname">
-                  </li>
-                  <li>
-                     <label for="usertel">Номер телефону</label>
-                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" id="tel">
-                  </li>
-                  <li>
-                     <input type="file" name="" id="file">
-                     <label for="file">Прикріпити проект</label>
-                  </li>
-               </ul>
-               <button type="submit">Відправити</button>
-               <input type="checkbox" name="" id="check">
-               <label for="check">Даю згоду на оброблення персональних даних</label>
+            <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
+               class="js-speaker-form">
+               <label class="formfield">
+                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
+                  <span class="label">Ім'я</span>
+               </label>
+               <label class="formfield">
+                  <input type="tel" data-error="Ошибка" class="forminput" placeholder=" ">
+                  <span class="label">Номер телефону</span>
+               </label>
+               <label class="formfield">
+                  <input type="file" name="" class="forminput inputfile">
+                  <svg width=" 18" height="18">
+                     <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
+                  </svg>
+                  <span class="file"">Прикріпити проект</span>
+                                 </label>
+               <button type=" submit">Відправити</button>
+                     <div class="formfield">
+                        <label class="policy-form">
+                           <input type="checkbox" class="checkbox">
+                           <svg width=" 15" height="15" class="icon">
+                              <use class="check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                           </svg>
+                           <span class="policy">Даю згоду на оброблення персональних даних</span>
+                        </label>
+                     </div>
             </form>
          </div>
       </section>
@@ -356,26 +416,30 @@
          <form action="/files/sendmail/sendmail.php/files/files" method="post" class="js-speaker-form">
             <div role="group" class="group">
                <h3>Заповніть форму і найближчим часом ми зв'яжемося з вами!</h3>
-               <ul>
-                  <li>
-                     <label for="formname">Ім'я</label>
-                     <input autocomplete="off" type="text" data-error="Ошибка" class="name" id="formname">
-                  </li>
-                  <li>
-                     <label for="formtel">Номер телефону</label>
-                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" id="formtel">
-                  </li>
-                  <li>
-                     <input type="file" name="" id="file">
-                     <label for="file">Прикріпити проект</label>
-                  </li>
-               </ul>
+               <label class="formfield">
+                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
+                  <span class="label">Ім'я</span>
+               </label>
+               <label class="formfield">
+                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
+                  <span class="label">Номер телефону</span>
+               </label>
+               <label class="formfield">
+                  <input type="file" name="" class="forminput inputfile">
+                  <svg width=" 18" height="18">
+                     <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
+                  </svg>
+                  <span class="file"">Прикріпити проект</span>
+               </label>
             </div>
-            <button type="submit">Відправити</button>
-            <div class="policy-form">
-               <input type="checkbox" name="" id="policy">
-               <label for="policy">Даю згоду на оброблення персональних даних</label>
-            </div>
+            <button type=" submit">Відправити</button>
+                     <label class="policy-form">
+                        <input type="checkbox" class="checkbox">
+                        <svg width=" 15" height="15" class="icon">
+                           <use class="check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                        </svg>
+                        <span class="policy">Даю згоду на оброблення персональних даних</span>
+                     </label>
          </form>
       </section>
    </main>
@@ -443,21 +507,25 @@
          <form action="/files/sendmail/sendmail.php/files/files" method="post">
             <div role="group" class="group">
                <h3>Заповніть форму, і ми звяжемося та розповімо про умови акції</h3>
-               <ul>
-                  <li>
-                     <label for="nameuser">Ім'я</label>
-                     <input autocomplete="off" type="text" data-error="Ошибка" class="name" id="nameuser">
-                  </li>
-                  <li>
-                     <label for="userphone">Номер телефону</label>
-                     <input autocomplete="off" type="tel" data-error="Ошибка" id="userphone">
-                  </li>
-               </ul>
+               <label class="formfield">
+                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
+                  <span class="label">Ім'я</span>
+               </label>
+               <label class="formfield">
+                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
+                  <span class="label">Номер телефону</span>
+               </label>
+
             </div>
             <button type="submit">Відправити</button>
-            <div class="policy-form">
-               <input type="checkbox" name="" id="policy">
-               <label for="policy">Даю згоду на оброблення персональних даних</label>
+            <div class="formfield">
+               <label class="policy-form">
+                  <input type="checkbox" class="checkbox">
+                  <svg width=" 15" height="15" class="icon">
+                     <use class="check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                  </svg>
+                  <span class="policy">Даю згоду на оброблення персональних даних</span>
+               </label>
             </div>
          </form>
       </div>
@@ -470,25 +538,28 @@
          <form action="/files/sendmail/sendmail.php/files/files" method="post">
             <div role="group" class="group">
                <h3>Заповніть форму, і ми звяжемося та обговоримо з вами усі деталі</h3>
-               <ul>
-                  <li>
-                     <label for="madalname">Ім'я</label>
-                     <input autocomplete="off" type="text" data-error="Ошибка" class="name" id="madalname">
-                  </li>
-                  <li>
-                     <label for="modalphone">Номер телефону</label>
-                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" id="modalphone">
-                  </li>
-                  <li>
-                     <label for="modaltext">Коротко про себе</label>
-                     <textarea name="" id="" cols="30" rows="10" id="modaltext"></textarea>
-                  </li>
-               </ul>
+               <label class="formfield">
+                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
+                  <span class="label">Ім'я</span>
+               </label>
+               <label class="formfield">
+                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
+                  <span class="label">Номер телефону</span>
+               </label>
+               <label class="formfield">
+                  <textarea cols="30" rows="10" class="forminput" placeholder=" "></textarea>
+                  <span class="label">Коротко про себе</span>
+               </label>
             </div>
             <button type="submit">Відправити</button>
-            <div class="policy-form">
-               <input type="checkbox" name="" id="policy">
-               <label for="policy">Даю згоду на оброблення персональних даних</label>
+            <div class="formfield">
+               <label class="policy-form">
+                  <input type="checkbox" class="checkbox">
+                  <svg width=" 15" height="15" class="icon">
+                     <use class="check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                  </svg>
+                  <span class="policy">Даю згоду на оброблення персональних даних</span>
+               </label>
             </div>
          </form>
       </div>
