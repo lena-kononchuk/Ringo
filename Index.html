@@ -47,7 +47,6 @@
    </style>
 </head>
 
-
 <body>
    <header>
       <nav>
@@ -247,10 +246,12 @@
             <form action="/files/sendmail/sendmail.php/files/files" method="post" class="js-speaker-form">
                <ul>
                   <li>
-                     <input autocomplete="off" type="text" data-error="Ошибка" placeholder="Ім'я" class="name">
+                     <label for="username">Ім'я</label>
+                     <input autocomplete="off" type="text" data-error="Ошибка" class="name" id="rname">
                   </li>
                   <li>
-                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" placeholder="Номер телефону">
+                     <label for="usertel">Номер телефону</label>
+                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" id="tel">
                   </li>
                   <li>
                      <input type="file" name="" id="file">
@@ -357,10 +358,12 @@
                <h3>Заповніть форму і найближчим часом ми зв'яжемося з вами!</h3>
                <ul>
                   <li>
-                     <input autocomplete="off" type="text" data-error="Ошибка" placeholder="Ім'я" class="name">
+                     <label for="formname">Ім'я</label>
+                     <input autocomplete="off" type="text" data-error="Ошибка" class="name" id="formname">
                   </li>
                   <li>
-                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" placeholder="Номер телефону">
+                     <label for="formtel">Номер телефону</label>
+                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" id="formtel">
                   </li>
                   <li>
                      <input type="file" name="" id="file">
@@ -442,10 +445,12 @@
                <h3>Заповніть форму, і ми звяжемося та розповімо про умови акції</h3>
                <ul>
                   <li>
-                     <input autocomplete="off" type="text" data-error="Ошибка" placeholder="Ім'я" class="name">
+                     <label for="nameuser">Ім'я</label>
+                     <input autocomplete="off" type="text" data-error="Ошибка" class="name" id="nameuser">
                   </li>
                   <li>
-                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" placeholder="Номер телефону">
+                     <label for="userphone">Номер телефону</label>
+                     <input autocomplete="off" type="tel" data-error="Ошибка" id="userphone">
                   </li>
                </ul>
             </div>
@@ -467,13 +472,16 @@
                <h3>Заповніть форму, і ми звяжемося та обговоримо з вами усі деталі</h3>
                <ul>
                   <li>
-                     <input autocomplete="off" type="text" data-error="Ошибка" placeholder="Ім'я" class="name">
+                     <label for="madalname">Ім'я</label>
+                     <input autocomplete="off" type="text" data-error="Ошибка" class="name" id="madalname">
                   </li>
                   <li>
-                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" placeholder="Номер телефону">
+                     <label for="modalphone">Номер телефону</label>
+                     <input autocomplete="off" type="tel" data-error="Ошибка" id="" id="modalphone">
                   </li>
                   <li>
-                     <textarea name="" id="" cols="30" rows="10" placeholder="Коротко про себе"></textarea>
+                     <label for="modaltext">Коротко про себе</label>
+                     <textarea name="" id="" cols="30" rows="10" id="modaltext"></textarea>
                   </li>
                </ul>
             </div>
