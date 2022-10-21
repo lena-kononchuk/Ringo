@@ -97,43 +97,47 @@
       /* кастомный input file */
    </style>
 </head>
+<!-- todo display:block для тега а, щоб працювала вертикальна геометрія -->
+<!-- todo для отступу між flex блоками використовувати margin(для предка margin -) а для дочерніх margin -->
+<!-- todo для розміру блоків flex використовувати функцію calc() -->
+<!-- !!!для зміни чи додаваня стилів для єлементу викристовуємо модифікатор чи мікс https://ru.bem.info/methodology/quick-start/#%D0%BC%D0%B8%D0%BA%D1%81-->
 
 <body>
-   <header class="header">
-      <nav class="header-navigation">
-         <a class="header-navigation__logo" href="">
+   <header class="page-header">
+      <nav class="page-header__navigation">
+         <a class="logo" href="">
             <svg width="122" height="53">
-               <use href="/files/images/svg-sprite/svg-file.svg#icon-logo">
+               <use class="logo__icon" href="/files/images/svg-sprite/svg-file.svg#icon-logo">
                </use>
             </svg>
          </a>
-         <ul class="header-navigation__menu">
-            <li class="header-navigation__item"><a class="header-navigation__link" href="">Напрямки</a></li>
-            <li class="header-navigation__item"><a class="header-navigation__link" href="">Про компанію</a></li>
-            <li class="header-navigation__item"><a class="header-navigation__link" href="">Переваги</a></li>
-            <li class="header-navigation__item"><a class="header-navigation__link" href="">Етапи роботи</a></li>
+         <ul class="navigation-menu">
+            <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Напрямки</a></li>
+            <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Про компанію</a></li>
+            <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Переваги</a></li>
+            <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Етапи роботи</a></li>
          </ul>
       </nav>
-      <div class="header-profile">
-         <ul class="header-profile__munu">
-            <li class="header-profile__item">
-               <a class="header-profile__link" href="" aria-label="посилання на інстаграм">
+      <div class="page-header__profile">
+         <ul class="profile-menu">
+            <li class="profile-menu__item">
+               <a class="profile-menu__link" href="" aria-label="посилання на інстаграм">
                   <svg width=" 24" height="24" aria-label="instagram">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-instagram">
                      </use>
                   </svg>
                </a>
             </li>
-            <li class="header-profile__item">
-               <a class="header-profile__link" href="" aria-label="посилання на фейсбук">
+            <li class="profile-menu__item">
+               <a class="profile-menu__link" href="" aria-label="посилання на фейсбук">
                   <svg width="24" height="24" aria-label="facebook">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-facebook">
                      </use>
                   </svg>
                </a>
             </li>
-            <li class="header-profile__item">
-               <a class="header-profile__link" href="tel:+380676615415">
+            <li class="profile-menu__item">
+               <a class="profile-menu__link" href="tel:+380676615415">
                   <svg width="22" height="22" aria-label="phone">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-phone">
                      </use>
@@ -148,7 +152,7 @@
    </header>
    <main>
       <section class="hero-page">
-         <h1 class="hero-page__title title">Виробництво Mеблів</h1>
+         <h1 class="hero-page__title">Виробництво Mеблів</h1>
          <div class="hero-page__subtitle">
             <p>Ми виконуємо комплексне виготовлення корпусних меблів для житлових і комерційних приміщень, забезпечимо
                Вас
@@ -169,258 +173,272 @@
          </div>
          <!-- todoЗРОБИТИ СВАЙПЕР -->
       </section>
-      <section class="directions">
-         <h2 class="directions__title">Основні напрямки</h2>
-         <ul class="card">
-            <li class="card__item">
-               <span class="card__number">01</span>
-               <h3 class="card__subtitle">Дизайн інтерєру</h3>
+      <section class="directions-page">
+         <h2 class="directions-page__title">Основні напрямки</h2>
+         <ul class="card-product">
+            <li class="card-product__item">
+               <span class="card-product__number">01</span>
+               <h3 class="card-product__subtitle">Дизайн інтерєру</h3>
                <img src="/files/images/directions/interior-design.jpg" alt="на фото дизайн інтерєру від компанії">
             </li>
-            <li class="card__item">
-               <span class="card__number">02</span>
-               <h3 class="card__subtitle">Виробництво меблів</h3>
+            <li class="card-product__item">
+               <span class="card-product__number">02</span>
+               <h3 class="card-product__subtitle">Виробництво меблів</h3>
                <img src="/files/images/directions/furniture-production.jpg"
                   alt="на фото виробництво меблів від компанії">
             </li>
-            <li class="card__item">
-               <span class="card__number">03</span>
-               <h3 class="card__subtitle">Комплексне меблювання</h3>
+            <li class="card-product__item">
+               <span class="card-product__number">03</span>
+               <h3 class="card-product__subtitle">Комплексне меблювання</h3>
                <img src="/files/images/directions/complex-decoration.jpg" alt="на фото дизайн інтерєру від компанії">
             </li>
          </ul>
       </section>
-      <section class="services">
-         <h2 class="services__title">Ми забезпечемо вас</h2>
-         <ul class="icon-menu">
-            <li class="icon-menu__item">
+      <section class="services-page">
+         <h2 class="services-page__title">Ми забезпечемо вас</h2>
+         <ul class="card-icon">
+            <li class="card-icon__item">
                <svg width="66" height="66">
                   <use href="/files/images/svg-sprite/svg-file.svg#icon-furniture">
                   </use>
                </svg>
-               <h3 class="icon-menu__title">Меблями</h3>
+               <h3 class="card-icon__title">Меблями</h3>
             </li>
-            <li class="icon-menu__item">
+            <li class="card-icon__item">
                <svg width="46" height="69">
                   <use href="/files/images/svg-sprite/svg-file.svg#icon-lighting">
                   </use>
                </svg>
-               <h3 class="icon-menu__title">Освітленням</h3>
+               <h3 class="card-icon__title">Освітленням</h3>
             </li>
-            <li class="icon-menu__item">
+            <li class="card-icon__item">
                <svg width="63" height="63">
                   <use href="/files/images/svg-sprite/svg-file.svg#icon-household-appliances">
                   </use>
                </svg>
-               <h3 class="icon-menu__title">Побутовою технікою</h3>
+               <h3 class="card-icon__title">Побутовою технікою</h3>
             </li>
-            <li class="icon-menu__item">
+            <li class="card-icon__item">
                <svg width="68" height="68">
                   <use href="/files/images/svg-sprite/svg-file.svg#icon-door">
                   </use>
                </svg>
-               <h3 class="icon-menu__title">Дверима</h3>
+               <h3 class="card-icon__title">Дверима</h3>
             </li>
-            <li class="icon-menu__item">
+            <li class="card-icon__item">
                <svg width="68" height="68">
                   <use href="/files/images/svg-sprite/svg-file.svg#icon-wall-panels">
                   </use>
                </svg>
-               <h3 class="icon-menu__title">Стіновими панелями та
+               <h3 class="card-icon__title">Стіновими панелями та
                   підлоговим покриттям</h3>
             </li>
-            <li class="icon-menu__item">
+            <li class="card-icon__item">
                <svg width="66" height="66">
                   <use href="/files/images/svg-sprite/svg-file.svg#icon-designing">
                   </use>
                </svg>
-               <h3 class="icon-menu__title"> Проектуванням</h3>
+               <h3 class="card-icon__title"> Проектуванням</h3>
             </li>
          </ul>
       </section>
-      <section class="about-company">
-         <h2 class="about-company__title">Проект Рінго Україна - створений виконувати об`єктні задачі комплексного
+      <section class="about-page">
+         <h2 class="about-page__title">Проект Рінго Україна - створений виконувати об`єктні задачі комплексного
             меблювання
             житлових та комерційних
             приміщень.</h2>
-         <div class="video-product">
-            <video class="video-product__left" width="160" height="200" autoplay loop>
+         <div class="video-card">
+            <video class="video-card__left" width="160" height="200" autoplay loop>
                <source src="/files/images/about-video/Bedroom.mp4" type="video/mp4">
                <source src="/files/images/about-video/bedroom.ogv" type="video/ogv">
                <source src="/files/images/about-video/bedroom.webm" type="video/webm">
                Your browser does not support the video tag.
             </video>
-            <video class="video-product__right" width="160" height="200" autoplay loop>
+            <video class="video-card__right" width="160" height="200" autoplay loop>
                <source src="/files/images/about-video/room.mp4" type="video/mp4">
                <source src="/files/images/about-video/room.ogv" type="video/ogv">
                <source src="/files/images/about-video/room.webm" type="video/webm">
                Your browser does not support the video tag.
             </video>
          </div>
-         <ul class="about-company__menu">
+         <ul class="content-list">
             <!-- !зробити псевдоелементом крапку(png) -->
-            <li class="about-company__item">
-               <p class="about-company__text">Наш колектив націлений на результат - вчасно реалізувати проект на
+            <li class="content-list__item">
+               <p class="content-list__text">Наш колектив націлений на результат - вчасно реалізувати проект на
                   найвищому рівні. Ми забезпечуємо
                   спокій замовника та
                   вирішуємо будь-які задачі</p>
             </li>
-            <li class="about-company__item">
-               <p class="about-company__text">Рінго найкращий підрядник прораба, дизайнера, проект-менеджера або
+            <li class="content-list__item">
+               <p class="content-list__text">Рінго найкращий підрядник прораба, дизайнера, проект-менеджера або
                   персональний помічник власника
                   бізнесу, квартири чи
                   салону</p>
             </li>
          </ul>
       </section>
-      <section class="advantages">
-         <h2 class="advantages__title">Наші переваги</h2>
-         <ul class="advantages__menu menu-advantages">
-            <li class="menu-advantages__item">
-               <span class="menu-advantages__number">01</span>
-               <img class="menu-advantages__images" src="/files/images/advantages/mobility.png"
+      <section class="advantages-page">
+         <h2 class="advantages-page__title">Наші переваги</h2>
+         <ul class="card-set">
+            <li class="card-set__item">
+               <span class="card-set__number">01</span>
+               <img class="card-set__images" src="/files/images/advantages/mobility.png"
                   alt="мобільність в роботі з кліентами">
-               <h3 class="menu-advantages__title">Мобільність</h3>
-               <p class="menu-advantages__text">Проводимо зустрічі на об`єктах в затишних закладах Києва</p>
+               <h3 class="card-set__title">Мобільність</h3>
+               <p class="card-set__text">Проводимо зустрічі на об`єктах в затишних закладах Києва</p>
             </li>
-            <li class="menu-advantages__item">
-               <span class="menu-advantages__number">02</span>
-               <img class="menu-advantages__images" src="/files/images/advantages/reliability.png"
-                  alt="надійність роботи">
-               <h3 class="menu-advantages__title">Надійність</h3>
-               <p class="menu-advantages__text">Система нашої роботи зосереджена на якості та термінах завершення
+            <li class="card-set__item">
+               <span class="card-set__number">02</span>
+               <img class="card-set__images" src="/files/images/advantages/reliability.png" alt="надійність роботи">
+               <h3 class="card-set__title">Надійність</h3>
+               <p class="card-set__text">Система нашої роботи зосереджена на якості та термінах завершення
                   проекту</p>
             </li>
-            <li class="menu-advantages__item">
-               <span class="menu-advantages__number">03</span>
-               <img class="menu-advantages__images" src="/files/images/advantages/quality.png" alt="якість роботи">
-               <h3 class="menu-advantages__title">Якість</h3>
-               <p class="menu-advantages__text">Виготовляємо виключно з перевірених європейських брендів</p>
+            <li class="card-set__item">
+               <span class="card-set__number">03</span>
+               <img class="card-set__images" src="/files/images/advantages/quality.png" alt="якість роботи">
+               <h3 class="card-set__title">Якість</h3>
+               <p class="card-set__text">Виготовляємо виключно з перевірених європейських брендів</p>
             </li>
-            <li class="menu-advantages__item">
-               <span class="menu-advantages__number">04</span>
-               <img class="menu-advantages__images" src="/files/images/advantages/professionalism.png"
+            <li class="card-set__item">
+               <span class="card-set__number">04</span>
+               <img class="card-set__images" src="/files/images/advantages/professionalism.png"
                   alt="високий профсіоналізм">
-               <h3 class="menu-advantages__title">Професіоналізм</h3>
-               <p class="menu-advantages__text">Наша команда - це клуб професіоналів, об`єднаних в одній компанії</p>
+               <h3 class="card-set__title">Професіоналізм</h3>
+               <p class="card-set__text">Наша команда - це клуб професіоналів, об`єднаних в одній компанії</p>
             </li>
-            <li class="menu-advantages__item">
-               <span class="menu-advantages__number">05</span>
-               <img class="menu-advantages__images" src="/files/images/advantages/benefit.png" alt="вигідні умови">
-               <h3 class="menu-advantages__title">Вигідність</h3>
-               <p class="menu-advantages__text">Ми відмовились від шоу-руму та офісу на користь вартості та мобільності
+            <li class="card-set__item">
+               <span class="card-set__number">05</span>
+               <img class="card-set__images" src="/files/images/advantages/benefit.png" alt="вигідні умови">
+               <h3 class="card-set__title">Вигідність</h3>
+               <p class="card-set__text">Ми відмовились від шоу-руму та офісу на користь вартості та мобільності
                </p>
             </li>
          </ul>
       </section>
-      <section class="contact" id="form">
-         <h2 class="contact__title">Обговоримо ваш проект?</h2>
-         <p class="contact__subtitle">Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
+      <section class="contact-page" id="form">
+         <h2 class="contact-page__title">Обговоримо ваш проект?</h2>
+         <p class="contact-page__subtitle">Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
          <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
             class="js-speaker-form form">
-            <label class="formfield">
-               <input type="text" data-error="Ошибка" class="formfield__input" placeholder=" ">
-               <span class="formfield__label">Ім'я</span>
-            </label>
-            <label class="formfield">
-               <input type="tel" data-error="Ошибка" class="formfield__input" placeholder=" ">
-               <span class="formfield__label">Номер телефону</span>
-            </label>
-            <label class="formfield">
-               <input type="file" name="" class="formfield__file">
-               <svg width=" 18" height="18">
-                  <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
-               </svg>
-               <span class="formfield__label">Прикріпити проект</span>
-            </label>
-            <button class="form__button" type="submit">Відправити</button>
-            <div class="formfield">
-               <label class="formfield__policy">
-                  <input type="checkbox" class="formfield__checkbox">
-                  <svg width=" 15" height="15" class="icon">
-                     <use class="check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+            <div role="group">
+               <label class="formfield">
+                  <input type="text" data-error="Ошибка" class="formfield__input" placeholder=" ">
+                  <span class="formfield__label">Ім'я</span>
+               </label>
+               <label class="formfield">
+                  <input type="tel" data-error="Ошибка" class="formfield__input" placeholder=" ">
+                  <span class="formfield__label">Номер телефону</span>
+               </label>
+               <label class="formfield">
+                  <input type="file" name="" class="formfield__file">
+                  <svg width=" 18" height="18">
+                     <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
                   </svg>
-                  <span class="formfield__label policy">Даю згоду на оброблення персональних даних</span>
+                  <span class="formfield__label">Прикріпити проект</span>
+               </label>
+               <button class="form__button" type="submit">Відправити</button>
+               <label class="policy">
+                  <input type="checkbox" class="policy__checkbox">
+                  <svg width=" 15" height="15" class="policy__icon">
+                     <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                  </svg>
+                  <span class="policy__label">Даю згоду на оброблення персональних даних</span>
                </label>
             </div>
          </form>
       </section>
-      <section class="stages">
-         <h2>Етапи роботи</h2>
-         <ul>
-            <li>
-               <span>01</span>
-               <h3>Підписання договору</h3>
-               <p>Визначаємось з бюджетом, матеріалами та фурнітурою.
+      <section class="stages-page">
+         <h2 class="stages-page__title">Етапи роботи</h2>
+         <ul class="card-stages">
+            <li class="card-stages__items">
+               <span class="card-stages__number">01</span>
+               <h3 class="card-stages__title">Підписання договору</h3>
+               <p class="card-stages__text">Визначаємось з бюджетом, матеріалами та фурнітурою.
                   Вносимо правки в проект,
                   підписуємо пакет документів.</p>
             </li>
-            <li>
-               <span>02</span>
-               <h3>Виготовлення</h3>
-               <p>Після підписання договору та визначення термінів, команда Рінго приступає до
+            <li class="card-stages__items">
+               <span class="card-stages__number">02</span>
+               <h3 class="card-stages__title">Виготовлення</h3>
+               <p class="card-stages__text">Після підписання договору та визначення термінів, команда Рінго приступає до
                   найцікавішого - виробництва!</p>
             </li>
-            <li>
-               <span>03</span>
-               <h3>Встановлення</h3>
-               <p>По готовності виробництва починаємо монтаж на обєкті. У домовлений час виконуємо доставку та монтаж.
+            <li class="card-stages__items">
+               <span class="card-stages__number">03</span>
+               <h3 class="card-stages__title">Встановлення</h3>
+               <p class="card-stages__text">По готовності виробництва починаємо монтаж на обєкті. У домовлений час
+                  виконуємо
+                  доставку та монтаж.
                </p>
             </li>
-            <li>
-               <span>04</span>
-               <h3>Новосілля</h3>
-               <p>По закінченню робимо перевірку та підписуємо акт закінчення робіт.</p>
+            <li class="card-stages__items">
+               <span class="card-stages__number">04</span>
+               <h3 class="card-stages__title">Новосілля</h3>
+               <p class="card-stages__text">По закінченню робимо перевірку та підписуємо акт закінчення робіт.</p>
             </li>
          </ul>
       </section>
-      <section class="works">
-         <h2>Зараз в роботі</h2>
-         <img src="/files/images/works/works1.jpg" alt="на фото робота компанії">
-         <img src="/files/images/works/works2.jpg" alt="на фото робота компанії">
-         <img src="/files/images/works/works3.jpg" alt="на фото робота компанії">
-         <div>
-            <svg width="60" height="60">
-               <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-left">
-               </use>
-            </svg>
-            <svg width="60" height="60">
-               <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-right">
-               </use>
-            </svg>
+      <section class="works-page">
+         <h2 class="works-page__title">Зараз в роботі</h2>
+         <div class="card-work">
+            <img src="/files/images/works/works1.jpg" alt="на фото робота компанії">
+            <img src="/files/images/works/works2.jpg" alt="на фото робота компанії">
+            <img src="/files/images/works/works3.jpg" alt="на фото робота компанії">
+            <!-- !!!!зробити свайпер -->
+            <div class="card-work__arrows">
+               <svg width="60" height="60">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-arrow-left">
+                  </use>
+               </svg>
+               <svg width="60" height="60">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-arrow-rigth">
+                  </use>
+               </svg>
+            </div>
+            <!-- !!!зробити привязку до слайдеру  -->
+            <div class="card-work__description">
+               <h3 class="card-work__title">Квартира ЖК Медовий</h3>
+               <span class=card-work__text">3 етап</span>
+            </div>
          </div>
-         <h3>Квартира ЖК Медовий</h3>
-         <span>3 етап</span>
       </section>
-      <section class="benefit">
-         <h2>Рінго роздає подарунки!</h2>
-         <div>
-            <svg width="18" height="18">
-               <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
-               </use>
-            </svg>
-            <span>Подарунок</span>
-            <svg width="18" height="18">
-               <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
-               </use>
-            </svg>
-            <span>Подарунок</span>
-            <!-- !зробити бекграундом призенти -->
-            <!-- <img src="/images/present/toaster.png" alt="на фото тостер">
+      <section class="benefit-page">
+         <h2 class="benefit-page__title">Рінго роздає подарунки!</h2>
+         <!-- !зробити бекграундом призенти -->
+         <!-- <img src="/images/present/toaster.png" alt="на фото тостер">
             <img src="/images/present/microwave.png" alt="на фото мікрохвильова піч"> -->
+         <p class="benefit-page__conditions">При замовленні до нового року, отримай цінний подарунок для свого
+            комфорту
+         </p>
+         <div class="gift-card">
+            <div class="gift-card__left">
+               <svg width="18" height="18">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
+                  </use>
+               </svg>
+               <span class="gift-card__title">Подарунок</span>
+            </div>
+            <div class="gift-card__right">
+               <svg width="18" height="18">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
+                  </use>
+               </svg>
+               <span class="gift-card__title">Подарунок</span>
+            </div>
          </div>
-         <p>При замовленні до нового року, отримай цінний подарунок для свого комфорту</p>
-         <button type="button" data-open>Хочу подарунок</button>
+         <button type="button" data-open class="benefit-page__button">Хочу подарунок</button>
       </section>
-      <section class="clients">
-         <h2>Наші партнери</h2>
-         <div>
+      <section class="partners-page">
+         <h2 class="partners-page__title">Наші партнери</h2>
+         <!-- !!!!зробити слайдер -->
+         <div class="partners-page__slider">
             <img src="/files/images/partners/client-franke.png" alt="на фото логотип наших партнерів">
             <img src="/files/images/partners/client-hafele.png" alt="на фото логотип наших партнерів">
             <img src="/files/images/partners/client-zerkalo.png" alt="на фото логотип наших партнерів">
             <img src="/files/images/partners/client-emir.png" alt="на фото логотип наших партнерів">
          </div>
-         <div>
+         <div class="partners-page__arrows">
             <svg width="60" height="60">
                <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-left">
                </use>
@@ -431,157 +449,167 @@
             </svg>
          </div>
       </section>
-      <section class="feedback">
-         <!-- !зробити форму  -->
-         <h2>Залишилися питання?</h2>
+      <section class="discuss-page">
+         <h2 class="discuss-page__title">Залишилися питання?</h2>
          <form action="/files/sendmail/sendmail.php/files/files" method="post" class="js-speaker-form">
-            <div role="group" class="group">
-               <h3>Заповніть форму і найближчим часом ми зв'яжемося з вами!</h3>
+            <div role="group" class="js-speaker-form__group">
+               <h3 class="js-speaker-form__title">Отримай безкоштовну консультацію менеджера та прорахунок проекту</h3>
                <label class="formfield">
-                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
-                  <span class="label">Ім'я</span>
+                  <input type="text" data-error="Ошибка" class="formfield__input" placeholder=" ">
+                  <span class="formfield__label">Ім'я</span>
                </label>
                <label class="formfield">
-                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
-                  <span class="label">Номер телефону</span>
+                  <input type="tel" data-error="Ошибка" class="formfield__input" placeholder=" ">
+                  <span class="formfield__label">Номер телефону</span>
                </label>
                <label class="formfield">
-                  <input type="file" name="" class="forminput inputfile">
+                  <input type="file" name="" class="formfield__file">
                   <svg width=" 18" height="18">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
                   </svg>
-                  <span class="file"">Прикріпити проект</span>
+                  <span class="formfield__label">Прикріпити проект</span>
                </label>
-            </div>
-            <button type=" submit">Відправити</button>
-                     <label class="policy-form">
-                        <input type="checkbox" class="checkbox">
-                        <svg width=" 15" height="15" class="icon">
-                           <use class="check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
-                        </svg>
-                        <span class="policy">Даю згоду на оброблення персональних даних</span>
-                     </label>
+               <button class="form__button" type="submit">Відправити</button>
+               <label class="policy">
+                  <input type="checkbox" class="policy__checkbox">
+                  <svg width=" 15" height="15" class="policy__icon">
+                     <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                  </svg>
+                  <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+               </label>
          </form>
       </section>
    </main>
-   <footer>
-      <div>
-         <a href="" aria-label="посилання на лого компанії">
-            <svg width="122" height="53">
-               <use href="/files/images/svg-sprite/svg-file.svg#icon-logo">
-               </use>
-            </svg>
-         </a>
-         <span>Соцмережі:</span>
-         <a href="" aria-label="посилання на інстаграм">
-            <svg width=" 24" height="24">
-               <use href="/files/images/svg-sprite/svg-file.svg#icon-instagram">
-               </use>
-            </svg>
-         </a>
-         <a href="" aria-label="посилання на фейсбук">
-            <svg width="24" height="24" aria-label="">
-               <use href="/files/images/svg-sprite/svg-file.svg#icon-facebook">
-               </use>
-            </svg>
-         </a>
-         <ul>
-            <li><a href="">Основні напрямки</a></li>
-            <li><a href="">Про компанію</a></li>
-            <li><a href="">Переваги</a></li>
-         </ul>
-         <ul>
-            <li><a href="">Етапи роботи</a></li>
-            <li><a href="">Зараз в роботі</a></li>
-            <li><a href="">Стати партнером</a></li>
-         </ul>
-         <a href="tel:+380676615415">
-            <svg width="22" height="22">
-               <use href="/files/images/svg-sprite/svg-file.svg#icon-phone">
-               </use>
-            </svg>
-            +380 67661 5415
-         </a>
-         <button type="button" data-modal-open>На каву з менеджером!</button>
+   <footer class="footer-page">
+      <div class="footer-page__header">
+         <div class="footer-social">
+            <a class="logo" href="" aria-label="посилання на лого компанії">
+               <svg class="logo__icon" width="122" height="53">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-logo">
+                  </use>
+               </svg>
+            </a>
+            <span class="footer-social__title">Соцмережі:</span>
+            <ul class="profile-menu">
+               <li class="profile-menu__item">
+                  <a class="profile-menu__link" href="" aria-label="посилання на інстаграм">
+                     <svg width=" 24" height="24" aria-label="instagram">
+                        <use href="/files/images/svg-sprite/svg-file.svg#icon-instagram">
+                        </use>
+                     </svg>
+                  </a>
+               </li>
+               <li class="profile-menu__item">
+                  <a class="profile-menu__link" href="" aria-label="посилання на фейсбук">
+                     <svg width="24" height="24" aria-label="facebook">
+                        <use href="/files/images/svg-sprite/svg-file.svg#icon-facebook">
+                        </use>
+                     </svg>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="footer-nav">
+            <ul class="navigation-menu">
+               <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Напрямки</a></li>
+               <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Про компанію</a></li>
+               <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Переваги</a></li>
+            </ul>
+            <ul class="navigation-menu">
+               <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Етапи роботи</a></li>
+               <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Зараз в роботі</a></li>
+               <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Стати партнером</a></li>
+            </ul>
+         </div>
+         <div class="footer-connect">
+            <a class="footer-connect__link" href="tel:+380676615415">
+               <svg width="22" height="22" aria-label="phone">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-phone">
+                  </use>
+               </svg>
+               +380 67661 5415
+            </a>
+            <button class="footer-connect__button" type="button" data-modal-open>На каву з менеджером!</button>
+         </div>
       </div>
-      <div>
-         <p>Бренди комплектуючих</p>
-         <img src="/files/images/brands/franke.png" alt="на фото бренд комплектуючих">
-         <img src="/files/images/brands/halele.png" alt="на фото бренд комплектуючих">
-         <img src="/files/images/brands/egeer.png" alt="на фото бренд комплектуючих">
-         <img src="/files/images/brands/linken.png" alt="на фото бренд комплектуючих">
-         <img src="/files/images/brands/Inoxa.png" alt="на фото бренд комплектуючих">
-         <img src="/files/images/brands/cleaf.png" alt="на фото бренд комплектуючих">
-         <img src="/files/images/brands/samsung.png" alt="на фото бренд комплектуючих">
-         <img src="/files/images/brands/blum.png" alt="на фото бренд комплектуючих">
+      <div class="footer-page__brands">
+         <!-- !!!!зробити slider -->
+         <div class="footer-slider">
+            <h2 class="footer-slider__title">Бренди комплектуючих</h2>
+            <img src="/files/images/brands/franke.png" alt="на фото бренд комплектуючих">
+            <img src="/files/images/brands/halele.png" alt="на фото бренд комплектуючих">
+            <img src="/files/images/brands/egeer.png" alt="на фото бренд комплектуючих">
+            <img src="/files/images/brands/linken.png" alt="на фото бренд комплектуючих">
+            <img src="/files/images/brands/Inoxa.png" alt="на фото бренд комплектуючих">
+            <img src="/files/images/brands/cleaf.png" alt="на фото бренд комплектуючих">
+            <img src="/files/images/brands/samsung.png" alt="на фото бренд комплектуючих">
+            <img src="/files/images/brands/blum.png" alt="на фото бренд комплектуючих">
+         </div>
       </div>
-      <div>
-         <p>&#169; 2021 Ringo</p>
-         <p>Дизайн сайту</p>
+      <div class="footer-page__copy">
+         <span>&#169; 2021 Ringo</span>
+         <span>Дизайн сайту</span>
       </div>
    </footer>
    <!-- ! popup gift -->
    <div class="backdrop is-hidden" modal>
       <div class="modal">
-         <h2>Хочете отримати подарунок?</h2>
-         <button type="button" data-close>Закрыть</button>
-         <form action="/files/sendmail/sendmail.php/files/files" method="post">
-            <div role="group" class="group">
-               <h3>Заповніть форму, і ми звяжемося та розповімо про умови акції</h3>
+         <h2 class="modal__title">Хочете отримати подарунок?</h2>
+         <button class="modal__icon-close" type="button" data-close>Закрыть</button>
+         <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
+            class="js-speaker-form form">
+            <h3 class="form__title">Заповніть форму, і ми звяжемося та розповімо про умови акції</h3>
+            <div role="group">
                <label class="formfield">
-                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
-                  <span class="label">Ім'я</span>
+                  <input type="text" data-error="Ошибка" class="formfield__input" placeholder=" ">
+                  <span class="formfield__label">Ім'я</span>
                </label>
                <label class="formfield">
-                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
-                  <span class="label">Номер телефону</span>
-               </label>
-
-            </div>
-            <button type="submit">Відправити</button>
-            <div class="formfield">
-               <label class="policy-form">
-                  <input type="checkbox" class="checkbox">
-                  <svg width=" 15" height="15" class="icon">
-                     <use class="check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
-                  </svg>
-                  <span class="policy">Даю згоду на оброблення персональних даних</span>
+                  <input type="tel" data-error="Ошибка" class="formfield__input" placeholder=" ">
+                  <span class="formfield__label">Номер телефону</span>
                </label>
             </div>
+            <button class="form__button" type="submit">Відправити</button>
+            <label class="policy">
+               <input type="checkbox" class="policy__checkbox">
+               <svg width=" 15" height="15" class="policy__icon">
+                  <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+               </svg>
+               <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+            </label>
          </form>
       </div>
    </div>
    <!-- !popup footer -->
    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-         <h2>Хочете стати нашим партнером?</h2>
-         <button type="button" data-modal-close>Закрыть</button>
-         <form action="/files/sendmail/sendmail.php/files/files" method="post">
-            <div role="group" class="group">
-               <h3>Заповніть форму, і ми звяжемося та обговоримо з вами усі деталі</h3>
+         <h2 class="modal__title">Хочете стати нашим партнером?</h2>
+         <button class="modal__icon-close" type="button" data-modal-close>Закрыть</button>
+         <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
+            class="js-speaker-form form">
+            <div role="group">
+               <h3 class="form__title">Заповніть форму, і ми звяжемося та обговоримо з вами усі деталі</h3>
                <label class="formfield">
-                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
-                  <span class="label">Ім'я</span>
+                  <input type="text" data-error="Ошибка" class="formfield__input" placeholder=" ">
+                  <span class="formfield__label">Ім'я</span>
                </label>
                <label class="formfield">
-                  <input type="text" data-error="Ошибка" class="forminput" placeholder=" ">
-                  <span class="label">Номер телефону</span>
+                  <input type="tel" data-error="Ошибка" class="formfield__input" placeholder=" ">
+                  <span class="formfield__label">Номер телефону</span>
                </label>
                <label class="formfield">
-                  <textarea cols="30" rows="10" class="forminput" placeholder=" "></textarea>
-                  <span class="label">Коротко про себе</span>
+                  <textarea cols="30" rows="10" class="formfield__input" placeholder=" "></textarea>
+                  <span class="formfield__label">Коротко про себе</span>
                </label>
             </div>
-            <button type="submit">Відправити</button>
-            <div class="formfield">
-               <label class="policy-form">
-                  <input type="checkbox" class="checkbox">
-                  <svg width=" 15" height="15" class="icon">
-                     <use class="check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
-                  </svg>
-                  <span class="policy">Даю згоду на оброблення персональних даних</span>
-               </label>
-            </div>
+            <button class="form__button" type="submit">Відправити</button>
+            <label class="policy">
+               <input type="checkbox" class="policy__checkbox">
+               <svg width=" 15" height="15" class="policy__icon">
+                  <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+               </svg>
+               <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+            </label>
          </form>
       </div>
    </div>
