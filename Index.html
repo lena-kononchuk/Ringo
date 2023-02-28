@@ -111,6 +111,11 @@
 <body>
    <header class="page-header">
       <div class="container">
+         <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="24" aria-label="open">
+               <use class="open" href="/files/images/svg-sprite/svg-file.svg#icon-open"></use>
+            </svg>
+         </button>
          <div class="header-body">
             <nav class="page-header__navigation">
                <a class="logo" href="">
@@ -119,14 +124,14 @@
                      </use>
                   </svg>
                </a>
-               <ul class="navigation-menu">
+               <ul class="navigation-menu navigation-body">
                   <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Напрямки</a></li>
                   <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Про компанію</a></li>
                   <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Переваги</a></li>
                   <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Етапи роботи</a></li>
                </ul>
             </nav>
-            <div class="page-header__profile">
+            <div class="page-header__profile navigation-body">
                <ul class="profile-menu">
                   <li class="profile-menu__item">
                      <a class="profile-menu__link" href="" aria-label="посилання на інстаграм">
@@ -154,8 +159,6 @@
                      </a>
                   </li>
                </ul>
-
-
             </div>
          </div>
       </div>
@@ -650,52 +653,67 @@
          </form>
       </div>
    </div>
-   <script>
-      (() => {
-         document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-            e.preventDefault();
+   <!-- mobile-menu body -->
+   <div class="menu-container js-menu-container" id="mobile-menu">
+      <!-- <a class="mobile-logo" href="">
+         <svg width="122" height="53">
+            <use class="mobile-logo__icon" href="/files/images/svg-sprite/svg-file.svg#icon-logo">
+            </use>
+         </svg>
+      </a> -->
+      <button class="menu-toggle js-close-menu">
+         <svg width="24" height="24" aria-label="close">
+            <use class="close" href="/files/images/svg-sprite/svg-file.svg#icon-close"></use>
+         </svg>
+      </button>
+      <div class="mobile-body">
+         <ul class="mobile-list">
+            <li class="mobile-list__item"><a class="mobile-list__link" href="">Напрямки</a></li>
+            <li class="mobile-list__item"><a class="mobile-list__link" href="">Про компанію</a></li>
+            <li class="mobile-list__item"><a class="mobile-list__link" href="">Переваги</a></li>
+            <li class="mobile-list__item"><a class="mobile-list__link" href="">Етапи роботи</a></li>
+         </ul>
+         <div class="mobile-sosial">
+            <!-- !можливо потрібно буде переробити список контактів для кращьої верстки -->
+            <ul class="profile-menu">
+               <li class="profile-menu__item">
+                  <a class="profile-menu__link" href="" aria-label="посилання на інстаграм">
+                     <svg width=" 24" height="24" aria-label="instagram">
+                        <use href="/files/images/svg-sprite/svg-file.svg#icon-instagram">
+                        </use>
+                     </svg>
+                  </a>
+               </li>
+               <li class="profile-menu__item">
+                  <a class="profile-menu__link" href="" aria-label="посилання на фейсбук">
+                     <svg width="24" height="24" aria-label="facebook">
+                        <use href="/files/images/svg-sprite/svg-file.svg#icon-facebook">
+                        </use>
+                     </svg>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="mobile-phone">
+            <ul class="profile-menu">
+               <li class="profile-menu__item">
+                  <a class="profile-menu__link" href="tel:+380676615415">
+                     <svg width="22" height="22" aria-label="phone">
+                        <use href="/files/images/svg-sprite/svg-file.svg#icon-phone">
+                        </use>
+                     </svg>
+                     +380 67661 5415
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
 
-            new FormData(e.currentTarget).forEach((value, name) =>
-               console.log(`${name}: ${value}`),
-            );
-
-            e.currentTarget.reset();
-         });
-      })();
-      // popup gifts
-      (() => {
-         const refs = {
-            openModalBtn: document.querySelector("[data-open]"),
-            closeModalBtn: document.querySelector("[data-close]"),
-            modal: document.querySelector("[modal]"),
-         };
-
-         refs.openModalBtn.addEventListener("click", toggleModal);
-         refs.closeModalBtn.addEventListener("click", toggleModal);
-
-         function toggleModal() {
-            // document.body.classList.toggle("modal-open");
-            refs.modal.classList.toggle("is-hidden");
-         }
-      })();
-      //!popup partner
-      (() => {
-         const refs = {
-            openModalBtn: document.querySelector("[data-modal-open]"),
-            closeModalBtn: document.querySelector("[data-modal-close]"),
-            modal: document.querySelector("[data-modal]"),
-         };
-
-         refs.openModalBtn.addEventListener("click", toggleModal);
-         refs.closeModalBtn.addEventListener("click", toggleModal);
-
-         function toggleModal() {
-            // document.body.classList.toggle("modal-open");
-            refs.modal.classList.toggle("is-hidden");
-         }
-      })();
-
-   </script>
+   </div>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+   <script src="./files/js/mobile-menu.js"></script>
    <script src="./files/js/main.js"></script>
 </body>
 
