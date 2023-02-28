@@ -277,11 +277,26 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  background-color: red;
+  padding: 20px 20px 20px 20px;
+  background-color: white;
   z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+}
+
+.header-body .logo__icon {
+  padding: 15px 0 15px 0;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 0px;
+  top: 25px;
+  margin-right: -30px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .menu-container.is-open {
@@ -290,18 +305,20 @@ body {
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 25px;
+  right: 50px;
+  color: #fff;
 }
 
-.mobile-list {
+.mobile-menu {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.mobile-list .mobile-list__link {
+.mobile-menu .link {
   display: block;
   padding: 10px;
+  color: #fff;
   text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
