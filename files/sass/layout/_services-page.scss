@@ -1,0 +1,39 @@
+.services-page {
+   text-align: center;
+   font-family: "Raleway";
+   color: $mainWhiteColor;
+   .container {
+      background-color: $mainGreenColor;
+      width: 100vw;
+   }
+   // .services-page__title
+
+   &__title {
+      padding-top: 80px;
+   }
+}
+.card-icon {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 50px 0 80px 0;
+   // .card-icon__item
+
+   &__item {
+      flex: 1 50%;
+   }
+
+   // .card-icon__title
+
+   &__title {
+      align-items: center;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+      opacity: 0.5;
+   }
+   &__svg {
+      :not(:first-child) {
+         padding-top: 48px;
+      }
+   }
+}

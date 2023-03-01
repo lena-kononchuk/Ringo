@@ -11,7 +11,7 @@
    <link rel="stylesheet" href="/files/css/main.min.css">
    <style>
       body {
-         background-color: rgb(207, 231, 200);
+         /* background-color: rgb(207, 231, 200); */
          font-family: 'Raleway', sans-serif;
       }
 
@@ -174,20 +174,10 @@
                   якісним
                   меблевим продуктом власного виробництва.</p>
             </div>
-            <a class="hero-page__link" href="#form">Обговорити проект</a>
-            <!-- todoЗРОБИТИ СВАЙПЕР -->
-            <div class="hero-page__swiper">
-               <svg width="20" height="20">
-                  <use href="/files/images/svg-sprite/svg-file.svg#icon-arrow-left">
-                  </use>
-               </svg>
-               <svg width="20" height="24">
-                  <use href="/files/images/svg-sprite/svg-file.svg#icon-arrow-rigth">
-                  </use>
-               </svg>
+            <div class="hero-page__button">
+               <a class="hero-page__link" href="#form">Обговорити проект</a>
             </div>
-         </div>
-         <!-- todoЗРОБИТИ СВАЙПЕР -->
+            <hr class="hero-break" />
       </section>
       <section class="directions-page">
          <div class="container">
@@ -196,18 +186,20 @@
                <li class="card-product__item">
                   <span class="card-product__number">01</span>
                   <h3 class="card-product__subtitle">Дизайн інтерєру</h3>
-                  <img src="/files/images/directions/interior-design.jpg" alt="на фото дизайн інтерєру від компанії">
+                  <img class="card-product__img" src="/files/images/directions/interior-design.jpg"
+                     alt="на фото дизайн інтерєру від компанії">
                </li>
                <li class="card-product__item">
                   <span class="card-product__number">02</span>
                   <h3 class="card-product__subtitle">Виробництво меблів</h3>
-                  <img src="/files/images/directions/furniture-production.jpg"
+                  <img class="card-product__img" src="/files/images/directions/furniture-production.jpg"
                      alt="на фото виробництво меблів від компанії">
                </li>
                <li class="card-product__item">
                   <span class="card-product__number">03</span>
                   <h3 class="card-product__subtitle">Комплексне меблювання</h3>
-                  <img src="/files/images/directions/complex-decoration.jpg" alt="на фото дизайн інтерєру від компанії">
+                  <img class="card-product__img" src="/files/images/directions/complex-decoration.jpg"
+                     alt="на фото дизайн інтерєру від компанії">
                </li>
             </ul>
          </div>
@@ -217,47 +209,47 @@
             <h2 class="services-page__title">Ми забезпечемо вас</h2>
             <ul class="card-icon">
                <li class="card-icon__item">
-                  <svg width="66" height="66">
+                  <svg class="card-icon__svg" width="68" height="68">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-furniture">
                      </use>
                   </svg>
                   <h3 class="card-icon__title">Меблями</h3>
                </li>
                <li class="card-icon__item">
-                  <svg width="46" height="69">
+                  <svg class="card-icon__svg" width="68" height="68">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-lighting">
                      </use>
                   </svg>
                   <h3 class="card-icon__title">Освітленням</h3>
                </li>
                <li class="card-icon__item">
-                  <svg width="63" height="63">
+                  <svg class="card-icon__svg" width="68" height="68">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-household-appliances">
                      </use>
                   </svg>
                   <h3 class="card-icon__title">Побутовою технікою</h3>
                </li>
                <li class="card-icon__item">
-                  <svg width="68" height="68">
+                  <svg class="card-icon__svg" width="68" height="68">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-door">
                      </use>
                   </svg>
                   <h3 class="card-icon__title">Дверима</h3>
                </li>
                <li class="card-icon__item">
-                  <svg width="68" height="68">
+                  <svg class="card-icon__svg" width="68" height="68">
+                     <use href="/files/images/svg-sprite/svg-file.svg#icon-designing">
+                     </use>
+                  </svg>
+                  <h3 class="card-icon__title"> Проектуванням</h3>
+               </li>
+               <li class="card-icon__item">
+                  <svg class="card-icon__svg" width="68" height="68">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-wall-panels">
                      </use>
                   </svg>
                   <h3 class="card-icon__title">Стіновими панелями та
                      підлоговим покриттям</h3>
-               </li>
-               <li class="card-icon__item">
-                  <svg width="66" height="66">
-                     <use href="/files/images/svg-sprite/svg-file.svg#icon-designing">
-                     </use>
-                  </svg>
-                  <h3 class="card-icon__title"> Проектуванням</h3>
                </li>
             </ul>
          </div>
@@ -284,18 +276,21 @@
             </div>
             <ul class="content-list">
                <!-- !зробити псевдоелементом крапку(png) -->
+               <hr>
                <li class="content-list__item">
                   <p class="content-list__text">Наш колектив націлений на результат - вчасно реалізувати проект на
                      найвищому рівні. Ми забезпечуємо
                      спокій замовника та
                      вирішуємо будь-які задачі</p>
                </li>
+               <hr>
                <li class="content-list__item">
                   <p class="content-list__text">Рінго найкращий підрядник прораба, дизайнера, проект-менеджера або
                      персональний помічник власника
                      бізнесу, квартири чи
                      салону</p>
                </li>
+               <hr>
             </ul>
          </div>
       </section>
@@ -303,6 +298,7 @@
          <div class="container">
             <h2 class="advantages-page__title">Наші переваги</h2>
             <ul class="card-set">
+               <hr>
                <li class="card-set__item">
                   <span class="card-set__number">01</span>
                   <img class="card-set__images" src="/files/images/advantages/mobility.png"
@@ -310,6 +306,7 @@
                   <h3 class="card-set__title">Мобільність</h3>
                   <p class="card-set__text">Проводимо зустрічі на об`єктах в затишних закладах Києва</p>
                </li>
+               <hr>
                <li class="card-set__item">
                   <span class="card-set__number">02</span>
                   <img class="card-set__images" src="/files/images/advantages/reliability.png" alt="надійність роботи">
@@ -317,12 +314,14 @@
                   <p class="card-set__text">Система нашої роботи зосереджена на якості та термінах завершення
                      проекту</p>
                </li>
+               <hr>
                <li class="card-set__item">
                   <span class="card-set__number">03</span>
                   <img class="card-set__images" src="/files/images/advantages/quality.png" alt="якість роботи">
                   <h3 class="card-set__title">Якість</h3>
                   <p class="card-set__text">Виготовляємо виключно з перевірених європейських брендів</p>
                </li>
+               <hr>
                <li class="card-set__item">
                   <span class="card-set__number">04</span>
                   <img class="card-set__images" src="/files/images/advantages/professionalism.png"
@@ -330,6 +329,7 @@
                   <h3 class="card-set__title">Професіоналізм</h3>
                   <p class="card-set__text">Наша команда - це клуб професіоналів, об`єднаних в одній компанії</p>
                </li>
+               <hr>
                <li class="card-set__item">
                   <span class="card-set__number">05</span>
                   <img class="card-set__images" src="/files/images/advantages/benefit.png" alt="вигідні умови">
@@ -356,11 +356,11 @@
                      <span class="formfield__label">Номер телефону</span>
                   </label>
                   <label class="formfield" style="width: 250;">
-                     <!-- <input type="file" name="" class="formfield__file"> -->
+                     <input type="file" name="" class="formfield__file">
                      <!--!ламав верстку, розкоментувати коли буде стилізація -->
-                     <!-- <svg height="18">
+                     <svg height="18">
                         <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
-                     </svg> -->
+                     </svg>
                      <span class="formfield__label">Прикріпити проект</span>
                   </label>
                   <button class="form__button" type="submit">Відправити</button>
@@ -699,7 +699,7 @@
             <ul class="profile-menu">
                <li class="profile-menu__item">
                   <a class="profile-menu__link" href="tel:+380676615415">
-                     <svg width="22" height="22" aria-label="phone">
+                     <svg width="22" height="22" aria-label="phone" class="phone">
                         <use href="/files/images/svg-sprite/svg-file.svg#icon-phone">
                         </use>
                      </svg>
@@ -708,8 +708,10 @@
                </li>
             </ul>
          </div>
+         <div class="mobile-form">
+            <a class="hero-page__link" href="#form">Обговорити проект</a>
+         </div>
       </div>
-
    </div>
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="

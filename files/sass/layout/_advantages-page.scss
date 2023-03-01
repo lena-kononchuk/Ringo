@@ -1,0 +1,60 @@
+.advantages-page {
+   font-family: "Raleway";
+   font-weight: 600;
+   color: $mainTextColor;
+   // .advantages-page__title
+
+   &__title {
+      padding-bottom: 50px;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      text-transform: uppercase;
+   }
+}
+.container {
+}
+.card-set {
+   // .card-set__item
+
+   &__item {
+      position: relative;
+      padding: 30px 0 30px 37px;
+   }
+
+   // .card-set__number
+
+   &__number {
+      position: absolute;
+      left: 0;
+      top: 29px;
+      font-size: 20px;
+      line-height: 26px;
+      color: $mainTextColor;
+      opacity: 0.3;
+   }
+
+   // .card-set__images
+
+   &__images {
+      @media screen and (max-width: 768px) {
+         display: none;
+      }
+   }
+
+   // .card-set__title
+
+   &__title {
+      font-size: 20px;
+      line-height: 26px;
+   }
+
+   // .card-set__text
+
+   &__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      opacity: 0.8;
+   }
+}

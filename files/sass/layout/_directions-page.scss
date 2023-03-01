@@ -1,0 +1,38 @@
+.directions-page {
+   padding: 80px 0 80px 0;
+   // .directions-page__title
+
+   &__title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      text-transform: uppercase;
+      color: $mainTextColor;
+   }
+}
+.card-product {
+   // .card-product__item
+
+   &__item {
+      padding-top: 50px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 29px;
+   }
+
+   // .card-product__number
+
+   &__number {
+      color: $mainTextColor;
+      opacity: 0.5;
+   }
+
+   // .card-product__subtitle
+
+   &__subtitle {
+      padding-top: 20px;
+      font-family: "Raleway";
+      color: $mainGreenColor;
+   }
+}

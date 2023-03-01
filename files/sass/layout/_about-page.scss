@@ -1,0 +1,53 @@
+.about-page {
+   padding: 80px 0;
+   // .about-page__title
+
+   &__title {
+      font-family: "Raleway";
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+      color: $mainTextColor;
+   }
+}
+.video-card {
+   @media screen and (max-width: 768px) {
+      display: none;
+   }
+   // .video-card__left
+
+   &__left {
+   }
+
+   // .video-card__right
+
+   &__right {
+   }
+}
+.content-list {
+   padding-top: 50px;
+   // .content-list__item
+
+   &__item {
+      position: relative;
+      padding: 30px 0;
+      ::before {
+         content: url("/files/images/about-video/point.png");
+         position: absolute;
+         left: 0;
+         top: 30px;
+      }
+   }
+
+   // .content-list__text
+
+   &__text {
+      padding-left: 38px;
+      font-family: "Raleway";
+      font-weight: 500;
+      line-height: 23px;
+      color: $mainTextColor;
+      opacity: 0.8;
+   }
+}
