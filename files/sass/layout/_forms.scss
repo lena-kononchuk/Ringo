@@ -1,0 +1,163 @@
+.form {
+   padding: 40px 0 60px 0;
+   font-family: "Raleway";
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 23px;
+
+   // .form__field
+
+   &__field {
+      position: relative;
+      display: block;
+   }
+
+   // .form__input
+
+   &__input {
+      width: 100%;
+      padding-top: 40px;
+
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #ffffff;
+      background-color: inherit;
+      color: #ffffff;
+      opacity: 0.5;
+   }
+
+   // .form__label
+
+   &__label {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(-30%);
+      transition: transform 250ms linear;
+      opacity: 0.5;
+   }
+}
+
+.form__field:focus-within > .form__label {
+   transform: translateY(-30px);
+   color: #cc9654;
+}
+.form__input:not(:placeholder-shown) + .form__label {
+   transform: translateY(-30px);
+   color: #cc9654;
+}
+
+// .form-file {
+//    // .form-file__field
+
+//    &__field {
+//       display: block;
+//       padding: 25px 0 40px 0;
+//       opacity: 0.5;
+//       appearance: none;
+//    }
+
+//    // .form-file__file
+
+//    &__file {
+//       // opacity: 0;
+//    }
+
+// }
+// .customize-file {
+//    position: relative;
+//    // .customize-file__icon
+
+//    &__icon {
+//       position: absolute;
+//       left: -141px;
+//       top: 3px;
+//    }
+
+//    // .customize-file__label
+
+//    &__label {
+//       padding-left: 28px;
+//    }
+// }
+
+.policy {
+   padding-top: 40px;
+   position: relative;
+   display: block;
+   // .policy__checkbox
+
+   &__checkbox {
+      appearance: none;
+   }
+
+   // .policy__icon
+
+   &__icon {
+      display: inline-block;
+      position: absolute;
+      top: 42px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $mainGreenColor;
+      fill: #ffffff;
+   }
+
+   // .policy__check
+
+   &__check {
+   }
+
+   // .policy__label
+
+   &__label {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #ffffff;
+      padding-left: 20px;
+   }
+}
+.policy__checkbox:checked ~ .policy__icon {
+   background-color: red;
+}
+
+.inputfile-box {
+   position: relative;
+   padding: 25px 0 40px 0;
+}
+
+.inputfile {
+   display: none;
+}
+
+.container {
+   display: inline-block;
+   width: 100%;
+}
+
+.file-box {
+   display: inline-block;
+   width: 100%;
+   box-sizing: border-box;
+   height: calc(2rem - 2px);
+   font-size: 12px;
+   padding-top: 25px;
+}
+
+.file-button {
+   padding-top: 25px;
+   position: absolute;
+   top: 0px;
+   left: 22px;
+   opacity: 0.5;
+}
+.file-label {
+   position: absolute;
+   // display: block;
+   top: 22px;
+   left: 0;
+   opacity: 0.5;
+}

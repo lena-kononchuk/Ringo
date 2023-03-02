@@ -346,24 +346,39 @@
             <p class="contact-page__subtitle">Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
             <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
                class="js-speaker-form form">
-               <div role="group">
-                  <label class="formfield">
-                     <input type="text" data-error="Ошибка" class="formfield__input" placeholder=" ">
-                     <span class="formfield__label">Ім'я</span>
+               <div role="form-group">
+                  <label class="form__field">
+                     <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
+                     <span class="form__label">Ім'я</span>
                   </label>
-                  <label class="formfield">
-                     <input type="tel" data-error="Ошибка" class="formfield__input" placeholder=" ">
-                     <span class="formfield__label">Номер телефону</span>
+                  <label class="form__field">
+                     <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
+                     <span class="form__label">Телефон</span>
                   </label>
-                  <label class="formfield" style="width: 250;">
-                     <input type="file" name="" class="formfield__file">
-                     <!--!ламав верстку, розкоментувати коли буде стилізація -->
-                     <svg height="18">
-                        <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
-                     </svg>
-                     <span class="formfield__label">Прикріпити проект</span>
-                  </label>
-                  <button class="form__button" type="submit">Відправити</button>
+
+
+                  <!-- <label class="form-file__field">
+                     <input type="file" name="file" class="form-file__file">
+                     <div class="customize-file">
+                        <svg height="18" class="customize-file__icon">
+                           <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
+                        </svg>
+                        <span class="customize-file__label">Прикріпити проект</span>
+                     </div>
+                  </label> -->
+                  <div class="inputfile-box">
+                     <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
+                     <label for="file">
+                        <span id="file-name" class="file-box"></span>
+                        <svg height="18" class="file-button">
+                           <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
+                        </svg>
+                        <span class="file-label">Прикріпити проект</span>
+                     </label>
+                  </div>
+
+
+                  <button class="form-label__button" type="submit">Відправити</button>
                   <label class="policy">
                      <input type="checkbox" class="policy__checkbox">
                      <svg width=" 15" height="15" class="policy__icon">
