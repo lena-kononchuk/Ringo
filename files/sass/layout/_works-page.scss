@@ -1,0 +1,28 @@
+.works-page {
+   padding: 30px 0 80px 0;
+   font-family: "Raleway";
+   font-weight: 600;
+   // .works-page__title
+
+   &__title {
+      text-align: center;
+      font-size: 24px;
+      line-height: 32px;
+      text-transform: uppercase;
+      color: $mainTextColor;
+   }
+
+   // .works-page__slider
+
+   &__slider {
+   }
+}
+.container {
+}
+.slider {
+   // .slider__body
+
+   &__body {
+      padding-top: 40px;
+   }
+}

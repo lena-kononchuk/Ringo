@@ -8,6 +8,7 @@
    <title>Ringo - Furniture production site</title>
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"> -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
    <link rel="stylesheet" href="/files/css/main.min.css">
    <style>
       body {
@@ -342,52 +343,42 @@
       </section>
       <section class="contact-page" id="form">
          <div class="container">
-            <h2 class="contact-page__title">Обговоримо ваш проект?</h2>
-            <p class="contact-page__subtitle">Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
-            <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
-               class="js-speaker-form form">
-               <div role="form-group">
-                  <label class="form__field">
-                     <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
-                     <span class="form__label">Ім'я</span>
-                  </label>
-                  <label class="form__field">
-                     <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
-                     <span class="form__label">Телефон</span>
-                  </label>
-
-
-                  <!-- <label class="form-file__field">
-                     <input type="file" name="file" class="form-file__file">
-                     <div class="customize-file">
-                        <svg height="18" class="customize-file__icon">
-                           <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
-                        </svg>
-                        <span class="customize-file__label">Прикріпити проект</span>
+            <div class="form-box">
+               <h2 class="contact-page__title">Обговоримо ваш проект?</h2>
+               <p class="contact-page__subtitle">Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
+               <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
+                  class="js-speaker-form form">
+                  <div role="form-group">
+                     <label class="form__field">
+                        <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
+                        <span class="form__label">Ім'я</span>
+                     </label>
+                     <label class="form__field">
+                        <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
+                        <span class="form__label">Телефон</span>
+                     </label>
+                     <div class="inputfile-box">
+                        <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
+                        <label for="file">
+                           <span id="file-name" class="file-box"></span>
+                           <svg height="18" class="file-button">
+                              <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
+                           </svg>
+                           <span class="file-label">Прикріпити проект</span>
+                        </label>
                      </div>
-                  </label> -->
-                  <div class="inputfile-box">
-                     <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
-                     <label for="file">
-                        <span id="file-name" class="file-box"></span>
-                        <svg height="18" class="file-button">
-                           <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
+                     <button class="form-label__button" type="submit">Відправити</button>
+                     <label class="policy">
+                        <input type="checkbox" class="policy__checkbox">
+                        <svg width=" 15" height="15" class="policy__icon">
+                           <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
                         </svg>
-                        <span class="file-label">Прикріпити проект</span>
+                        <span class="policy__label">Даю згоду на оброблення персональних даних</span>
                      </label>
                   </div>
-
-
-                  <button class="form-label__button" type="submit">Відправити</button>
-                  <label class="policy">
-                     <input type="checkbox" class="policy__checkbox">
-                     <svg width=" 15" height="15" class="policy__icon">
-                        <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
-                     </svg>
-                     <span class="policy__label">Даю згоду на оброблення персональних даних</span>
-                  </label>
-               </div>
-            </form>
+               </form>
+            </div>
+            <div class="contact-page__bg"></div>
          </div>
       </section>
       <section class="stages-page">
@@ -427,25 +418,38 @@
       <section class="works-page">
          <div class="container">
             <h2 class="works-page__title">Зараз в роботі</h2>
-            <div class="card-work">
-               <img src="/files/images/works/works1.jpg" alt="на фото робота компанії">
-               <img src="/files/images/works/works2.jpg" alt="на фото робота компанії">
-               <img src="/files/images/works/works3.jpg" alt="на фото робота компанії">
-               <!-- !!!!зробити свайпер -->
-               <div class="card-work__arrows">
-                  <svg width="60" height="60">
-                     <use href="/files/images/svg-sprite/svg-file.svg#icon-arrow-left">
-                     </use>
-                  </svg>
-                  <svg width="60" height="60">
-                     <use href="/files/images/svg-sprite/svg-file.svg#icon-arrow-rigth">
-                     </use>
-                  </svg>
-               </div>
-               <!-- !!!зробити привязку до слайдеру  -->
-               <div class="card-work__description">
-                  <h3 class="card-work__title">Квартира ЖК Медовий</h3>
-                  <span class=card-work__text">3 етап</span>
+            <div class="slider__body">
+               <!-- Slider main container -->
+               <div class="works-page__slider swiper-container">
+                  <!-- Additional required wrapper -->
+                  <div class="works-page__slider swiper-wrapper">
+                     <!-- Slides -->
+                     <div class="works-page__slider  swiper-slide">
+                        <img src="/files/images/works/works1.jpg" alt="на фото робота компанії">
+                        <div class="swiper-slide__title">Квартира ЖК Медовий</div>
+                        <div class="swiper-slide__sub">3 етап</div>
+                     </div>
+                     <div class="works-page__slider  swiper-slide">
+                        <img src="/files/images/works/works2.jpg" alt="на фото робота компанії">
+                        <div class="swiper-slide__title">Квартира ЖК Форум</div>
+                        <div class="swiper-slide__sub">1 етап</div>
+                     </div>
+                     <div class="works-page__slider  swiper-slide">
+                        <img src="/files/images/works/works3.jpg" alt="на фото робота компанії">
+                        <div class="swiper-slide__title">Квартира ЖК Америка</div>
+                        <div class="swiper-slide__sub">2 етап</div>
+                     </div>
+                     ...
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+
+                  <!-- If we need navigation buttons -->
+                  <!-- !відкрити тільки з таблетки -->
+                  <div class="swiper-button">
+                     <div class="swiper-button-prev"></div>
+                     <div class="swiper-button-next"></div>
+                  </div>
                </div>
             </div>
          </div>
@@ -454,8 +458,6 @@
          <div class="container">
             <h2 class="benefit-page__title">Рінго роздає подарунки!</h2>
             <!-- !зробити бекграундом призенти -->
-            <!-- <img src="/images/present/toaster.png" alt="на фото тостер">
-            <img src="/images/present/microwave.png" alt="на фото мікрохвильова піч"> -->
             <p class="benefit-page__conditions">При замовленні до нового року, отримай цінний подарунок для свого
                комфорту
             </p>
@@ -475,28 +477,55 @@
                   <span class="gift-card__title">Подарунок</span>
                </div>
             </div>
-            <button type="button" data-open class="benefit-page__button">Хочу подарунок</button>
+            <button type="button" data-open class="benefit-page__button form-label__button">Хочу подарунок</button>
          </div>
       </section>
+      <!-- почати тут  -->
       <section class="partners-page">
          <div class="container">
             <h2 class="partners-page__title">Наші партнери</h2>
             <!-- !!!!зробити слайдер -->
-            <div class="partners-page__slider">
-               <img src="/files/images/partners/client-franke.png" alt="на фото логотип наших партнерів">
-               <img src="/files/images/partners/client-hafele.png" alt="на фото логотип наших партнерів">
-               <img src="/files/images/partners/client-zerkalo.png" alt="на фото логотип наших партнерів">
-               <img src="/files/images/partners/client-emir.png" alt="на фото логотип наших партнерів">
-            </div>
-            <div class="partners-page__arrows">
-               <svg width="60" height="60">
-                  <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-left">
-                  </use>
-               </svg>
-               <svg width="60" height="60">
-                  <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-right">
-                  </use>
-               </svg>
+            <div class="partners__body">
+
+               <!-- Slider main container -->
+               <div class="partners-page__slider swiper-container">
+                  <!-- Additional required wrapper -->
+                  <div class="partners-page__slider swiper-wrapper">
+                     <!-- Slides -->
+                     <div class="partners-page__slider  swiper-slide">
+                        <img src="/files/images/partners/client-franke.png" alt="на фото логотип наших партнерів">
+                     </div>
+                     <div class="partners-page__slider  swiper-slide">
+                        <img src="/files/images/partners/client-hafele.png" alt="на фото логотип наших партнерів">
+                     </div>
+                     <div class="partners-page__slider  swiper-slide">
+                        <img src="/files/images/partners/client-zerkalo.png" alt="на фото логотип наших партнерів">
+                     </div>
+                     <div class="partners-page__slider  swiper-slide">
+                        <img src="/files/images/partners/client-emir.png" alt="на фото логотип наших партнерів">
+                     </div>
+                     ...
+
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                  <!-- If we need navigation buttons -->
+                  <!-- !відкрити тільки з таблетки -->
+                  <!-- <div class="partners-page__swiper swiper-button">
+                     <div class="swiper-button-prev">
+                        <svg width="60" height="60">
+                           <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-left">
+                           </use>
+                        </svg>
+                     </div>
+                     <div class="swiper-button-next">
+                        <svg width="60" height="60">
+                           <use href="/files/images/svg-sprite/svg-file.svg#icon-circul-arrow-right">
+                           </use>
+                        </svg>
+                     </div>
+                  </div> -->
+               </div>
             </div>
          </div>
       </section>
@@ -731,6 +760,8 @@
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <script src="./files/js/sliders.js"></script>
    <script src="./files/js/mobile-menu.js"></script>
    <script src="./files/js/main.js"></script>
 </body>

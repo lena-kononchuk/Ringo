@@ -2,10 +2,13 @@
    padding-top: 80px;
    font-family: "Raleway";
    font-weight: 500;
+
    .container {
       width: 100vw;
       background-color: $mainGreenColor;
       color: $mainWhiteColor;
+   }
+   .form-box {
    }
    // .contact-page__title
 
@@ -25,4 +28,10 @@
       line-height: 23px;
       opacity: 0.8;
    }
+   // зробити bg з tablet
+   // &__bg {
+   //    background-image: url("/files/images/background/form-bg.jpg");
+   //    width: 100%;
+   //    height: 100px;
+   // }
 }

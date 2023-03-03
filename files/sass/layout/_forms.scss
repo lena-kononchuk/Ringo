@@ -61,7 +61,7 @@
    &__icon {
       display: inline-block;
       position: absolute;
-      top: 42px;
+      top: 44px;
       left: 0;
       width: 18px;
       height: 18px;
@@ -86,7 +86,7 @@
    }
 }
 .policy__checkbox:checked ~ .policy__icon {
-   background-color: red;
+   fill: $mainBrownColor;
 }
 
 .inputfile-box {
@@ -104,12 +104,15 @@
 }
 
 .file-box {
+   position: absolute;
+   top: 48px;
+   left: 0;
    display: inline-block;
    width: 100%;
    box-sizing: border-box;
    height: calc(2rem - 2px);
    font-size: 12px;
-   padding-top: 25px;
+   // padding-top: 25px;
 }
 
 .file-button {
