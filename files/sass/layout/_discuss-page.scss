@@ -1,0 +1,48 @@
+.discuss-page {
+   // .discuss-page__body
+
+   &__body {
+      @media screen and (min-width: 640px) {
+         display: flex;
+         flex: 1 1 50%;
+      }
+      // .discuss-page__form
+
+      &__form {
+         width: 50%;
+      }
+
+      // .discuss-page__background
+
+      &__background {
+         background-image: url("/files/images/background/form-bg.jpg");
+         height: 200px;
+         width: 400px;
+      }
+   }
+}
+.container {
+}
+.js-speaker-form {
+}
+.form {
+   // .form__title
+
+   &__title {
+   }
+
+   // .form__field
+
+   &__field {
+   }
+
+   // .form__input
+
+   &__input {
+   }
+
+   // .form__label
+
+   &__label {
+   }
+}
