@@ -3,7 +3,7 @@
    // .about-page__title
 
    &__title {
-      font-family: "Raleway";
+      font-family: "Raleway", sans-serif;
       font-weight: 600;
       font-size: 20px;
       line-height: 26px;
@@ -44,7 +44,7 @@
 
    &__text {
       padding-left: 38px;
-      font-family: "Raleway";
+      font-family: "Raleway", sans-serif;
       font-weight: 500;
       line-height: 23px;
       color: $mainTextColor;

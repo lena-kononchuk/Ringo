@@ -76,32 +76,6 @@
       color: $mainBrownColor;
    }
 }
-.mobile-sosial .profile-menu {
-   display: flex;
-   align-items: center;
-   padding-bottom: 128px;
-   :not(:last-child) {
-      padding-right: 15px;
-   }
-}
-.mobile-phone .profile-menu__link {
-   display: flex;
-   align-items: center;
-   text-decoration: none;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 20px;
-   line-height: 20px;
-   text-transform: uppercase;
-   color: $mainGreenColor;
-   .phone {
-      padding-right: 7px;
-   }
-   :hover {
-      transition: color 250ms ease-in-out;
-      color: $mainBrownColor;
-   }
-}
 .mobile-form {
    margin: 30px 0 10px 0;
    .hero-page__link {
@@ -119,6 +93,41 @@
          background: #cc9654;
          box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
          transition: background 250ms ease-in-out;
+      }
+   }
+}
+
+.mobile-sosial {
+   display: flex;
+   align-items: center;
+   padding-bottom: 128px;
+   :not(:last-child) {
+      padding-right: 15px;
+   }
+   // .mobile-sosial__menu
+
+   &__menu {
+      display: flex;
+   }
+}
+.mobile-phone {
+   // .mobile-phone__menu
+   &__link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $mainGreenColor;
+      .phone {
+         padding-right: 7px;
+      }
+      :hover {
+         transition: color 250ms ease-in-out;
+         color: $mainBrownColor;
       }
    }
 }

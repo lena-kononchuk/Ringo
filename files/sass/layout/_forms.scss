@@ -1,9 +1,11 @@
 .form {
+   // width: 100vw;
    padding: 40px 0 60px 0;
-   font-family: "Raleway";
+   font-family: "Raleway", sans-serif;
    font-weight: 500;
    font-size: 16px;
    line-height: 23px;
+   width: 100%;
 
    // .form__field
 
@@ -72,9 +74,6 @@
 
    // .policy__check
 
-   &__check {
-   }
-
    // .policy__label
 
    &__label {
@@ -96,11 +95,6 @@
 
 .inputfile {
    display: none;
-}
-
-.container {
-   display: inline-block;
-   width: 100%;
 }
 
 .file-box {

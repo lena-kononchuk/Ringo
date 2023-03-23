@@ -1,0 +1,135 @@
+.footer-page {
+   padding: 50px 0 40px 0;
+   font-weight: 500;
+   color: $mainTextColor;
+   font-family: "Raleway", sans-serif;
+   // .footer-page__header
+
+   &__header {
+   }
+
+   // .footer-page__brands
+
+   &__brands {
+      border-bottom: 1px solid rgba(40, 43, 34, 0.2);
+   }
+
+   // .footer-page__copy
+
+   &__copy {
+      padding-top: 20px;
+      opacity: 0.5;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      line-height: 14px;
+   }
+}
+.footer-social {
+   position: relative;
+   padding-bottom: 50px;
+   // .footer-social__title
+
+   &__title {
+      font-size: 14px;
+      line-height: 14px;
+      opacity: 0.5;
+   }
+}
+.logo {
+   // .logo__icon
+
+   &__icon {
+      display: block;
+      padding-bottom: 30px;
+   }
+}
+.profile-menu {
+   display: flex;
+   position: absolute;
+   bottom: 44px;
+   left: 90px;
+
+   // .profile-menu__item
+
+   &__item {
+   }
+
+   // .profile-menu__link
+
+   &__link {
+   }
+}
+.footer-nav {
+   display: flex;
+   justify-content: space-between;
+}
+.navigation-menu {
+   padding-bottom: 50px;
+   // .navigation-menu__item
+
+   &__item:not(:last-child) {
+      padding-bottom: 20px;
+   }
+
+   // .navigation-menu__link
+
+   &__link {
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 16px;
+      color: $mainTextColor;
+   }
+}
+.footer-connect {
+   padding-bottom: 50px;
+   // .footer-connect__link
+
+   &__link {
+      display: flex;
+      text-decoration: none;
+      padding-left: 7px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #3d4a39;
+   }
+
+   // .footer-connect__button
+
+   &__button {
+      margin-top: 25px;
+   }
+   border-bottom: 1px solid rgba(40, 43, 34, 0.2);
+}
+
+.brands-body {
+   // .brands-body__title
+
+   &__title {
+      padding: 50px 0 30px 0;
+      font-size: 18px;
+      line-height: 18px;
+      color: $mainGreenColor;
+   }
+
+   // .brands-body__item
+
+   &__item {
+      padding-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: space-between;
+      align-items: flex-start;
+   }
+
+   // .brands-body__list
+   &__list {
+      width: 110px;
+      padding-right: 18px;
+   }
+   &__list:not(:last-child) {
+      padding-bottom: 25px;
+   }
+}

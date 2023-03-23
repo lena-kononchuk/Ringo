@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Ringo - Furniture production site</title>
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"> -->
+
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
    <link rel="stylesheet" href="/files/css/main.min.css">
    <style>
@@ -314,12 +314,12 @@
          </div>
       </section>
       <section class="contact-page" id="form">
-         <div class="container">
-            <div class="form-box">
-               <h2 class="contact-page__title">Обговоримо ваш проект?</h2>
-               <p class="contact-page__subtitle">Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
+         <div class="contact-page__body contact-body">
+            <div class="contact-body__form">
                <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
                   class="js-speaker-form form">
+                  <h2 class="contact-body__title">Обговоримо ваш проект?</h2>
+                  <p class="contact-body__sub-title">Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
                   <div role="form-group">
                      <label class="form__field">
                         <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
@@ -350,7 +350,7 @@
                   </div>
                </form>
             </div>
-            <div class="contact-page__bg"></div>
+            <div class="contact-body__background"></div>
          </div>
       </section>
       <section class="stages-page">
@@ -429,28 +429,30 @@
       </section>
       <section class="benefit-page">
          <div class="container">
-            <h2 class="benefit-page__title">Рінго роздає подарунки!</h2>
-            <!-- !зробити бекграундом призенти -->
-            <p class="benefit-page__conditions">При замовленні до нового року, отримай цінний подарунок для свого
-               комфорту
-            </p>
-            <div class="gift-card">
-               <div class="gift-card__left">
-                  <svg width="18" height="18">
-                     <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
-                     </use>
-                  </svg>
-                  <span class="gift-card__title">Подарунок</span>
+            <div class="benefit-page__body">
+               <h2 class="benefit-page__title">Рінго роздає подарунки!</h2>
+               <!-- !зробити бекграундом призенти -->
+               <p class="benefit-page__conditions">При замовленні до нового року, отримай цінний подарунок для свого
+                  комфорту
+               </p>
+               <div class="gift-card">
+                  <div class="gift-card__left">
+                     <svg width="18" height="18">
+                        <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
+                        </use>
+                     </svg>
+                     <span class="gift-card__title">Подарунок</span>
+                  </div>
+                  <div class="gift-card__right">
+                     <svg width="18" height="18">
+                        <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
+                        </use>
+                     </svg>
+                     <span class="gift-card__title">Подарунок</span>
+                  </div>
                </div>
-               <div class="gift-card__right">
-                  <svg width="18" height="18">
-                     <use href="/files/images/svg-sprite/svg-file.svg#icon-gift">
-                     </use>
-                  </svg>
-                  <span class="gift-card__title">Подарунок</span>
-               </div>
+               <button type="button" data-open class="benefit-page__button form-label__button">Хочу подарунок</button>
             </div>
-            <button type="button" data-open class="benefit-page__button form-label__button">Хочу подарунок</button>
          </div>
       </section>
       <!-- почати тут  -->
@@ -487,37 +489,37 @@
             </div>
       </section>
       <section class="discuss-page">
-         <div class="container">
-            <div class="discuss-page__body">
-               <div class="discuss-page__form">
-                  <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
-                     class="js-speaker-form form">
-                     <h2 class="discuss-page__title">Залишилися питання?</h2>
-                     <h3 class="form__title">Отримай безкоштовну консультацію менеджера та прорахунок проекту</h3>
-                     <div role="form-group">
-                        <label class="form__field">
-                           <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
-                           <span class="form__label">Ім'я</span>
-                        </label>
-                        <label class="form__field">
-                           <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
-                           <span class="form__label">Телефон</span>
-                        </label>
-                        <button class="form-label__button" type="submit">Відправити</button>
-                        <label class="policy">
-                           <input type="checkbox" class="policy__checkbox">
-                           <svg width=" 15" height="15" class="policy__icon">
-                              <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked">
-                              </use>
-                           </svg>
-                           <span class="policy__label">Даю згоду на оброблення персональних даних</span>
-                        </label>
-                     </div>
-                  </form>
-               </div>
-               <div class="discuss-page__background"></div>
+         <div class="discuss-page__body body-discuss">
+            <div class="body-discuss__form">
+               <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
+                  class="js-speaker-form form">
+                  <h2 class="body-discuss__title">Залишилися питання?</h2>
+                  <h3 class="body-discuss__sub-title">Отримай безкоштовну консультацію менеджера та прорахунок проекту
+                  </h3>
+                  <div role="form-group">
+                     <label class="form__field">
+                        <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
+                        <span class="form__label">Ім'я</span>
+                     </label>
+                     <label class="form__field">
+                        <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
+                        <span class="form__label">Телефон</span>
+                     </label>
+                     <button class="form-label__button" type="submit">Відправити</button>
+                     <label class="policy">
+                        <input type="checkbox" class="policy__checkbox">
+                        <svg width=" 15" height="15" class="policy__icon">
+                           <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked">
+                           </use>
+                        </svg>
+                        <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+                     </label>
+                  </div>
+               </form>
             </div>
+            <div class="body-discuss__background"></div>
          </div>
+         <!-- </div> -->
       </section>
    </main>
    <footer class="footer-page">
@@ -552,7 +554,7 @@
             </div>
             <div class="footer-nav">
                <ul class="navigation-menu">
-                  <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Напрямки</a></li>
+                  <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Основні напрямки</a></li>
                   <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Про компанію</a></li>
                   <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Переваги</a></li>
                </ul>
@@ -570,22 +572,30 @@
                   </svg>
                   +380 67661 5415
                </a>
-               <button class="footer-connect__button" type="button" data-modal-open>На каву з менеджером!</button>
+               <button class="footer-connect__button form-label__button" type="button" data-modal-open>На каву з
+                  менеджером!</button>
             </div>
          </div>
          <div class="footer-page__brands">
-            <!-- !!!!зробити slider -->
-            <div class="footer-slider">
-               <h2 class="footer-slider__title">Бренди комплектуючих</h2>
-               <img src="/files/images/brands/franke.png" alt="на фото бренд комплектуючих">
-               <img src="/files/images/brands/halele.png" alt="на фото бренд комплектуючих">
-               <img src="/files/images/brands/egeer.png" alt="на фото бренд комплектуючих">
-               <img src="/files/images/brands/linken.png" alt="на фото бренд комплектуючих">
-               <img src="/files/images/brands/Inoxa.png" alt="на фото бренд комплектуючих">
-               <img src="/files/images/brands/cleaf.png" alt="на фото бренд комплектуючих">
-               <img src="/files/images/brands/samsung.png" alt="на фото бренд комплектуючих">
-               <img src="/files/images/brands/blum.png" alt="на фото бренд комплектуючих">
-            </div>
+            <h2 class="brands-body__title">Бренди комплектуючих</h2>
+            <ul class="brands-body__item">
+               <li class="brands-body__list"><img src="/files/images/brands/franke.png"
+                     alt="на фото бренд комплектуючих"></li>
+               <li class="brands-body__list"><img src="/files/images/brands/halele.png"
+                     alt="на фото бренд комплектуючих"></li>
+               <li class="brands-body__list"><img src="/files/images/brands/egeer.png"
+                     alt="на фото бренд комплектуючих"></li>
+               <li class="brands-body__list"><img src="/files/images/brands/linken.png"
+                     alt="на фото бренд комплектуючих"></li>
+               <li class="brands-body__list"><img src="/files/images/brands/Inoxa.png"
+                     alt="на фото бренд комплектуючих"></li>
+               <li class="brands-body__list"><img src="/files/images/brands/cleaf.png"
+                     alt="на фото бренд комплектуючих"></li>
+               <li class="brands-body__list"><img src="/files/images/brands/samsung.png"
+                     alt="на фото бренд комплектуючих"></li>
+               <li class="brands-body__list"><img src="/files/images/brands/blum.png" alt="на фото бренд комплектуючих">
+               </li>
+            </ul>
          </div>
          <div class="footer-page__copy">
             <span>&#169; 2021 Ringo</span>
@@ -632,34 +642,41 @@
    <!-- !popup footer -->
    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-         <h2 class="modal__title">Хочете стати нашим партнером?</h2>
-         <button class="modal__icon-close" type="button" data-modal-close>Закрыть</button>
-         <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
-            class="js-speaker-form form">
-            <div role="group">
-               <h3 class="form__title">Заповніть форму, і ми звяжемося та обговоримо з вами усі деталі</h3>
-               <label class="formfield">
-                  <input type="text" data-error="Ошибка" class="formfield__input" placeholder=" ">
-                  <span class="formfield__label">Ім'я</span>
-               </label>
-               <label class="formfield">
-                  <input type="tel" data-error="Ошибка" class="formfield__input" placeholder=" ">
-                  <span class="formfield__label">Номер телефону</span>
-               </label>
-               <label class="formfield">
-                  <textarea cols="30" rows="10" class="formfield__input" placeholder=" "></textarea>
-                  <span class="formfield__label">Коротко про себе</span>
-               </label>
-            </div>
-            <button class="form__button" type="submit">Відправити</button>
-            <label class="policy">
-               <input type="checkbox" class="policy__checkbox">
-               <svg width=" 15" height="15" class="policy__icon">
-                  <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+         <div class="modal__container">
+            <h2 class="modal__title">Хочете стати нашим партнером?</h2>
+            <button class="modal__icon-close" type="button" data-modal-close>
+               <svg width="23" height="23" aria-label="close">
+                  <use href="/files/images/svg-sprite/svg-file.svg#icon-close">
+                  </use>
                </svg>
-               <span class="policy__label">Даю згоду на оброблення персональних даних</span>
-            </label>
-         </form>
+            </button>
+            <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
+               class="js-speaker-form form">
+               <h3 class="form__title">Заповніть форму, і ми звяжемося та обговоримо з вами усі деталі</h3>
+               <div role="form-group">
+                  <label class="form__field">
+                     <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
+                     <span class="form__label">Ім'я</span>
+                  </label>
+                  <label class="form__field">
+                     <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
+                     <span class="form__label">Телефон</span>
+                  </label>
+                  <label class="form__field textarea">
+                     <textarea class="textarea__input" placeholder=" "></textarea>
+                     <span class="textarea__label ">Коротко про себе</span>
+                  </label>
+                  <button class="form-label__button" type="submit">Відправити</button>
+                  <label class="policy">
+                     <input type="checkbox" class="policy__checkbox">
+                     <svg width=" 15" height="15" class="policy__icon">
+                        <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                     </svg>
+                     <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+                  </label>
+               </div>
+            </form>
+         </div>
       </div>
    </div>
    <!-- mobile-menu body -->
@@ -686,17 +703,17 @@
          </ul>
          <div class="mobile-sosial">
             <!-- !можливо потрібно буде переробити список контактів для кращьої верстки -->
-            <ul class="profile-menu">
-               <li class="profile-menu__item">
-                  <a class="profile-menu__link" href="" aria-label="посилання на інстаграм">
+            <ul class="mobile-sosial__menu">
+               <li class="mobile-sosial__item">
+                  <a class="mobile-sosial__link" href="" aria-label="посилання на інстаграм">
                      <svg width=" 24" height="24" aria-label="instagram">
                         <use href="/files/images/svg-sprite/svg-file.svg#icon-instagram">
                         </use>
                      </svg>
                   </a>
                </li>
-               <li class="profile-menu__item">
-                  <a class="profile-menu__link" href="" aria-label="посилання на фейсбук">
+               <li class="mobile-sosial__item">
+                  <a class="mobile-sosial__link" href="" aria-label="посилання на фейсбук">
                      <svg width="24" height="24" aria-label="facebook">
                         <use href="/files/images/svg-sprite/svg-file.svg#icon-facebook">
                         </use>
@@ -706,9 +723,9 @@
             </ul>
          </div>
          <div class="mobile-phone">
-            <ul class="profile-menu">
-               <li class="profile-menu__item">
-                  <a class="profile-menu__link" href="tel:+380676615415">
+            <ul class="mobile-phone__menu">
+               <li class="mobile-phone__item">
+                  <a class="mobile-phone__link" href="tel:+380676615415">
                      <svg width="22" height="22" aria-label="phone" class="phone">
                         <use href="/files/images/svg-sprite/svg-file.svg#icon-phone">
                         </use>
@@ -722,7 +739,7 @@
             <a class="hero-page__link" href="#form">Обговорити проект</a>
          </div>
       </div>
-   </div> -->
+   </div>
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"></script>
