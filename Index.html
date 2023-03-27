@@ -11,64 +11,9 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
    <link rel="stylesheet" href="/files/css/main.min.css">
    <style>
-      body {
-         /* background-color: rgb(207, 231, 200); */
-         font-family: 'Raleway', sans-serif;
-      }
-
       video {
          object-fit: cover;
       }
-
-      /* --------------------------------------------- */
-      /* --------------------------------------------- */
-      /* ------------------ */
-      .formfield {
-         position: relative;
-         display: block;
-
-      }
-
-      /* --------------------------------------------- */
-      /* костиль для плавного поднятия метки формы */
-      /* .forminput::placeholder {
-         opacity: 0;
-      } */
-
-      .label {
-         position: absolute;
-         top: 50%;
-         left: 10px;
-         transform: translateY(-50%);
-         transition: transform 250ms linear;
-      }
-
-      .forminput:focus+.label,
-      .forminput:not(:placeholder-shown)+.label {
-         transform: translateY(-30px);
-      }
-
-      /* --------------------------------------------- */
-      /* кастомный input file */
-      .inputfile,
-      .checkbox {
-         width: 0.1px;
-         height: 0.1px;
-         opacity: 0;
-         position: absolute;
-         z-index: -1;
-      }
-
-      .icon {
-         fill: blue;
-      }
-
-      .checkbox:checked+.icon {
-         fill: red;
-      }
-
-
-      /* кастомный input file */
    </style>
 </head>
 <!-- todo display:block для тега а, щоб працювала вертикальна геометрія -->
@@ -248,7 +193,6 @@
                </video>
             </div>
             <ul class="content-list">
-               <!-- !зробити псевдоелементом крапку(png) -->
                <hr>
                <li class="content-list__item">
                   <p class="content-list__text">Наш колектив націлений на результат - вчасно реалізувати проект на
@@ -455,7 +399,6 @@
             </div>
          </div>
       </section>
-      <!-- почати тут  -->
       <section class="partners-page">
          <div class="container">
             <h2 class="partners-page__title">Наші партнери</h2>
@@ -639,9 +582,9 @@
          </div>
       </div>
    </div>
-   <!-- !popup footer -->
+   <!-- !popup partner -->
    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
+      <div class="is-modal">
          <div class="modal__container">
             <h2 class="modal__title">Хочете стати нашим партнером?</h2>
             <button class="modal__icon-close" type="button" data-modal-close>
@@ -663,8 +606,7 @@
                      <span class="form__label">Телефон</span>
                   </label>
                   <label class="form__field textarea">
-                     <textarea class="textarea__input" placeholder=" "></textarea>
-                     <span class="textarea__label ">Коротко про себе</span>
+                     <textarea class="textarea__input" placeholder="Коротко про себе"></textarea>
                   </label>
                   <button class="form-label__button" type="submit">Відправити</button>
                   <label class="policy">
@@ -679,7 +621,7 @@
          </div>
       </div>
    </div>
-   <!-- mobile-menu body -->
+   <!--! mobile-menu body -->
    <div class="menu-container js-menu-container" id="mobile-menu">
       <a class="mobile-logo" href="">
          <svg width="100" height="44">
@@ -735,9 +677,9 @@
                </li>
             </ul>
          </div>
-         <div class="mobile-form">
+         <!-- <div class="mobile-form">
             <a class="hero-page__link" href="#form">Обговорити проект</a>
-         </div>
+         </div> -->
       </div>
    </div>
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
