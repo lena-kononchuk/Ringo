@@ -6,8 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Ringo - Furniture production site</title>
-   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"> -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
    <link rel="stylesheet" href="/files/css/main.min.css">
    <style>
@@ -30,53 +30,54 @@
    <header class="page-header">
       <div class="container">
          <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-            <svg width="35" height="25" aria-label="open">
+            <svg width="35" height="30" aria-label="open">
                <use href="/files/images/svg-sprite/svg-file.svg#icon-open"></use>
             </svg>
          </button>
-         <div class="header-body">
-            <nav class="page-header__navigation">
+         <div class="page-header__list">
+            <nav class="navigation-list__nav">
                <a class="logo" href="">
                   <svg width="100" height="44" class="logo__icon">
                      <use href="/files/images/svg-sprite/svg-file.svg#icon-logo">
                      </use>
                   </svg>
                </a>
-               <ul class="navigation-menu navigation-body">
-                  <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Напрямки</a></li>
-                  <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Про компанію</a></li>
-                  <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Переваги</a></li>
-                  <li class="navigation-menu__item"><a class="navigation-menu__link" href="">Етапи роботи</a></li>
+               <ul class="navigation-list__menu  navigation-menu">
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="">Напрямки</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="">Про компанію</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="">Переваги</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="">Етапи роботи</a></li>
+
                </ul>
             </nav>
-            <div class="page-header__profile navigation-body">
-               <ul class="profile-menu">
-                  <li class="profile-menu__item">
-                     <a class="profile-menu__link" href="" aria-label="посилання на інстаграм">
+            <div class="page-header__profile profile-header">
+               <ul class="profile-header__menu">
+                  <li class="profile-header__item">
+                     <a class="profile-header__link" href="" aria-label="посилання на інстаграм">
                         <svg width=" 24" height="24" aria-label="instagram">
                            <use href="/files/images/svg-sprite/svg-file.svg#icon-instagram">
                            </use>
                         </svg>
                      </a>
                   </li>
-                  <li class="profile-menu__item">
-                     <a class="profile-menu__link" href="" aria-label="посилання на фейсбук">
-                        <svg width="24" height="24" aria-label="facebook">
+                  <li class="profile-header__item">
+                     <a class="profile-header__link" href="" aria-label="посилання на фейсбук">
+                        <svg width="10" height="21" aria-label="facebook">
                            <use href="/files/images/svg-sprite/svg-file.svg#icon-facebook">
                            </use>
                         </svg>
                      </a>
                   </li>
-                  <li class="profile-menu__item">
-                     <a class="profile-menu__link" href="tel:+380676615415">
-                        <svg width="22" height="22" aria-label="phone">
-                           <use href="/files/images/svg-sprite/svg-file.svg#icon-phone">
-                           </use>
-                        </svg>
-                        +380 67661 5415
-                     </a>
-                  </li>
                </ul>
+               <div class="profile-header__phone">
+                  <a class="profile-header__links" href="tel:+380676615415">
+                     <svg width="22" height="22" aria-label="phone" class="profile-header__icon">
+                        <use class="profile-header__icon" href="/files/images/svg-sprite/svg-file.svg#icon-phone">
+                        </use>
+                     </svg>
+                     +380 67661 5415
+                  </a>
+               </div>
             </div>
          </div>
       </div>

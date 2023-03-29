@@ -1,0 +1,122 @@
+.page-header {
+   min-height: 75px;
+   font-family: "Raleway";
+   font-weight: 700;
+   // .page-header__list
+
+   &__list {
+   }
+
+   // .page-header__profile
+
+   &__profile {
+      @media screen and (min-width: 1000px) {
+         column-gap: 51px;
+      }
+   }
+   .navigation-list {
+      // .navigation-list__nav
+
+      &__nav {
+         @media screen and (min-width: 1000px) {
+            display: flex;
+            gap: 40px;
+         }
+         @media screen and (min-width: 1440px) {
+            column-gap: 50px;
+         }
+         @media screen and (min-width: 1440px) {
+            column-gap: 79px;
+         }
+      }
+
+      // .navigation-list__menu
+
+      &__menu {
+         @media screen and (min-width: 1000px) {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 30px;
+            padding: 30px 0;
+            @media screen and (min-width: 1440px) {
+               column-gap: 50px;
+            }
+            @media screen and (min-width: 1440px) {
+               column-gap: 79px;
+            }
+         }
+      }
+
+      // .navigation-list__item
+
+      &__item {
+      }
+
+      // .navigation-list__link
+
+      &__link {
+         @media screen and (min-width: 1000px) {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;
+            color: #282b22;
+         }
+      }
+   }
+   .logo {
+      // .logo__icon
+
+      &__icon {
+         padding: 15px 0 15px 0;
+      }
+   }
+   .navigation-menu {
+   }
+   .profile-header {
+      @media screen and (min-width: 640px) {
+         position: absolute;
+         top: 30px;
+         right: 80px;
+         z-index: 9999;
+      }
+      @media screen and (min-width: 1000px) {
+         right: 20px;
+      }
+      // .profile-header__menu
+
+      &__menu {
+         @media screen and (min-width: 640px) {
+            display: flex;
+            gap: 15px;
+         }
+         @media screen and (min-width: 1000px) {
+            padding-left: 51px;
+         }
+      }
+
+      &__phone {
+         @media screen and (min-width: 640px) {
+            padding-left: 50px;
+            z-index: 9999;
+         }
+      }
+      // .profile-header__links
+
+      &__links {
+         @media screen and (min-width: 640px) {
+            font-family: "Lato";
+            font-weight: 500;
+            text-decoration: none;
+            color: $mainGreenColor;
+            padding-bottom: 10px;
+         }
+      }
+      &__icon {
+         @media screen and (min-width: 640px) {
+            vertical-align: -5px;
+         }
+      }
+   }
+}

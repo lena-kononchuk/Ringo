@@ -224,11 +224,53 @@ img {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Raleway", sans-serif;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-style: normal;
   color: rgb(40, 43, 34);
   background-color: #fff;
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url("../../fonts/Raleway-Regular.woff") format("woff"), url("../../files/fonts/Raleway-Regular.woff2") format("woff2"), url("../../files/fonts/Raleway-Regular.otf") format("otf"), url("../../files/fonts/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/files/fonts/Raleway-Medium.otf") format("otf"), url("/files/fonts/Raleway-Medium.ttf") format("truetype"), url("/files/fonts/Raleway-Medium.woff") format("woff"), url("/files/fonts/Raleway-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/files/fonts/Raleway-SemiBold.eot");
+  src: url("/files/fonts/Raleway-SemiBold.eot?#iefix") format("embedded-opentype"), url("/files/fonts/Raleway-SemiBold.otf") format("otf"), url("/files/fonts/Raleway-SemiBold.ttf") format("truetype"), url("/files/fonts/Raleway-SemiBold.woff") format("woff"), url("/files/fonts/Raleway-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/files/fonts/Raleway-Bold.eot");
+  src: url("/files/fonts/Raleway-Bold.eot?#iefix") format("embedded-opentype"), url("/files/fonts/Raleway-Bold.otf") format("otf"), url("/files/fonts/Raleway-Bold.ttf") format("truetype"), "/files/fonts/Raleway-Bold.woff" format("woff"), url("/files/fonts/Raleway-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/files/fonts/Lato-Regular.eot");
+  src: url("/files/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("/files/fonts//Lato-Regular.otf") format("otf"), url("/files/fonts/Lato-Regular.woff") format("woff"), url("/files/fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/files/fonts/Lato-Bold.eot");
+  src: url("/files/fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("/files/fonts/Lato-Bold.otf") format("otf"), url("/files/fonts/Lato-Bold.ttf") format("truetype"), url("/files/fonts//Lato-Bold.woff") format("woff"), url("/files/fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 .container {
   padding-left: 20px;
   padding-right: 20px;
@@ -237,27 +279,27 @@ body {
 }
 @media screen and (min-width: 320px) {
   .container {
-    width: 320px;
+    width: 280px;
   }
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    width: 440px;
   }
 }
 @media screen and (min-width: 640px) {
   .container {
-    width: 640px;
+    width: 600px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 728px;
   }
 }
 @media screen and (min-width: 1000px) {
   .container {
-    width: 960px;
+    width: 920px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -494,6 +536,114 @@ body {
 .partners-page .swiper-pagination-custom .swiper-pagination-bullet-active,
 .partners-page .swiper-pagination-fraction .swiper-pagination-bullet-active {
   background-color: #ae7b3c;
+}
+
+.page-header {
+  min-height: 75px;
+  font-family: "Raleway";
+  font-weight: 700;
+}
+@media screen and (min-width: 1000px) {
+  .page-header__profile {
+    -moz-column-gap: 51px;
+         column-gap: 51px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .page-header .navigation-list__nav {
+    display: flex;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .page-header .navigation-list__nav {
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .page-header .navigation-list__nav {
+    -moz-column-gap: 79px;
+         column-gap: 79px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .page-header .navigation-list__menu {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    padding: 30px 0;
+  }
+}
+@media screen and (min-width: 1000px) and (min-width: 1440px) {
+  .page-header .navigation-list__menu {
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+}
+@media screen and (min-width: 1000px) and (min-width: 1440px) {
+  .page-header .navigation-list__menu {
+    -moz-column-gap: 79px;
+         column-gap: 79px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .page-header .navigation-list__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #282b22;
+  }
+}
+.page-header .logo__icon {
+  padding: 15px 0 15px 0;
+}
+@media screen and (min-width: 640px) {
+  .page-header .profile-header {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    z-index: 9999;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .page-header .profile-header {
+    right: 20px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .page-header .profile-header__menu {
+    display: flex;
+    gap: 15px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .page-header .profile-header__menu {
+    padding-left: 51px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .page-header .profile-header__phone {
+    padding-left: 50px;
+    z-index: 9999;
+  }
+}
+@media screen and (min-width: 640px) {
+  .page-header .profile-header__links {
+    font-family: "Lato";
+    font-weight: 500;
+    text-decoration: none;
+    color: #3d4a39;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .page-header .profile-header__icon {
+    vertical-align: -5px;
+  }
 }
 
 .hero-page {
@@ -1078,12 +1228,23 @@ body {
   padding-bottom: 25px;
 }
 
-@media screen and (max-width: 768px) {
-  .navigation-body {
+@media screen and (max-width: 1000px) {
+  .page-header .navigation-menu,
+  .page-header .profile-header {
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
+  .page-header .navigation-menu {
+    display: flex;
+  }
+}
+@media screen and (min-width: 640px) {
+  .page-header .profile-header {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1000px) {
   .menu-toggle {
     display: none;
   }
@@ -1091,7 +1252,7 @@ body {
 .menu-container {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   padding: 20px 20px 20px 20px;
@@ -1099,6 +1260,17 @@ body {
   z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+}
+@media screen and (min-width: 640px) {
+  .menu-container {
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 640px) {
+  .menu-container .logo__icon {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+  }
 }
 
 .header-body .logo__icon {
@@ -1190,6 +1362,11 @@ body {
 .mobile-sosial__menu {
   display: flex;
 }
+@media screen and (min-width: 640px) {
+  .mobile-sosial {
+    display: none;
+  }
+}
 
 .mobile-phone__link {
   display: flex;
@@ -1201,6 +1378,8 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   color: #3d4a39;
+  font-family: "Lato";
+  font-weight: 600;
 }
 .mobile-phone__link .phone {
   padding-right: 7px;
@@ -1208,6 +1387,11 @@ body {
 .mobile-phone__link :hover {
   transition: color 250ms ease-in-out;
   color: #ae7b3c;
+}
+@media screen and (min-width: 640px) {
+  .mobile-phone {
+    display: none;
+  }
 }
 
 .form {
