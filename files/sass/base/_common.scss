@@ -19,9 +19,12 @@ img {
 body {
   margin: 0;
   font-family: "Raleway";
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
   color: $mainTextColor;
   background-color: #fff;
-  // overflow: hidden;
+  overflow: hidden;
+}
+html {
+  overflow-x: hidden;
 }

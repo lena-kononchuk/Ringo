@@ -15,7 +15,6 @@
    &__form {
       background-color: $mainGreenColor;
       padding: 0 20px 0 20px;
-      width: 100%;
       @media screen and (min-width: 1000px) {
          padding: 0 20px 0 200px;
       }
@@ -43,13 +42,11 @@
 
    &__background {
       background-image: url("/files/images/background/feedback-bg.jpg");
-      width: 100vw;
-      min-height: 360px;
+      width: 100%;
+      min-height: 260px;
       background-repeat: no-repeat;
       background-position: center top;
       background-size: 100% auto;
-      margin-right: -40px;
-      padding-right: 40px;
       @media screen and (min-width: 640px) {
          width: 100vw;
          background-size: auto auto;

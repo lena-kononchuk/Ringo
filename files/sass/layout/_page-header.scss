@@ -5,6 +5,9 @@
    // .page-header__list
 
    &__list {
+      @media screen and (min-width: 1000px) {
+         display: flex;
+      }
    }
 
    // .page-header__profile
@@ -82,7 +85,7 @@
          z-index: 9999;
       }
       @media screen and (min-width: 1000px) {
-         right: 20px;
+         right: 35px;
       }
       // .profile-header__menu
 

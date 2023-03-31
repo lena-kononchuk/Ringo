@@ -225,49 +225,56 @@ img {
 body {
   margin: 0;
   font-family: "Raleway";
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
   color: rgb(40, 43, 34);
   background-color: #fff;
+  overflow: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../../fonts/Raleway-Regular.woff") format("woff"), url("../../files/fonts/Raleway-Regular.woff2") format("woff2"), url("../../files/fonts/Raleway-Regular.otf") format("otf"), url("../../files/fonts/Raleway-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Lato";
+  src: local("Lato Medium"), local("Lato-Medium"), url("/files/fonts/Lato-Medium.woff2") format("woff2"), url("/files/fonts/Lato-Medium.woff") format("woff"), url("/files/fonts/Lato-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("/files/fonts/Lato Semi Bold"), local("Lato-Semi-Bold"), url("/files/fonts/Lato-Semibold.woff2") format("woff2"), url("/files/fonts/Lato-Semibold.woff") format("woff"), url("/files/fonts/Lato-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Bold"), local("Lato-Bold"), url("/files/fonts/Lato-Bold.woff2") format("woff2"), url("/files/fonts/Lato-Bold.woff") format("woff"), url("/files/fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Raleway";
-  src: url("/files/fonts/Raleway-Medium.otf") format("otf"), url("/files/fonts/Raleway-Medium.ttf") format("truetype"), url("/files/fonts/Raleway-Medium.woff") format("woff"), url("/files/fonts/Raleway-Medium.woff2") format("woff2");
+  src: local("Raleway Medium"), local("Raleway-Medium"), url("/files/fonts/Raleway-Medium.woff2") format("woff2"), url("/files/fonts/Raleway-Medium.woff") format("woff"), url("/files/fonts/Raleway-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Raleway";
-  src: url("/files/fonts/Raleway-SemiBold.eot");
-  src: url("/files/fonts/Raleway-SemiBold.eot?#iefix") format("embedded-opentype"), url("/files/fonts/Raleway-SemiBold.otf") format("otf"), url("/files/fonts/Raleway-SemiBold.ttf") format("truetype"), url("/files/fonts/Raleway-SemiBold.woff") format("woff"), url("/files/fonts/Raleway-SemiBold.woff2") format("woff2");
+  src: local("Raleway Semi Bold"), local("Raleway-Semi-Bold"), url("/files/fonts/Raleway-SemiBold.woff2") format("woff2"), url("/files/fonts/Raleway-SemiBold.woff") format("woff"), url("/files/fonts/Raleway-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Raleway";
-  src: url("/files/fonts/Raleway-Bold.eot");
-  src: url("/files/fonts/Raleway-Bold.eot?#iefix") format("embedded-opentype"), url("/files/fonts/Raleway-Bold.otf") format("otf"), url("/files/fonts/Raleway-Bold.ttf") format("truetype"), "/files/fonts/Raleway-Bold.woff" format("woff"), url("/files/fonts/Raleway-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("/files/fonts/Lato-Regular.eot");
-  src: url("/files/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("/files/fonts//Lato-Regular.otf") format("otf"), url("/files/fonts/Lato-Regular.woff") format("woff"), url("/files/fonts/Lato-Regular.woff2") format("woff2");
+  src: local("Raleway Regular"), local("Raleway-Regular"), url("/files/fonts/Raleway-Regular.woff2") format("woff2"), url("/files/fonts/Raleway-Regular.woff") format("woff"), url("/files/fonts/Raleway-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Lato";
-  src: url("/files/fonts/Lato-Bold.eot");
-  src: url("/files/fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("/files/fonts/Lato-Bold.otf") format("otf"), url("/files/fonts/Lato-Bold.ttf") format("truetype"), url("/files/fonts//Lato-Bold.woff") format("woff"), url("/files/fonts/Lato-Bold.woff2") format("woff2");
+  font-family: "Raleway";
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("/files/fonts/Raleway-Bold.woff2") format("woff2"), url("/files/fonts/Raleway-Bold.woff") format("woff"), url("/files/fonts/Raleway-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -289,7 +296,7 @@ body {
 }
 @media screen and (min-width: 640px) {
   .container {
-    width: 600px;
+    width: 640px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -544,6 +551,11 @@ body {
   font-weight: 700;
 }
 @media screen and (min-width: 1000px) {
+  .page-header__list {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1000px) {
   .page-header__profile {
     -moz-column-gap: 51px;
          column-gap: 51px;
@@ -611,7 +623,7 @@ body {
 }
 @media screen and (min-width: 1000px) {
   .page-header .profile-header {
-    right: 20px;
+    right: 35px;
   }
 }
 @media screen and (min-width: 640px) {
@@ -647,40 +659,64 @@ body {
 }
 
 .hero-page {
-  font-family: "Raleway", sans-serif;
-}
-.hero-page .container {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url("/files/images/background/bg-hero.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
+  background-size: auto auto;
+  min-width: 100%;
   text-align: center;
   color: rgb(255, 255, 255);
   padding-bottom: 20px;
 }
+@media screen and (min-width: 640px) {
+  .hero-page {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url("/files/images/background/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 .hero-page__title {
   padding-top: 70px;
-  font-weight: 700;
   font-size: 28px;
   line-height: 34px;
   text-transform: uppercase;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+}
+@media screen and (min-width: 640px) {
+  .hero-page__title {
+    font-size: 56px;
+    line-height: 67px;
+  }
 }
 .hero-page__subtitle {
   padding-top: 28px;
+  padding-bottom: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
   opacity: 0.8;
+  font-family: "Raleway";
+}
+@media screen and (min-width: 640px) {
+  .hero-page__subtitle {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 .hero-page__button {
-  padding: 30px 0 62px 0;
+  margin-bottom: 62px;
 }
 .hero-page__link {
-  padding: 22px 84px;
+  font-weight: 700;
+  padding: 20px 62px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   background-color: #ae7b3c;
   box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+  font-family: "Raleway";
+  line-height: 16px;
 }
 .hero-page__link :hover {
   background: #cc9654;
@@ -725,7 +761,6 @@ body {
 }
 .services-page .container {
   background-color: #3d4a39;
-  width: 100vw;
 }
 .services-page__title {
   padding-top: 80px;
@@ -845,7 +880,6 @@ body {
 .contact-body__form {
   background-color: #3d4a39;
   padding: 0 20px 0 20px;
-  width: 100%;
 }
 @media screen and (min-width: 1000px) {
   .contact-body__form {
@@ -872,13 +906,11 @@ body {
 }
 .contact-body__background {
   background-image: url("/files/images/background/form-bg.jpg");
-  width: 100vw;
-  min-height: 360px;
+  width: 100%;
+  min-height: 280px;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
-  margin-right: -40px;
-  padding-right: 40px;
 }
 @media screen and (min-width: 640px) {
   .contact-body__background {
@@ -946,14 +978,11 @@ body {
   font-weight: 600;
   text-align: center;
   color: rgb(40, 43, 34);
+  background-color: #f3f3f3;
   /* Чорний */
 }
 .benefit-page__body {
   padding: 80px 0;
-}
-.benefit-page .container {
-  width: 100vw;
-  background: #f3f3f3;
 }
 .benefit-page__title {
   font-size: 24px;
@@ -996,7 +1025,6 @@ body {
 .body-discuss__form {
   background-color: #3d4a39;
   padding: 0 20px 0 20px;
-  width: 100%;
 }
 @media screen and (min-width: 1000px) {
   .body-discuss__form {
@@ -1023,13 +1051,11 @@ body {
 }
 .body-discuss__background {
   background-image: url("/files/images/background/feedback-bg.jpg");
-  width: 100vw;
-  min-height: 360px;
+  width: 100%;
+  min-height: 260px;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
-  margin-right: -40px;
-  padding-right: 40px;
 }
 @media screen and (min-width: 640px) {
   .body-discuss__background {
@@ -1279,7 +1305,7 @@ body {
 
 .menu-toggle {
   position: absolute;
-  right: -25px;
+  right: 0px;
   top: 25px;
   background-color: transparent;
   cursor: pointer;
