@@ -10,16 +10,36 @@
       line-height: 32px;
       text-align: center;
       text-transform: uppercase;
+      @media screen and (min-width: 640px) {
+         font-size: 36px;
+         line-height: 45px;
+      }
    }
 }
-.container {
-}
 .card-set {
+   hr {
+      opacity: 0.2;
+   }
+   &__img {
+      @media screen and (min-width: 640px) {
+         width: 50%;
+      }
+   }
+   &__text-block {
+      @media screen and (min-width: 640px) {
+         width: 50%;
+         padding-left: 30px;
+      }
+   }
+
    // .card-set__item
 
    &__item {
       position: relative;
       padding: 30px 0 30px 37px;
+      @media screen and (min-width: 640px) {
+         display: flex;
+      }
    }
 
    // .card-set__number
@@ -40,6 +60,10 @@
       @media screen and (max-width: 768px) {
          display: none;
       }
+      @media screen and (min-width: 640px) {
+         display: inline-block;
+         opacity: 0;
+      }
    }
 
    // .card-set__title
@@ -47,6 +71,10 @@
    &__title {
       font-size: 20px;
       line-height: 26px;
+      @media screen and (min-width: 640px) {
+         font-size: 28px;
+         line-height: 36px;
+      }
    }
 
    // .card-set__text

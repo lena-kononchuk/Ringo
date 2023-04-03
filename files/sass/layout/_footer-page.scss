@@ -2,10 +2,14 @@
    padding: 50px 0 40px 0;
    font-weight: 500;
    color: $mainTextColor;
-   font-family: "Raleway", sans-serif;
+   font-family: "Lato";
    // .footer-page__header
 
    &__header {
+      @media screen and (min-width: 640px) {
+         display: flex;
+         flex-wrap: wrap;
+      }
    }
 
    // .footer-page__brands
@@ -28,6 +32,9 @@
 .footer-social {
    position: relative;
    padding-bottom: 50px;
+   @media screen and (min-width: 640px) {
+      padding-right: 170px;
+   }
    // .footer-social__title
 
    &__title {
@@ -49,7 +56,9 @@
    position: absolute;
    bottom: 44px;
    left: 90px;
-
+   @media screen and (min-width: 640px) {
+      bottom: 59px;
+   }
    // .profile-menu__item
 
    &__item {
@@ -63,6 +72,9 @@
 .footer-nav {
    display: flex;
    justify-content: space-between;
+   @media screen and (min-width: 640px) {
+      column-gap: 24px;
+   }
 }
 .navigation-menu {
    padding-bottom: 50px;
@@ -70,6 +82,9 @@
 
    &__item:not(:last-child) {
       padding-bottom: 20px;
+      @media screen and (min-width: 640px) {
+         padding-bottom: 30px;
+      }
    }
 
    // .navigation-menu__link
@@ -83,6 +98,13 @@
 }
 .footer-connect {
    padding-bottom: 50px;
+   @media screen and (min-width: 640px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 122px;
+   }
+
    // .footer-connect__link
 
    &__link {
@@ -94,14 +116,27 @@
       line-height: 20px;
       text-transform: uppercase;
       color: #3d4a39;
+      @media screen and (min-width: 640px) {
+         padding-top: 27px;
+      }
    }
 
    // .footer-connect__button
 
    &__button {
       margin-top: 25px;
+      @media screen and (min-width: 640px) {
+         padding: 22px 56px;
+      }
    }
    border-bottom: 1px solid rgba(40, 43, 34, 0.2);
+   &__phone {
+   }
+
+   // .footer-connec__button
+
+   &__button {
+   }
 }
 
 .brands-body {

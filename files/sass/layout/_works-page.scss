@@ -10,6 +10,10 @@
       line-height: 32px;
       text-transform: uppercase;
       color: $mainTextColor;
+      @media screen and (min-width: 640px) {
+         font-size: 36px;
+         line-height: 45px;
+      }
    }
 
    // .works-page__slider
