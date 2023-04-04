@@ -1,36 +1,120 @@
+// Basic Swiper Styles ================================================================*/
 .swiper-container {
-   margin-left: auto;
-   margin-right: auto;
+   margin: 0 auto;
    position: relative;
    overflow: hidden;
-   list-style: none;
-   padding: 0;
+   -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+   -ms-backface-visibility: hidden;
+   -o-backface-visibility: hidden;
+   backface-visibility: hidden;
    /* Fix of Webkit flickering */
    z-index: 1;
-}
-.swiper-container-vertical > .swiper-wrapper {
-   flex-direction: column;
 }
 .swiper-wrapper {
    position: relative;
    width: 100%;
-   height: 100%;
-   z-index: 2;
-   display: flex;
-   transition-property: transform;
+   -webkit-transition-property: -webkit-transform, left, top;
+   -webkit-transition-duration: 0s;
+   -webkit-transform: translate3d(0px, 0, 0);
+   -webkit-transition-timing-function: ease;
+
+   -moz-transition-property: -moz-transform, left, top;
+   -moz-transition-duration: 0s;
+   -moz-transform: translate3d(0px, 0, 0);
+   -moz-transition-timing-function: ease;
+
+   -o-transition-property: -o-transform, left, top;
+   -o-transition-duration: 0s;
+   -o-transform: translate3d(0px, 0, 0);
+   -o-transition-timing-function: ease;
+   -o-transform: translate(0px, 0px);
+
+   -ms-transition-property: -ms-transform, left, top;
+   -ms-transition-duration: 0s;
+   -ms-transform: translate3d(0px, 0, 0);
+   -ms-transition-timing-function: ease;
+
+   transition-property: transform, left, top;
+   transition-duration: 0s;
+   transform: translate3d(0px, 0, 0);
+   transition-timing-function: ease;
+
+   -webkit-box-sizing: content-box;
+   -moz-box-sizing: content-box;
    box-sizing: content-box;
 }
-.swiper-container-android .swiper-slide,
-.swiper-wrapper {
-   transform: translate3d(0px, 0, 0);
+.swiper-free-mode > .swiper-wrapper {
+   -webkit-transition-timing-function: ease-out;
+   -moz-transition-timing-function: ease-out;
+   -ms-transition-timing-function: ease-out;
+   -o-transition-timing-function: ease-out;
+   transition-timing-function: ease-out;
+   margin: 0 auto;
 }
+.swiper-slide {
+   float: left;
+   -webkit-box-sizing: content-box;
+   -moz-box-sizing: content-box;
+   box-sizing: content-box;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+   -ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+   -ms-touch-action: pan-x;
+}
+
+/* ===============================================================
+Your custom styles, here you need to specify container's and slide's
+sizes, pagination, etc.
+================================================================*/
+.swiper-container {
+   /* Specify Swiper's Size: */
+
+   /*width:200px;
+	height: 100px;*/
+}
+.swiper-slide {
+   /* Specify Slides's Size: */
+
+   // width: 100%;
+   // height: 100%;
+}
+.swiper-slide-active {
+   /* Specific active slide styling: */
+}
+.swiper-slide-visible {
+   /* Specific visible slide styling: */
+}
+/* ===============================================================
+Pagination Styles
+================================================================*/
+.swiper-pagination-switch {
+   /* Stylize pagination button: */
+}
+.swiper-active-switch {
+   /* Specific active button style: */
+}
+.swiper-visible-switch {
+   /* Specific visible button style: */
+}
+.swiper-button {
+   opacity: 0;
+}
+
 .works-page {
+   position: relative;
    .swiper-wrapper img {
       padding-bottom: 30px;
       min-height: 220px;
       width: 100%;
       @media screen and (min-width: 640px) {
          height: 340px;
+         @media screen and (min-width: 1000px) {
+         }
       }
    }
    .swiper-pagination {
@@ -60,64 +144,76 @@
          opacity: 0.5;
       }
    }
-   // .swiper-pagination {
-   //    position: absolute;
-   //    left: 0;
-   //    bottom: 0;
-   // }
-   .card-work {
-      // .card-work__arrows
+   @media screen and (min-width: 1000px) {
+      .swiper-button {
+         opacity: 1;
+      }
+      .swiper-button-lock {
+         display: block;
+      }
+      .swiper-pagination {
+         display: none;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+         color: $mainWhiteColor;
+         background: rgba(174, 123, 60, 1);
+         border-radius: 50%;
+         width: 60px;
+         height: 60px;
+         top: 33%;
+      }
+      @media screen and (min-width: 1000px) {
+         .swiper-button-next:after,
+         .swiper-button-prev:after {
+            font-size: 20px;
+         }
+      }
 
-      &__arrows {
-      }
-   }
-   .swiper-horizontal > .swiper-pagination-bullets,
-   .swiper-pagination-bullets.swiper-pagination-horizontal,
-   .swiper-pagination-custom,
-   .swiper-pagination-fraction {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      .swiper-pagination-bullet-active {
-         background-color: $mainBrownColor;
-      }
-   }
-   .swiper-button {
-      opacity: 0;
-   }
-}
-.partners-page {
-   .slider__body {
-      position: relative;
-   }
-   .swiper-container {
-   }
-   .swiper-wrapper {
-      height: 142px;
       @media screen and (min-width: 1000px) {
-         height: 172px;
-      }
-   }
-   .swiper-slide img {
-      padding: 12px 14px;
-      height: 45px;
-      width: 105px;
-      border: 1px solid #e9e9e8;
-      @media screen and (min-width: 640px) {
-         height: 65px;
-         width: 157px;
-      }
-      @media screen and (min-width: 1000px) {
-         height: 72px;
-         width: 195px;
-      }
-   }
-   .swiper-horizontal > .swiper-pagination-bullets,
-   .swiper-pagination-bullets.swiper-pagination-horizontal,
-   .swiper-pagination-custom,
-   .swiper-pagination-fraction {
-      .swiper-pagination-bullet-active {
-         background-color: $mainBrownColor;
+         .swiper-slide-prev,
+         .swiper-slide-next {
+            .swiper-slide__title,
+            .swiper-slide__sub {
+               opacity: 0;
+               transition: opacity 250ms ease-in;
+            }
+         }
       }
    }
 }
+// .partners-page {
+//    .slider__body {
+//       position: relative;
+//    }
+//    .swiper-container {
+//    }
+//    .swiper-wrapper {
+//       height: 142px;
+//       @media screen and (min-width: 1000px) {
+//          height: 172px;
+//       }
+//    }
+//    .swiper-slide img {
+//       padding: 12px 14px;
+//       height: 45px;
+//       width: 105px;
+//       border: 1px solid #e9e9e8;
+//       @media screen and (min-width: 640px) {
+//          height: 65px;
+//          width: 157px;
+//       }
+//       @media screen and (min-width: 1000px) {
+//          height: 72px;
+//          width: 195px;
+//       }
+//    }
+//    .swiper-horizontal > .swiper-pagination-bullets,
+//    .swiper-pagination-bullets.swiper-pagination-horizontal,
+//    .swiper-pagination-custom,
+//    .swiper-pagination-fraction {
+//       .swiper-pagination-bullet-active {
+//          background-color: $mainBrownColor;
+//       }
+//    }
+// }
