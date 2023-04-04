@@ -38,6 +38,7 @@ let swiper2 = new Swiper('.partners-page__slider', {
    breakpoints: {
       320: {
          slidesPerView: 2,
+         spaceBetween: 10,
       },
       480: {
          slidesPerView: 2,
@@ -51,7 +52,7 @@ let swiper2 = new Swiper('.partners-page__slider', {
          slidesPerView: 4,
          spaceBetween: 20,
       },
-      1268: {
+      1440: {
          slidesPerView: 4,
          spaceBetween: 30,
       },

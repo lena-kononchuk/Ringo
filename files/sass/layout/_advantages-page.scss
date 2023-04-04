@@ -14,9 +14,24 @@
          font-size: 36px;
          line-height: 45px;
       }
+      @media screen and (min-width: 1000px) {
+         font-size: 46px;
+         line-height: 58px;
+      }
    }
 }
 .card-set {
+   :hover {
+      .card-set__title {
+         color: $mainBrownColor;
+         transition: color 500ms ease-in;
+      }
+      .card-set__images {
+         opacity: 1;
+         transform: scale(1.1);
+         transition: transform 500ms ease-in;
+      }
+   }
    hr {
       opacity: 0.2;
    }
@@ -74,6 +89,7 @@
       @media screen and (min-width: 640px) {
          font-size: 28px;
          line-height: 36px;
+         cursor: pointer;
       }
    }
 
@@ -84,5 +100,8 @@
       font-size: 16px;
       line-height: 22px;
       opacity: 0.8;
+      @media screen and (min-width: 1000px) {
+         max-width: 347px;
+      }
    }
 }

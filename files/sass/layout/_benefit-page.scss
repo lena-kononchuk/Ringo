@@ -17,6 +17,12 @@
          font-size: 36px;
          line-height: 45px;
       }
+      @media screen and (min-width: 1000px) {
+         max-width: 362px;
+         margin: 0 auto;
+         font-size: 46px;
+         line-height: 58px;
+      }
    }
 
    // .benefit-page__conditions
@@ -27,6 +33,10 @@
       font-size: 16px;
       line-height: 22px;
       opacity: 0.8;
+      @media screen and (min-width: 1000px) {
+         max-width: 362px;
+         margin: 0 auto;
+      }
    }
 
    // .benefit-page__button
@@ -38,10 +48,39 @@
          width: 30%;
       }
    }
-}
-.container {
-}
-.gift-card {
-   display: none;
-   // .gift-card__left
+   .gift-card {
+      @media screen and (max-width: 1000px) {
+         display: none;
+      }
+      @media screen and (min-width: 1000px) {
+         position: relative;
+         display: flex;
+         justify-content: space-between;
+         padding: 0 80px;
+         &__left {
+            ::before {
+               content: " ";
+               background: url("/files/images/present/toaster-min.png");
+               position: absolute;
+               bottom: 40px;
+               left: 44px;
+               width: 160px;
+               height: 130px;
+            }
+         }
+         &__right {
+            ::before {
+               content: " ";
+               background: url("/files/images/present/microwave-min.png");
+               position: absolute;
+               bottom: 40px;
+               right: 44px;
+               width: 193px;
+               height: 130px;
+            }
+         }
+      }
+
+      // .gift-card__left
+   }
 }

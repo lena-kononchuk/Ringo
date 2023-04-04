@@ -13,10 +13,14 @@
          font-size: 36px;
          line-height: 47px;
       }
+      @media screen and (min-width: 1000px) {
+         max-width: 814px;
+         margin: 0 auto;
+      }
    }
 }
 .video-card {
-   @media screen and (max-width: 768px) {
+   @media screen and (max-width: 1440px) {
       display: none;
    }
    // .video-card__left

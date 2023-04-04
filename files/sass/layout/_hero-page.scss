@@ -27,6 +27,11 @@
          font-size: 56px;
          line-height: 67px;
       }
+      @media screen and (min-width: 1000px) {
+         max-width: 537px;
+         margin-left: auto;
+         margin-right: auto;
+      }
    }
 
    // .hero-page__subtitle
@@ -42,30 +47,34 @@
          font-size: 18px;
          line-height: 27px;
       }
+      @media screen and (min-width: 1000px) {
+         max-width: 537px;
+         margin-left: auto;
+         margin-right: auto;
+      }
    }
 
    // .hero-page__button
 
    &__button {
-      margin-bottom: 62px;
+      background-color: $mainBrownColor;
+      box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+      @media screen and (min-width: 1000px) {
+         max-width: 260px;
+         margin: 0 auto;
+      }
    }
 
    // .hero-page__link
 
    &__link {
       font-weight: 700;
-      padding: 20px 62px;
       text-decoration: none;
-      color: $mainWhiteColor;
-      background-color: $mainBrownColor;
-      box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
       font-family: "Raleway";
       line-height: 16px;
-      :hover {
-         background: #cc9654;
-      }
+      color: $mainWhiteColor;
    }
    .hero-break {
-      margin-bottom: 30px;
+      margin: 62px 0 30px 0;
    }
 }

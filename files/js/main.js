@@ -43,12 +43,4 @@
    }
 })();
 // ----------------------------- upload 
-function uploadFile(target) {
-   document.getElementById("file-name").innerHTML = target.files[0].name;
-}
 
-// function opasityElement() {
-//    const focusEl = document.querySelector('.card-set__text-block');
-//    const images = document.querySelector('.card-set__images');
-//    focusEl
-// }

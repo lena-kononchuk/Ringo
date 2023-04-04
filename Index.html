@@ -16,15 +16,6 @@
       }
    </style>
 </head>
-<!-- todo display:block для тега а, щоб працювала вертикальна геометрія -->
-<!-- todo для отступу між flex блоками використовувати margin(для предка margin -) а для дочерніх margin -->
-<!-- todo для розміру блоків flex використовувати функцію calc() -->
-<!-- !!!для зміни чи додаваня стилів для єлементу викристовуємо модифікатор чи мікс https://ru.bem.info/methodology/quick-start/#%D0%BC%D0%B8%D0%BA%D1%81-->
-
-<!-- todo placefolder для однакових стилів в сайті (статичний шаблон)-->
-<!--!! (%notification(імя класа) ) і @extend де потрібно використавувати цей шаблон (@extend %notification)-->
-<!--todo mixin - це шаблони які ми можемо настроїти самостійно -->
-<!--!! @mixinНАЗВА МІКСИНУ (приклад:@mixin centeredFlex(){}) і @include для визову (примір:  @include centeredFlex())-->
 
 <body>
    <header class="page-header">
@@ -93,7 +84,7 @@
                   якісним
                   меблевим продуктом власного виробництва.</p>
             </div>
-            <div class="hero-page__button">
+            <div class="hero-page__button form-label__button">
                <a class="hero-page__link" href="#form">Обговорити проект</a>
             </div>
             <hr class="hero-break" />
@@ -224,10 +215,11 @@
                         alt="мобільність в роботі з кліентами">
                   </div>
                   <div class="card-set__text-block">
-                     <h3 class="card-set__title">Мобільність</h3>
+                     <h3 class="card-set__title ">Мобільність</h3>
                      <p class="card-set__text">Проводимо зустрічі на об`єктах в затишних закладах Києва</p>
                   </div>
                </li>
+
                <hr>
                <li class="card-set__item">
                   <div class="card-set__img">
@@ -320,7 +312,7 @@
          </div>
       </section>
       <section class="stages-page">
-         <div class="container">
+         <div class="container stages-page__container">
             <h2 class="stages-page__title">Етапи роботи</h2>
             <ul class="card-stages">
                <li class="card-stages__items">
