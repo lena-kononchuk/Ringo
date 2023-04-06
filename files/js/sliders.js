@@ -1,7 +1,10 @@
 // works section swiper
-const swiper1 = new Swiper('.works-page__slider', {
+const swiper = new Swiper('.works-page__slider', {
    loop: false,
    speed: 500,
+   autoplay: {
+      delay: 3000,
+   },
    effect: 'coverflow',
    coverflowEffect: {
       rotate: 0,
@@ -41,41 +44,3 @@ const swiper1 = new Swiper('.works-page__slider', {
    },
 });
 
-
-// partners section swiper
-let swiper2 = new Swiper('.partners-page__slider', {
-   slidesPerView: 2,
-   spaceBetween: 10,
-   // Navigation arrows
-   // Optional parameters
-
-
-
-   // If we need pagination
-   pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-   },
-   breakpoints: {
-      320: {
-         slidesPerView: 2,
-         spaceBetween: 10,
-      },
-      480: {
-         slidesPerView: 2,
-         spaceBetween: 15,
-      },
-      640: {
-         slidesPerView: 3,
-         spaceBetween: 20,
-      },
-      1000: {
-         slidesPerView: 4,
-         spaceBetween: 20,
-      },
-      1440: {
-         slidesPerView: 4,
-         spaceBetween: 30,
-      },
-   },
-});

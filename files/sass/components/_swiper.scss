@@ -92,8 +92,16 @@ sizes, pagination, etc.
 /* ===============================================================
 Pagination Styles
 ================================================================*/
-.swiper-pagination-switch {
+.swiper-pagination-bullet {
+   width: 8px;
+   height: 8px;
+   background: #282b22;
+   opacity: 0.3;
    /* Stylize pagination button: */
+}
+.swiper-pagination-bullet-active {
+   background: #ae7b3c;
+   opacity: 1;
 }
 .swiper-active-switch {
    /* Specific active button style: */
@@ -118,6 +126,7 @@ Pagination Styles
       }
    }
    .swiper-pagination {
+      bottom: 0;
    }
    .swiper-slide {
       // position: relative;
@@ -176,44 +185,57 @@ Pagination Styles
             .swiper-slide__title,
             .swiper-slide__sub {
                opacity: 0;
-               transition: opacity 250ms ease-in;
+               transition: all 50ms ease-in;
             }
          }
       }
    }
 }
-// .partners-page {
-//    .slider__body {
-//       position: relative;
-//    }
-//    .swiper-container {
-//    }
-//    .swiper-wrapper {
-//       height: 142px;
-//       @media screen and (min-width: 1000px) {
-//          height: 172px;
-//       }
-//    }
-//    .swiper-slide img {
-//       padding: 12px 14px;
-//       height: 45px;
-//       width: 105px;
-//       border: 1px solid #e9e9e8;
-//       @media screen and (min-width: 640px) {
-//          height: 65px;
-//          width: 157px;
-//       }
-//       @media screen and (min-width: 1000px) {
-//          height: 72px;
-//          width: 195px;
-//       }
-//    }
-//    .swiper-horizontal > .swiper-pagination-bullets,
-//    .swiper-pagination-bullets.swiper-pagination-horizontal,
-//    .swiper-pagination-custom,
-//    .swiper-pagination-fraction {
-//       .swiper-pagination-bullet-active {
-//          background-color: $mainBrownColor;
-//       }
-//    }
-// }
+.partners-page {
+   .slider__body {
+      position: relative;
+   }
+   .swiper-container {
+      width: 100%;
+      height: 142px;
+      // margin-left: auto;
+      // margin-right: auto;
+   }
+   .swiper-wrapper {
+      max-width: 142px;
+      height: 56px;
+      width: 100%;
+      @media screen and (min-width: 1000px) {
+      }
+   }
+
+   .swiper-slide img {
+      height: 44px;
+      width: 97px;
+      padding: 12px 18px;
+      border: 1px solid #e9e9e8;
+      @media screen and (min-width: 640px) {
+         width: 145px;
+         height: 52px;
+      }
+      @media screen and (min-width: 1000px) {
+         width: 187px;
+         height: 70px;
+      }
+      @media screen and (min-width: 1440px) {
+         width: 200px;
+         height: 70px;
+      }
+   }
+   .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      background: #282b22;
+      opacity: 0.3;
+      /* Stylize pagination button: */
+   }
+   .swiper-pagination-bullet-active {
+      background: #ae7b3c;
+      opacity: 1;
+   }
+}

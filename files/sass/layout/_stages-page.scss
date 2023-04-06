@@ -29,6 +29,14 @@
    }
 }
 .card-stages {
+   :hover {
+      .card-stages__number {
+         color: $mainBrownColor;
+         border: 1px solid $mainBrownColor;
+         transition: all 250ms ease-in-out;
+         opacity: 1;
+      }
+   }
    @media screen and (min-width: 640px) {
       display: flex;
       flex-wrap: wrap;

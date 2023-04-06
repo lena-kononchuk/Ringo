@@ -64,6 +64,7 @@
    position: absolute;
    bottom: 44px;
    left: 90px;
+   column-gap: 7px;
    @media screen and (min-width: 640px) {
       bottom: 59px;
    }

@@ -21,6 +21,14 @@
             max-width: 350px;
          }
       }
+      @media screen and (min-width: 1440px) {
+      }
+      @media screen and (min-width: 1440px) {
+         padding-left: 200px;
+         .form {
+            min-width: 413px;
+         }
+      }
    }
    &__title {
       text-transform: uppercase;
@@ -59,6 +67,14 @@
       }
       @media screen and (min-width: 1000px) {
          background-position: center center;
+      }
+      @media screen and (min-width: 1440px) {
+         // padding-right: 200px;
+         // background-size: 100% 100%;
+         // background-position: center top;
+      }
+      @media screen and (min-width: 1600px) {
+         // background-size: 100%;
       }
    }
 }

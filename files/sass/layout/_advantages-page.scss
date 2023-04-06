@@ -31,6 +31,11 @@
          transform: scale(1.1);
          transition: transform 500ms ease-in;
       }
+      .card-set__number {
+         color: $mainBrownColor;
+         transition: color 500ms ease-in;
+         opacity: 1;
+      }
    }
    hr {
       opacity: 0.2;

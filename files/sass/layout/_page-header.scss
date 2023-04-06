@@ -91,6 +91,9 @@
          right: 44px;
          top: 25px;
       }
+      @media screen and (min-width: 1440px) {
+         right: 155px;
+      }
       // .profile-header__menu
 
       &__menu {

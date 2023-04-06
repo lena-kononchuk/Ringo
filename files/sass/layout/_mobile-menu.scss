@@ -114,6 +114,15 @@
          transition: background 250ms ease-in-out;
       }
    }
+   &__link {
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      text-decoration: none;
+      font-family: "Raleway";
+      line-height: 16px;
+      color: $mainWhiteColor;
+   }
 }
 
 .mobile-sosial {
