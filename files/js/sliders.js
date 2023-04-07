@@ -33,6 +33,10 @@ const swiper = new Swiper('.works-page__slider', {
          slidesPerView: 1,
          spaceBetween: 40,
       },
+      768: {
+         slidesPerView: 2,
+         spaceBetween: 40,
+      },
       1000: {
          slidesPerView: 2,
          spaceBetween: 40,

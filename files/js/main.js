@@ -43,4 +43,26 @@
    }
 })();
 // ----------------------------- upload 
+// validate a form
+function validateForm() {
+   var name = document.forms["myForm"]["name"].value;
+   // var age = document.forms["myForm"]["age"].value;
+   var errorDiv = document.querySelectorAll("error");
+
+   if (name == isNaN) {
+      errorDiv.innerHTML = "Пожалуйста, заполните все поля";
+      return false;
+   }
+
+   // Если все проверки пройдены, очищаем элемент <div> с ошибками
+   errorDiv.innerHTML = "";
+
+   // Возвращаем true для отправки формы
+   return true;
+}
+
+
+
+
+
 

@@ -21,7 +21,7 @@ let swiper2 = new Swiper('.partners-body__slider', {
          slidesPerView: 3,
          spaceBetween: 20,
       },
-      1000: {
+      992: {
          slidesPerView: 4,
          spaceBetween: 20,
       },

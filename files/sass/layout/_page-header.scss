@@ -57,6 +57,10 @@
       // .navigation-list__item
 
       &__item {
+         :hover {
+            transition: color 250ms ease-in-out;
+            color: $mainBrownColor;
+         }
       }
 
       // .navigation-list__link
@@ -68,6 +72,10 @@
             font-size: 16px;
             line-height: 16px;
             color: #282b22;
+            :hover {
+               transition: color 250ms ease-in-out;
+               color: $mainBrownColor;
+            }
          }
       }
    }
@@ -87,12 +95,16 @@
          right: 80px;
          z-index: 9999;
       }
+      @media screen and (min-width: 992px) {
+         right: 90px;
+         top: 32px;
+      }
       @media screen and (min-width: 1000px) {
          right: 44px;
          top: 25px;
       }
       @media screen and (min-width: 1440px) {
-         right: 155px;
+         right: 181px;
       }
       // .profile-header__menu
 
@@ -114,6 +126,7 @@
          @media screen and (min-width: 1000px) {
             padding-left: 0px;
          }
+         // .profile-header__icon
       }
       // .profile-header__links
 

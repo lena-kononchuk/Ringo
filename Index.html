@@ -5,10 +5,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="theme-color" content="#317EFB" />
+   <meta name="theme-color" content="#317EFB">
    <title>Ringo - Furniture production site</title>
    <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
    <link rel="stylesheet" href="/files/css/main.min.css">
    <style>
       video {
@@ -92,7 +92,8 @@
             <div class="hero-page__button form-label__button">
                <a class="hero-page__link" href="#form">Обговорити проект</a>
             </div>
-            <hr class="hero-break" />
+            <hr class="hero-break">
+         </div>
       </section>
       <section id="directions" class="directions-page">
          <div class="container">
@@ -190,21 +191,18 @@
                </video>
             </div>
             <ul class="content-list">
-               <hr>
                <li class="content-list__item">
                   <p class="content-list__text">Наш колектив націлений на результат - вчасно реалізувати проект на
                      найвищому рівні. Ми забезпечуємо
                      спокій замовника та
                      вирішуємо будь-які задачі</p>
                </li>
-               <hr>
                <li class="content-list__item">
                   <p class="content-list__text">Рінго найкращий підрядник прораба, дизайнера, проект-менеджера або
                      персональний помічник власника
                      бізнесу, квартири чи
                      салону</p>
                </li>
-               <hr>
             </ul>
          </div>
       </section>
@@ -212,7 +210,6 @@
          <div class="container">
             <h2 class="advantages-page__title">Наші переваги</h2>
             <ul class="card-set">
-               <hr>
                <li class="card-set__item">
                   <div class="card-set__img">
                      <span class="card-set__number">01</span>
@@ -224,8 +221,6 @@
                      <p class="card-set__text">Проводимо зустрічі на об`єктах в затишних закладах Києва</p>
                   </div>
                </li>
-
-               <hr>
                <li class="card-set__item">
                   <div class="card-set__img">
                      <span class="card-set__number">02</span>
@@ -238,7 +233,6 @@
                         проекту</p>
                   </div>
                </li>
-               <hr>
                <li class="card-set__item">
                   <div class="card-set__img">
                      <span class="card-set__number">03</span>
@@ -249,7 +243,6 @@
                      <p class="card-set__text">Виготовляємо виключно з перевірених європейських брендів</p>
                   </div>
                </li>
-               <hr>
                <li class="card-set__item">
                   <div class="card-set__img">
                      <span class="card-set__number">04</span>
@@ -261,7 +254,6 @@
                      <p class="card-set__text">Наша команда - це клуб професіоналів, об`єднаних в одній компанії</p>
                   </div>
                </li>
-               <hr>
                <li class="card-set__item">
                   <div class="card-set__img">
                      <span class="card-set__number">05</span>
@@ -279,38 +271,36 @@
       <section class="contact-page" id="form">
          <div class="contact-page__body contact-body">
             <div class="contact-body__form">
-               <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
+               <form name="myForm" autocomplete="off" action=" /files/componetns/sendmail/sendmail.php/files/files"
                   class="js-speaker-form form">
                   <h2 class="contact-body__title">Обговоримо ваш проект?</h2>
                   <p class="contact-body__sub-title">Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
-                  <div role="form-group">
-                     <label class="form__field">
-                        <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
-                        <span class="form__label">Ім'я</span>
-                     </label>
-                     <label class="form__field">
-                        <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
-                        <span class="form__label">Телефон</span>
-                     </label>
-                     <div class="inputfile-box">
-                        <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
-                        <label for="file">
-                           <span id="file-name" class="file-box"></span>
-                           <svg height="18" class="file-button">
-                              <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
-                           </svg>
-                           <span class="file-label">Прикріпити проект</span>
-                        </label>
-                     </div>
-                     <button class="form-label__button" type="submit">Відправити</button>
-                     <label class="policy">
-                        <input type="checkbox" class="policy__checkbox">
-                        <svg width=" 15" height="15" class="policy__icon">
-                           <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                  <label class="form__field">
+                     <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " required>
+                     <span class="form__label">Ім'я</span>
+                  </label>
+                  <label class="form__field">
+                     <input type="tel" name="phone" data-error="Ошибка" class="form__input" placeholder=" " required>
+                     <span class="form__label">Телефон</span>
+                  </label>
+                  <div class="inputfile-box">
+                     <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
+                     <label for="file">
+                        <span id="file-name" class="file-box"></span>
+                        <svg height="18" class="file-button">
+                           <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
                         </svg>
-                        <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+                        <span class="file-label">Прикріпити проект</span>
                      </label>
                   </div>
+                  <button class="form-label__button" type="submit">Відправити</button>
+                  <label class="policy">
+                     <input type="checkbox" class="policy__checkbox">
+                     <svg width=" 15" height="15" class="policy__icon">
+                        <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                     </svg>
+                     <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+                  </label>
                </form>
             </div>
             <div class="contact-body__background"></div>
@@ -463,6 +453,7 @@
                   <div class="swiper-pagination"></div>
                </div>
             </div>
+         </div>
       </section>
       <section class="discuss-page">
          <div class="discuss-page__body body-discuss">
@@ -472,25 +463,23 @@
                   <h2 class="body-discuss__title">Залишилися питання?</h2>
                   <h3 class="body-discuss__sub-title">Отримай безкоштовну консультацію менеджера та прорахунок проекту
                   </h3>
-                  <div role="form-group">
-                     <label class="form__field">
-                        <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
-                        <span class="form__label">Ім'я</span>
-                     </label>
-                     <label class="form__field">
-                        <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
-                        <span class="form__label">Телефон</span>
-                     </label>
-                     <button class="form-label__button" type="submit">Відправити</button>
-                     <label class="policy">
-                        <input type="checkbox" class="policy__checkbox">
-                        <svg width=" 15" height="15" class="policy__icon">
-                           <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked">
-                           </use>
-                        </svg>
-                        <span class="policy__label">Даю згоду на оброблення персональних даних</span>
-                     </label>
-                  </div>
+                  <label class="form__field">
+                     <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" ">
+                     <span class="form__label">Ім'я</span>
+                  </label>
+                  <label class="form__field">
+                     <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" ">
+                     <span class="form__label">Телефон</span>
+                  </label>
+                  <button class="form-label__button" type="submit">Відправити</button>
+                  <label class="policy">
+                     <input type="checkbox" class="policy__checkbox">
+                     <svg width=" 15" height="15" class="policy__icon">
+                        <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked">
+                        </use>
+                     </svg>
+                     <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+                  </label>
                </form>
             </div>
             <div class="body-discuss__background"></div>
@@ -610,24 +599,22 @@
             <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
                class="js-speaker-form form">
                <h3 class="form__title">Заповніть форму, і ми звяжемося та розповімо про умови акції</h3>
-               <div role="form-group">
-                  <label class="form__field">
-                     <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
-                     <span class="form__label">Ім'я</span>
-                  </label>
-                  <label class="form__field">
-                     <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
-                     <span class="form__label">Телефон</span>
-                  </label>
-                  <button class="form-label__button" type="submit">Відправити</button>
-                  <label class="policy">
-                     <input type="checkbox" class="policy__checkbox">
-                     <svg width=" 15" height="15" class="policy__icon">
-                        <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
-                     </svg>
-                     <span class="policy__label">Даю згоду на оброблення персональних даних</span>
-                  </label>
-               </div>
+               <label class="form__field">
+                  <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" ">
+                  <span class="form__label">Ім'я</span>
+               </label>
+               <label class="form__field">
+                  <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" ">
+                  <span class="form__label">Телефон</span>
+               </label>
+               <button class="form-label__button" type="submit">Відправити</button>
+               <label class="policy">
+                  <input type="checkbox" class="policy__checkbox">
+                  <svg width=" 15" height="15" class="policy__icon">
+                     <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                  </svg>
+                  <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+               </label>
             </form>
          </div>
       </div>
@@ -646,27 +633,25 @@
             <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
                class="js-speaker-form form">
                <h3 class="form__title">Заповніть форму, і ми звяжемося та обговоримо з вами усі деталі</h3>
-               <div role="form-group">
-                  <label class="form__field">
-                     <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" " />
-                     <span class="form__label">Ім'я</span>
-                  </label>
-                  <label class="form__field">
-                     <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" " />
-                     <span class="form__label">Телефон</span>
-                  </label>
-                  <label class="form__field textarea">
-                     <textarea class="textarea__input" placeholder="Коротко про себе"></textarea>
-                  </label>
-                  <button class="form-label__button" type="submit">Відправити</button>
-                  <label class="policy">
-                     <input type="checkbox" class="policy__checkbox">
-                     <svg width=" 15" height="15" class="policy__icon">
-                        <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
-                     </svg>
-                     <span class="policy__label">Даю згоду на оброблення персональних даних</span>
-                  </label>
-               </div>
+               <label class="form__field">
+                  <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" ">
+                  <span class="form__label">Ім'я</span>
+               </label>
+               <label class="form__field">
+                  <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" ">
+                  <span class="form__label">Телефон</span>
+               </label>
+               <label class="form__field textarea">
+                  <textarea class="textarea__input" placeholder="Коротко про себе"></textarea>
+               </label>
+               <button class="form-label__button" type="submit">Відправити</button>
+               <label class="policy">
+                  <input type="checkbox" class="policy__checkbox">
+                  <svg width=" 15" height="15" class="policy__icon">
+                     <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
+                  </svg>
+                  <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+               </label>
             </form>
          </div>
       </div>
@@ -686,14 +671,12 @@
       </button>
       <div class="mobile-body">
          <ul class="mobile-list">
-            <li style="width: 200;" class="mobile-list__item"><a class="mobile-list__link"
-                  href="#directions">Напрямки</a></li>
-            <li style="width: 200;" class="mobile-list__item"><a class="mobile-list__link" href="#about">Про
+            <li class="mobile-list__item"><a class="mobile-list__link" href="#directions">Напрямки</a></li>
+            <li class="mobile-list__item"><a class="mobile-list__link" href="#about">Про
                   компанію</a>
             </li>
-            <li style="width: 200;" class="mobile-list__item"><a class="mobile-list__link"
-                  href="#advantages">Переваги</a></li>
-            <li style="width: 200;" class="mobile-list__item"><a class="mobile-list__link" href="#stages">Етапи
+            <li class="mobile-list__item"><a class="mobile-list__link" href="#advantages">Переваги</a></li>
+            <li class="mobile-list__item"><a class="mobile-list__link" href="#stages">Етапи
                   роботи</a>
             </li>
          </ul>
@@ -741,11 +724,11 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"></script>
 
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-   <script type="text/javascript" src="./files/js/sliders.js"></script>
-   <script type="text/javascript" src="./files/js/swiper.js"></script>
-   <script type="text/javascript" src="./files/js/mobile-menu.js"></script>
-   <script type="text/javascript" src="./files/js/main.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <script src="./files/js/sliders.js"></script>
+   <script src="./files/js/swiper.js"></script>
+   <script src="./files/js/mobile-menu.js"></script>
+   <script src="./files/js/main.js"></script>
 </body>
 
 </html>

@@ -304,6 +304,11 @@ html {
     width: 728px;
   }
 }
+@media screen and (min-width: 992px) {
+  .container {
+    width: 952px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .container {
     width: 960px;
@@ -580,7 +585,12 @@ Pagination Styles
 }
 @media screen and (min-width: 640px) {
   .works-page .swiper-wrapper img {
-    height: 340px;
+    height: 380px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .works-page .swiper-wrapper img {
+    height: 240px;
   }
 }
 .works-page .swiper-pagination {
@@ -663,6 +673,18 @@ Pagination Styles
   .partners-page .swiper-slide img {
     width: 145px;
     height: 52px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .partners-page .swiper-slide img {
+    width: 191px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .partners-page .swiper-slide img {
+    width: 184px;
+    height: 60px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -751,6 +773,10 @@ Pagination Styles
          column-gap: 79px;
   }
 }
+.page-header .navigation-list__item :hover {
+  transition: color 250ms ease-in-out;
+  color: #ae7b3c;
+}
 @media screen and (min-width: 1000px) {
   .page-header .navigation-list__link {
     text-decoration: none;
@@ -758,6 +784,10 @@ Pagination Styles
     font-size: 16px;
     line-height: 16px;
     color: #282b22;
+  }
+  .page-header .navigation-list__link :hover {
+    transition: color 250ms ease-in-out;
+    color: #ae7b3c;
   }
 }
 .page-header .logo__icon {
@@ -771,6 +801,12 @@ Pagination Styles
     z-index: 9999;
   }
 }
+@media screen and (min-width: 992px) {
+  .page-header .profile-header {
+    right: 90px;
+    top: 32px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .page-header .profile-header {
     right: 44px;
@@ -779,7 +815,7 @@ Pagination Styles
 }
 @media screen and (min-width: 1440px) {
   .page-header .profile-header {
-    right: 155px;
+    right: 181px;
   }
 }
 @media screen and (min-width: 640px) {
@@ -828,12 +864,23 @@ Pagination Styles
   color: rgb(255, 255, 255);
   padding-bottom: 20px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   .hero-page {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url("/files/images/background/hero-bg.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: auto auto;
+    background-position: right top;
+  }
+}
+@media screen and (min-width: 640px) {
+  .hero-page {
+    background-size: auto auto;
+    background-position: center top;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .hero-page {
+    background-size: 100% auto;
   }
 }
 .hero-page__title {
@@ -884,7 +931,7 @@ Pagination Styles
   background-color: #ae7b3c;
   box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 640px) {
   .hero-page__button {
     max-width: 260px;
     margin: 0 auto;
@@ -1400,6 +1447,16 @@ Pagination Styles
     padding-left: 60px;
   }
 }
+@media screen and (min-width: 768px) {
+  .card-stages__items {
+    padding-left: 90px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-stages__items {
+    padding-left: 70px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .card-stages__items {
     padding-left: 0px;
@@ -1644,6 +1701,7 @@ Pagination Styles
   .footer-page__header {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -1667,16 +1725,6 @@ Pagination Styles
 .footer-social {
   position: relative;
   padding-bottom: 50px;
-}
-@media screen and (min-width: 640px) {
-  .footer-social {
-    padding-right: 170px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .footer-social {
-    padding-right: 139px;
-  }
 }
 .footer-social__title {
   font-size: 14px;
@@ -1712,6 +1760,12 @@ Pagination Styles
          column-gap: 24px;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer-nav {
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+  }
+}
 
 .navigation-menu {
   padding-bottom: 50px;
@@ -1724,11 +1778,19 @@ Pagination Styles
     padding-bottom: 30px;
   }
 }
+.navigation-menu__item:not(:last-child) :hover {
+  transition: color 250ms ease-in-out;
+  color: #ae7b3c;
+}
 .navigation-menu__link {
   text-decoration: none;
   font-size: 16px;
   line-height: 16px;
   color: rgb(40, 43, 34);
+}
+.navigation-menu__link :hover {
+  transition: color 250ms ease-in-out;
+  color: #ae7b3c;
 }
 
 .footer-connect {
@@ -1743,7 +1805,7 @@ Pagination Styles
          column-gap: 122px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 992px) {
   .footer-connect {
     display: block;
   }
@@ -1763,7 +1825,7 @@ Pagination Styles
     padding-top: 27px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 992px) {
   .footer-connect__link {
     padding-top: 0px;
   }
@@ -1809,6 +1871,7 @@ Pagination Styles
   .footer-page__header {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -1832,16 +1895,6 @@ Pagination Styles
 .footer-social {
   position: relative;
   padding-bottom: 50px;
-}
-@media screen and (min-width: 640px) {
-  .footer-social {
-    padding-right: 170px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .footer-social {
-    padding-right: 139px;
-  }
 }
 .footer-social__title {
   font-size: 14px;
@@ -1877,6 +1930,12 @@ Pagination Styles
          column-gap: 24px;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer-nav {
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+  }
+}
 
 .navigation-menu {
   padding-bottom: 50px;
@@ -1889,11 +1948,19 @@ Pagination Styles
     padding-bottom: 30px;
   }
 }
+.navigation-menu__item:not(:last-child) :hover {
+  transition: color 250ms ease-in-out;
+  color: #ae7b3c;
+}
 .navigation-menu__link {
   text-decoration: none;
   font-size: 16px;
   line-height: 16px;
   color: rgb(40, 43, 34);
+}
+.navigation-menu__link :hover {
+  transition: color 250ms ease-in-out;
+  color: #ae7b3c;
 }
 
 .footer-connect {
@@ -1908,7 +1975,7 @@ Pagination Styles
          column-gap: 122px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 992px) {
   .footer-connect {
     display: block;
   }
@@ -1928,7 +1995,7 @@ Pagination Styles
     padding-top: 27px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 992px) {
   .footer-connect__link {
     padding-top: 0px;
   }
