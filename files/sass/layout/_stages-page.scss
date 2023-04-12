@@ -1,5 +1,5 @@
 .stages-page {
-   padding: 80px 0 100px 0;
+   padding: 80px 0 50px 0;
    font-family: "Raleway", sans-serif;
    font-weight: 600;
    color: $mainTextColor;
@@ -29,6 +29,8 @@
    }
 }
 .card-stages {
+   border-bottom: 1px solid #e7e7e6;
+   padding-bottom: 30px;
    :hover {
       .card-stages__number {
          color: $mainBrownColor;

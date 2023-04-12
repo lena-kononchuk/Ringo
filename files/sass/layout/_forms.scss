@@ -22,7 +22,7 @@
    &__input {
       width: 100%;
       padding-top: 40px;
-
+      padding-bottom: 5px;
       outline: none;
       border: none;
       border-bottom: 2px solid #ffffff;
@@ -54,6 +54,14 @@
    transform: translateY(-30px);
    color: #cc9654;
 }
+.form__input::placeholder {
+   opacity: 0;
+}
+// input.form__input:focus-within > .just-validate-error-label + .form__label {
+//    transform: translateY(-30px);
+//    color: #cc9654;
+// }
+
 .policy {
    padding-top: 40px;
    position: relative;
@@ -99,27 +107,36 @@
    padding: 25px 0 40px 0;
 }
 
-.inputfile {
-   display: none;
-}
+// .inputfile {
+//    display: none;
+// }
 
-.file-box {
+.file-list {
    position: absolute;
-   top: 48px;
+   top: 38px;
    left: 0;
    display: inline-block;
    width: 100%;
    box-sizing: border-box;
    height: calc(2rem - 2px);
    font-size: 12px;
-   // padding-top: 25px;
+   padding-top: 25px;
 }
-
+.custom-file-upload {
+   font-size: 16px;
+   line-height: 14px;
+   color: #ffffff;
+   opacity: 0.5;
+   span {
+      font-size: 16px;
+      line-height: 20px;
+   }
+}
 .file-button {
    padding-top: 25px;
    position: absolute;
    top: 0px;
-   left: 22px;
+   left: 15px;
    opacity: 0.5;
 }
 .file-label {
@@ -128,4 +145,12 @@
    top: 22px;
    left: 0;
    opacity: 0.5;
+}
+.just-validate-error-label {
+   position: absolute;
+   top: 15px;
+   left: 0;
+}
+.just-validate-error-field.active + .form__label {
+   display: none;
 }

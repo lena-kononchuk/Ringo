@@ -1,14 +1,3 @@
-(() => {
-   document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-      e.preventDefault();
-
-      new FormData(e.currentTarget).forEach((value, name) =>
-         console.log(`${name}: ${value}`),
-      );
-
-      e.currentTarget.reset();
-   });
-})();
 
 // popup gifts
 (() => {
@@ -42,27 +31,22 @@
       refs.modal.classList.toggle("is-hidden");
    }
 })();
-// ----------------------------- upload 
-// validate a form
-function validateForm() {
-   var name = document.forms["myForm"]["name"].value;
-   // var age = document.forms["myForm"]["age"].value;
-   var errorDiv = document.querySelectorAll("error");
+// ----------------------------- upload
+//  ------------------------ handleFileSelect
+function handleFileSelect(event) {
+   const files = event.target.files;
+   const fileList = document.getElementById('file-list');
+   fileList.innerHTML = '';
 
-   if (name == isNaN) {
-      errorDiv.innerHTML = "Пожалуйста, заполните все поля";
-      return false;
+   for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const fileName = document.createElement('span');
+      fileName.textContent = file.name;
+      fileList.appendChild(fileName);
    }
 
-   // Если все проверки пройдены, очищаем элемент <div> с ошибками
-   errorDiv.innerHTML = "";
-
-   // Возвращаем true для отправки формы
-   return true;
+   document.getElementById('file-input').style.display = 'none';
+   fileList.style.display = 'block';
 }
 
-
-
-
-
-
+document.getElementById('file-input').addEventListener('change', handleFileSelect);

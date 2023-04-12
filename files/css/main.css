@@ -314,6 +314,11 @@ html {
     width: 960px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1160px;
+  }
+}
 @media screen and (min-width: 1440px) {
   .container {
     width: 1159px;
@@ -473,7 +478,6 @@ html {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   /* Fix of Webkit flickering */
   z-index: 1;
@@ -593,6 +597,21 @@ Pagination Styles
     height: 240px;
   }
 }
+@media screen and (min-width: 992px) {
+  .works-page .swiper-wrapper img {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works-page .swiper-wrapper img {
+    height: 340px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .works-page .swiper-wrapper img {
+    height: 380px;
+  }
+}
 .works-page .swiper-pagination {
   bottom: 0;
 }
@@ -649,6 +668,9 @@ Pagination Styles
     opacity: 0;
     transition: all 50ms ease-in;
   }
+}
+.works-page .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.7;
 }
 
 .partners-page .slider__body {
@@ -1007,6 +1029,11 @@ Pagination Styles
     flex-direction: column;
   }
 }
+@media screen and (min-width: 768px) {
+  .card-product__item {
+    padding-top: 0px;
+  }
+}
 @media screen and (min-width: 1440px) {
   .card-product__item {
     width: 384px;
@@ -1112,6 +1139,7 @@ Pagination Styles
   padding: 140px 0 80px 0;
 }
 .about-page__title {
+  padding-bottom: 50px;
   font-family: "Raleway";
   font-weight: 600;
   font-size: 20px;
@@ -1153,13 +1181,14 @@ Pagination Styles
 }
 
 .content-list {
-  padding-top: 50px;
+  border-top: 1px solid #e7e7e6;
+  border-bottom: 1px solid #e7e7e6;
 }
 @media screen and (min-width: 640px) {
   .content-list {
     display: flex;
-    -moz-column-gap: 59px;
-         column-gap: 59px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
   }
   .content-list hr {
     display: none;
@@ -1201,6 +1230,7 @@ Pagination Styles
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   color: rgb(40, 43, 34);
+  padding-bottom: 50px;
 }
 .advantages-page__title {
   padding-bottom: 50px;
@@ -1222,14 +1252,19 @@ Pagination Styles
   }
 }
 
+.card-set {
+  border-top: 1px solid #e7e7e6;
+  border-bottom: 1px solid #e7e7e6;
+}
 .card-set :hover .card-set__title {
   color: #ae7b3c;
   transition: color 500ms ease-in;
 }
 .card-set :hover .card-set__images {
+  padding-top: 20px;
   opacity: 1;
-  transform: scale(1.1);
-  transition: transform 500ms ease-in;
+  transform: scale(1.2);
+  transition: transform 500ms ease-in-out;
 }
 .card-set :hover .card-set__number {
   color: #ae7b3c;
@@ -1253,6 +1288,7 @@ Pagination Styles
 .card-set__item {
   position: relative;
   padding: 30px 0 30px 37px;
+  border-bottom: 1px solid #e7e7e6;
 }
 @media screen and (min-width: 640px) {
   .card-set__item {
@@ -1277,6 +1313,7 @@ Pagination Styles
   .card-set__images {
     display: inline-block;
     opacity: 0;
+    padding-left: 40px;
   }
 }
 .card-set__title {
@@ -1298,7 +1335,7 @@ Pagination Styles
 }
 @media screen and (min-width: 1000px) {
   .card-set__text {
-    max-width: 347px;
+    max-width: 424px;
   }
 }
 
@@ -1379,7 +1416,7 @@ Pagination Styles
   }
 }
 .stages-page {
-  padding: 80px 0 100px 0;
+  padding: 80px 0 50px 0;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   color: rgb(40, 43, 34);
@@ -1413,6 +1450,10 @@ Pagination Styles
   }
 }
 
+.card-stages {
+  border-bottom: 1px solid #e7e7e6;
+  padding-bottom: 30px;
+}
 .card-stages :hover .card-stages__number {
   color: #ae7b3c;
   border: 1px solid #ae7b3c;
@@ -2218,6 +2259,7 @@ Pagination Styles
 .form__input {
   width: 100%;
   padding-top: 40px;
+  padding-bottom: 5px;
   outline: none;
   border: none;
   border-bottom: 2px solid #ffffff;
@@ -2252,6 +2294,14 @@ Pagination Styles
 .form__input:not(:placeholder-shown) + .form__label {
   transform: translateY(-30px);
   color: #cc9654;
+}
+
+.form__input::-moz-placeholder {
+  opacity: 0;
+}
+
+.form__input::placeholder {
+  opacity: 0;
 }
 
 .policy {
@@ -2292,26 +2342,34 @@ Pagination Styles
   padding: 25px 0 40px 0;
 }
 
-.inputfile {
-  display: none;
-}
-
-.file-box {
+.file-list {
   position: absolute;
-  top: 48px;
+  top: 38px;
   left: 0;
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
   height: calc(2rem - 2px);
   font-size: 12px;
+  padding-top: 25px;
+}
+
+.custom-file-upload {
+  font-size: 16px;
+  line-height: 14px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.custom-file-upload span {
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .file-button {
   padding-top: 25px;
   position: absolute;
   top: 0px;
-  left: 22px;
+  left: 15px;
   opacity: 0.5;
 }
 
@@ -2320,4 +2378,14 @@ Pagination Styles
   top: 22px;
   left: 0;
   opacity: 0.5;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.just-validate-error-field.active + .form__label {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
