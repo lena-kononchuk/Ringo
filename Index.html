@@ -271,7 +271,8 @@
       <section class="contact-page" id="form">
          <div class="contact-page__body contact-body">
             <div class="contact-body__form">
-               <form id="form" name="myForm" autocomplete="off" action="#" class="js-speaker-form form" method="post">
+               <form id="form_contact" name="myForm" autocomplete="off" action="#" class="js-speaker-form form"
+                  method="post">
                   <h2 class="contact-body__title">Обговоримо ваш проект?</h2>
                   <p class="contact-body__sub-title">Заповніть форму і найближчим часом ми зв'яжемося з вами!</p>
                   <label class="form__field">
@@ -291,18 +292,16 @@
                            <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
                            </svg>
                            Прикріпити проект
-                           <!-- <span class="file-label">Прикріпити проект</span> -->
                      </label>
                   </div>
-
                   <button id="validate-button" class="form-label__button" type="submit">Відправити</button>
                   <label class="policy">
-                     <input id="checkbox" type="checkbox" class="policy__checkbox js-input-checkbox" name="check"
-                        required>
+                     <input id="agree1" type="checkbox" class="policy__checkbox js-input-checkbox" name="agree"
+                        onclick="isCheck()">
                      <svg width=" 15" height="15" class="policy__icon">
                         <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
                      </svg>
-                     <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+                     <span id="label" class="policy__label">Дайте згоду на оброблення персональних даних</span>
                   </label>
                </form>
             </div>
@@ -461,27 +460,28 @@
       <section class="discuss-page">
          <div class="discuss-page__body body-discuss">
             <div class="body-discuss__form">
-               <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
-                  class="js-speaker-form form">
-                  <h2 class="body-discuss__title">Залишилися питання?</h2>
-                  <h3 class="body-discuss__sub-title">Отримай безкоштовну консультацію менеджера та прорахунок проекту
-                  </h3>
+               <form id="form_discuss" name="myForm" autocomplete="off" action="#" class="js-speaker-form form"
+                  method="post">
+                  <h2 class="contact-body__title">Залишилися питання?</h2>
+                  <p class="contact-body__sub-title">Отримай безкоштовну консультацію менеджера та прорахунок проекту
+                  </p>
                   <label class="form__field">
-                     <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" ">
+                     <input type="text" name="name" class="form__input js-input-name active" placeholder=" " value=""
+                        autocomplete="off">
                      <span class="form__label">Ім'я</span>
                   </label>
                   <label class="form__field">
-                     <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" ">
+                     <input type="tel" name="phone" class="form__input js-input-phone active" placeholder=" ">
                      <span class="form__label">Телефон</span>
                   </label>
-                  <button class="form-label__button" type="submit">Відправити</button>
+                  <button id="validate-button" class="form-label__button" type="submit">Відправити</button>
                   <label class="policy">
-                     <input type="checkbox" class="policy__checkbox">
+                     <input id="agree3" type="checkbox" class="policy__checkbox js-input-checkbox" name="agree"
+                        onclick="isCheck()">
                      <svg width=" 15" height="15" class="policy__icon">
-                        <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked">
-                        </use>
+                        <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
                      </svg>
-                     <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+                     <span id="label" class="policy__label">Дайте згоду на оброблення персональних даних</span>
                   </label>
                </form>
             </div>
@@ -599,24 +599,25 @@
                   </use>
                </svg>
             </button>
-            <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
-               class="js-speaker-form form">
+            <form id="form" name="myForm" autocomplete="off" action="#" class="js-speaker-form form" method="post">
                <h3 class="form__title">Заповніть форму, і ми звяжемося та розповімо про умови акції</h3>
                <label class="form__field">
-                  <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" ">
+                  <input type="text" name="name" class="form__input js-input-name active" placeholder=" " value=""
+                     autocomplete="off">
                   <span class="form__label">Ім'я</span>
                </label>
                <label class="form__field">
-                  <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" ">
+                  <input type="tel" name="phone" class="form__input js-input-phone active" placeholder=" ">
                   <span class="form__label">Телефон</span>
                </label>
-               <button class="form-label__button" type="submit">Відправити</button>
+               <button id="btn3" class="form-label__button" type="submit">Відправити</button>
                <label class="policy">
-                  <input type="checkbox" class="policy__checkbox">
+                  <input id="checkbox" type="checkbox" class="policy__checkbox js-input-checkbox" name="agree"
+                     onclick="isCheck()">
                   <svg width=" 15" height="15" class="policy__icon">
                      <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
                   </svg>
-                  <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+                  <span id="label" class="policy__label">Дайте згоду на оброблення персональних даних</span>
                </label>
             </form>
          </div>
@@ -633,27 +634,29 @@
                   </use>
                </svg>
             </button>
-            <form autocomplete="off" action="/files/sendmail/sendmail.php/files/files" method="post"
-               class="js-speaker-form form">
+            <form id="form_partner" name="myForm" autocomplete="off" action="#" class="js-speaker-form form "
+               method="post">
                <h3 class="form__title">Заповніть форму, і ми звяжемося та обговоримо з вами усі деталі</h3>
                <label class="form__field">
-                  <input type="text" name="name" data-error="Ошибка" class="form__input" placeholder=" ">
+                  <input type="text" name="name" class="form__input js-input-name active" placeholder=" " value=""
+                     autocomplete="off">
                   <span class="form__label">Ім'я</span>
                </label>
                <label class="form__field">
-                  <input type="tel" name="tel" data-error="Ошибка" class="form__input" placeholder=" ">
+                  <input type="tel" name="phone" class="form__input js-input-phone active" placeholder=" ">
                   <span class="form__label">Телефон</span>
                </label>
                <label class="form__field textarea">
                   <textarea class="textarea__input" placeholder="Коротко про себе"></textarea>
                </label>
-               <button class="form-label__button" type="submit">Відправити</button>
+               <button id="btn2" class="form-label__button" type="submit">Відправити</button>
                <label class="policy">
-                  <input type="checkbox" class="policy__checkbox">
+                  <input id="agree2" type="checkbox" class="policy__checkbox js-input-checkbox" name="agree"
+                     onclick="isCheck()">
                   <svg width=" 15" height="15" class="policy__icon">
                      <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
                   </svg>
-                  <span class="policy__label">Даю згоду на оброблення персональних даних</span>
+                  <span id="label" class="policy__label">Дайте згоду на оброблення персональних даних</span>
                </label>
             </form>
          </div>
