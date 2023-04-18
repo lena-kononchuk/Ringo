@@ -840,6 +840,11 @@ Pagination Styles
     right: 181px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .page-header .profile-header {
+    right: 220px;
+  }
+}
 @media screen and (min-width: 640px) {
   .page-header .profile-header__menu {
     display: flex;
@@ -1003,6 +1008,13 @@ Pagination Styles
          column-gap: 20px;
   }
 }
+@media screen and (min-width: 992px) {
+  .card-product {
+    -moz-column-gap: 46px;
+         column-gap: 46px;
+    padding-right: 20px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .card-product {
     justify-content: space-between;
@@ -1031,7 +1043,7 @@ Pagination Styles
 }
 @media screen and (min-width: 768px) {
   .card-product__item {
-    padding-top: 0px;
+    padding-top: 40px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1313,7 +1325,12 @@ Pagination Styles
   .card-set__images {
     display: inline-block;
     opacity: 0;
-    padding-left: 40px;
+    padding-left: 8px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card-set__images {
+    padding-left: 35px;
   }
 }
 .card-set__title {
@@ -1595,11 +1612,14 @@ Pagination Styles
     margin: 0 auto;
   }
 }
+.benefit-page__button {
+  width: 100%;
+}
 @media screen and (min-width: 640px) {
   .benefit-page__button {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    max-width: 260px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -2131,7 +2151,7 @@ Pagination Styles
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: -29px;
+  top: 29px;
   right: 17px;
   color: #fff;
 }
@@ -2337,6 +2357,14 @@ Pagination Styles
   fill: #ae7b3c;
 }
 
+.policy__checkbox:checked ~ .policy__label {
+  color: #ae7b3c;
+}
+
+.policy__checkbox:checked ~ .just-validate-error-label {
+  display: none;
+}
+
 .inputfile-box {
   position: relative;
   padding: 25px 0 40px 0;
@@ -2388,4 +2416,8 @@ Pagination Styles
 
 .just-validate-error-field.active + .form__label {
   display: none;
+}
+
+.just-validate-error-label {
+  font-size: 12px;
 }/*# sourceMappingURL=main.css.map */

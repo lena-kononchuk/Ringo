@@ -101,7 +101,12 @@
 .policy__checkbox:checked ~ .policy__icon {
    fill: $mainBrownColor;
 }
-
+.policy__checkbox:checked ~ .policy__label {
+   color: $mainBrownColor;
+}
+.policy__checkbox:checked ~ .just-validate-error-label {
+   display: none;
+}
 .inputfile-box {
    position: relative;
    padding: 25px 0 40px 0;
@@ -153,4 +158,7 @@
 }
 .just-validate-error-field.active + .form__label {
    display: none;
+}
+.just-validate-error-label {
+   font-size: 12px;
 }

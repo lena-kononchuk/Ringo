@@ -26,6 +26,10 @@
       flex-wrap: wrap;
       column-gap: 20px;
    }
+   @media screen and (min-width: 992px) {
+      column-gap: 46px;
+      padding-right: 20px;
+   }
    @media screen and (min-width: 1000px) {
       justify-content: space-between;
    }
@@ -48,7 +52,7 @@
          flex-direction: column;
       }
       @media screen and (min-width: 768px) {
-         padding-top: 0px;
+         padding-top: 40px;
       }
       @media screen and (min-width: 1440px) {
          width: 384px;

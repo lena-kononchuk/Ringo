@@ -3,11 +3,12 @@
 	document.querySelector('.js-speaker-form').addEventListener('submit', e => {
 		e.preventDefault();
 
-		new FormData(e.currentTarget).forEach((value, name) =>
-			console.log(`${name}: ${value}`),
+		new FormData(e.currentTarget).forEach((value, name) => {
+			//console.log(`${name}: ${value}`);
+		}
 		);
 
-		// e.currentTarget.reset();
+		e.currentTarget.reset();
 
 	});
 })();
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// create error/validation
 	// Получаем все формы на странице
 	const forms = document.querySelectorAll('.form');
+
 
 	// Проходимся по каждой форме и создаем экземпляр JustValidate для каждой из них
 	for (const form of forms) {
@@ -43,54 +45,36 @@ document.addEventListener('DOMContentLoaded', () => {
 				value: 3,
 				errorMessage: "Мінімум 3 літери"
 			},
+		]).addField('.js-input-checkbox', [
+			{
+				rule: 'required',
+				errorMessage: "Підтвердіть згоду на обробку даних",
+				rules: {
+					myCheckbox: {
+						checked: true
+					}
+				},
+			},
 		]).addField('.js-input-phone', [
 			{
 				rule: 'required',
 				errorMessage: "Введіть телефон"
 			},
 		]).onFail(fields => {
-
-			console.log(fields);
 			for (const key in fields) {
-				let field = document.querySelector(key);
+				let field = document.querySelectorAll(key);
 				field.value = "";
+				// const submitButtons = document.querySelectorAll('button[type="submit"]');
+				// submitButtons.forEach(button => {
+				// 	button.addEventListener('click', formSend);
+				// 	async function formSend(e) {
+				// 		// e.preventDefault();
+				// 		alert("успішно відправлена форма");
+				// 	}
+				// });
 			}
 		});
 	}
 });
-// check the policy
-function isCheck() {
 
-	for (const form of submitBtns) {
-		let label = document.querySelector('.policy__label');
-		let labelIcon = document.querySelector('.policy__icon');
-		let checks = document.getElementById(`form#${form.id}`);
-		var submitBtns = document.getElementById(`form#${form.id}`);
-		if (check.checked) {
-			submitBtns.disabled = false;
-			label.textContent = "Даю згоду на оброблення персональних даних";
-			label.style.color = '#cc9654';
-			labelIcon.style.fill = "#cc9654";
-		} else {
-			submitBtn.disabled = true;
-		}
-	}
-}
-// function isCheck() {
-// 	const form = document.querySelectorAll('.form');
-// 	let label = document.querySelector('.policy__label');
-// 	let labelIcon = document.querySelector('.policy__icon');
-// 	let checks = document.getElementById(`form#${form.id}`);
-// 	var submitBtns = document.getElementById(`form#${form.id}`);
-// 	for (const form of submitBtns) {
-// 		if (checks.checked) {
-// 			submitBtns.disabled = false;
-// 			label.textContent = "Даю згоду на оброблення персональних даних";
-// 			label.style.color = '#cc9654';
-// 			labelIcon.style.fill = "#cc9654";
-// 		} else {
-// 			submitBtns.disabled = true;
-// 		}
-// 	}
-// }
 

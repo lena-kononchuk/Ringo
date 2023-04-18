@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+novalidate="novalidate"
 
 <head>
    <meta charset="UTF-8">
@@ -90,7 +91,7 @@
                   меблевим продуктом власного виробництва.</p>
             </div>
             <div class="hero-page__button form-label__button">
-               <a class="hero-page__link" href="#form">Обговорити проект</a>
+               <a class="hero-page__link" href="#contact">Обговорити проект</a>
             </div>
             <hr class="hero-break">
          </div>
@@ -268,7 +269,7 @@
             </ul>
          </div>
       </section>
-      <section class="contact-page" id="form">
+      <section class="contact-page" id="contact">
          <div class="contact-page__body contact-body">
             <div class="contact-body__form">
                <form id="form_contact" name="myForm" autocomplete="off" action="#" class="js-speaker-form form"
@@ -285,23 +286,24 @@
                      <span class="form__label">Телефон</span>
                   </label>
                   <div class="inputfile-box">
-                     <input accept="pdf" type="file" class="inputfile" id="file-input" style="display:none;">
+                     <input type="file" class="inputfile" id="file-input" style="display:none;">
                      <label for="file-input" class="custom-file-upload">
-                        <div id="file-list" class="file-list""></div>
+                        <span id="file-list" class="file-list"></span>
                         <svg height=" 18" class="file-button">
                            <use href="/files/images/svg-sprite/svg-file.svg#icon-file"></use>
-                           </svg>
-                           Прикріпити проект
+                        </svg>
+                        Прикріпити проект
                      </label>
                   </div>
                   <button id="validate-button" class="form-label__button" type="submit">Відправити</button>
-                  <label class="policy">
-                     <input id="agree1" type="checkbox" class="policy__checkbox js-input-checkbox" name="agree"
-                        onclick="isCheck()">
+                  <label class="policy ">
+                     <input id="agree1" type="checkbox" class="policy__checkbox " value="item1">
                      <svg width=" 15" height="15" class="policy__icon">
                         <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
                      </svg>
-                     <span id="label" class="policy__label">Дайте згоду на оброблення персональних даних</span>
+                     <span class="policy__label js-input-checkbox">Даю згоду на
+                        оброблення персональних
+                        даних</span>
                   </label>
                </form>
             </div>
@@ -474,14 +476,14 @@
                      <input type="tel" name="phone" class="form__input js-input-phone active" placeholder=" ">
                      <span class="form__label">Телефон</span>
                   </label>
-                  <button id="validate-button" class="form-label__button" type="submit">Відправити</button>
+                  <button id="validate-button1" class="form-label__button" type="submit">Відправити</button>
                   <label class="policy">
-                     <input id="agree3" type="checkbox" class="policy__checkbox js-input-checkbox" name="agree"
-                        onclick="isCheck()">
+                     <input id="agree3" type="checkbox" class="policy__checkbox " name="agree" value=" item2">
                      <svg width=" 15" height="15" class="policy__icon">
                         <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
                      </svg>
-                     <span id="label" class="policy__label">Дайте згоду на оброблення персональних даних</span>
+                     <span class="policy__label js-input-checkbox">Даю згоду на оброблення персональних
+                        даних</span>
                   </label>
                </form>
             </div>
@@ -612,12 +614,12 @@
                </label>
                <button id="btn3" class="form-label__button" type="submit">Відправити</button>
                <label class="policy">
-                  <input id="checkbox" type="checkbox" class="policy__checkbox js-input-checkbox" name="agree"
-                     onclick="isCheck()">
+                  <input id="checkbox" type="checkbox" class="policy__checkbox" name="agree">
                   <svg width=" 15" height="15" class="policy__icon">
                      <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
                   </svg>
-                  <span id="label" class="policy__label">Дайте згоду на оброблення персональних даних</span>
+                  <span class="policy__label js-input-checkbox">Даю згоду на оброблення персональних
+                     даних</span>
                </label>
             </form>
          </div>
@@ -651,12 +653,12 @@
                </label>
                <button id="btn2" class="form-label__button" type="submit">Відправити</button>
                <label class="policy">
-                  <input id="agree2" type="checkbox" class="policy__checkbox js-input-checkbox" name="agree"
-                     onclick="isCheck()">
+                  <input id="agree2" type="checkbox" class="policy__checkbox " name="agree">
                   <svg width=" 15" height="15" class="policy__icon">
                      <use class="policy__check" href="/files/images/svg-sprite/svg-file.svg#icon-checked"></use>
                   </svg>
-                  <span id="label" class="policy__label">Дайте згоду на оброблення персональних даних</span>
+                  <span class="policy__label js-input-checkbox">Даю згоду на оброблення персональних
+                     даних</span>
                </label>
             </form>
          </div>
@@ -722,7 +724,7 @@
             </ul>
          </div>
          <div class="mobile-form form-label__button">
-            <a class="mobile-form__link" href="#form">Обговорити проект</a>
+            <a class="mobile-form__link" href="#contact">Обговорити проект</a>
          </div>
       </div>
    </div>
