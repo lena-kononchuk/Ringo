@@ -8,7 +8,7 @@
 		}
 		);
 
-		e.currentTarget.reset();
+		// e.currentTarget.reset();
 
 	});
 })();
@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			for (const key in fields) {
 				let field = document.querySelectorAll(key);
 				field.value = "";
+
 				// const submitButtons = document.querySelectorAll('button[type="submit"]');
 				// submitButtons.forEach(button => {
 				// 	button.addEventListener('click', formSend);
