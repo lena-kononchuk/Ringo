@@ -22,12 +22,19 @@
          }
       }
       @media screen and (min-width: 1440px) {
-      }
-      @media screen and (min-width: 1440px) {
-         padding-left: 200px;
+         padding-left: 135px;
          .form {
             min-width: 413px;
          }
+      }
+      @media screen and (min-width: 1600px) {
+         padding-left: 98px;
+      }
+      @media screen and (min-width: 1700px) {
+         padding-left: 107px;
+      }
+      @media screen and (min-width: 1920px) {
+         padding-left: 203px;
       }
    }
    &__title {
@@ -75,6 +82,10 @@
       }
       @media screen and (min-width: 1600px) {
          // background-size: 100%;
+      }
+      @media screen and (min-width: 1700px) {
+         background-size: 100%;
+         background-position: center top;
       }
    }
 }

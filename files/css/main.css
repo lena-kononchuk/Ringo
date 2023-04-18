@@ -326,7 +326,17 @@ html {
 }
 @media screen and (min-width: 1600px) {
   .container {
-    width: 1200px;
+    width: 1410px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .container {
+    width: 1500px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 1500px;
   }
 }
 
@@ -1391,10 +1401,25 @@ Pagination Styles
 }
 @media screen and (min-width: 1440px) {
   .contact-body__form {
-    padding-left: 200px;
+    padding-left: 135px;
   }
   .contact-body__form .form {
     min-width: 413px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .contact-body__form {
+    padding-left: 98px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .contact-body__form {
+    padding-left: 107px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .contact-body__form {
+    padding-left: 203px;
   }
 }
 .contact-body__title {
@@ -1442,6 +1467,13 @@ Pagination Styles
     background-position: center center;
   }
 }
+@media screen and (min-width: 1700px) {
+  .contact-body__background {
+    background-size: 100%;
+    background-position: center top;
+  }
+}
+
 .stages-page {
   padding: 80px 0 50px 0;
   font-family: "Raleway", sans-serif;
@@ -1714,10 +1746,25 @@ Pagination Styles
 }
 @media screen and (min-width: 1440px) {
   .body-discuss__form {
-    padding-left: 200px;
+    padding-left: 135px;
   }
   .body-discuss__form .form {
     min-width: 413px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .body-discuss__form {
+    padding-left: 98px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .body-discuss__form {
+    padding-left: 107px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .body-discuss__form {
+    padding-left: 203px;
   }
 }
 .body-discuss__title {
@@ -1756,6 +1803,11 @@ Pagination Styles
   .body-discuss__background {
     width: 50%;
     background-size: auto auto;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .body-discuss__background {
+    background-size: 100%;
   }
 }
 
