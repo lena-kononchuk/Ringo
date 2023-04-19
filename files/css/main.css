@@ -903,7 +903,7 @@ Pagination Styles
 }
 
 .hero-page {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url("./files/images/background/bg-hero.jpg");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url("/files/images/background/bg-hero.jpg");
   background-repeat: no-repeat;
   background-size: auto auto;
   width: 100%;
@@ -913,7 +913,7 @@ Pagination Styles
 }
 @media screen and (min-width: 360px) {
   .hero-page {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url("./files/images/background/hero-bg.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url("/files/images/background/hero-bg.jpg");
     background-repeat: no-repeat;
     background-size: auto auto;
     background-position: right top;
