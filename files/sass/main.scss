@@ -1,13 +1,13 @@
-@import "./utils/variable";
-@import "./base/normalize";
-@import "./base/reset";
-@import "./base/common";
-@import "./base/fonts";
+@import "../sass/utils/variable";
+@import "../sass/base/normalize";
+@import "../sass/base/reset";
+@import "../sass/base/common";
+@import "../sass/base/fonts";
 
-@import "./components/container";
-@import "./components/button";
-@import "./components/modal";
-@import "./components/swiper";
+@import "../sass/components/container";
+@import "../sass/components/button";
+@import "../sass/components/modal";
+@import "../sass/components/swiper";
 
 @import "./layout/page-header";
 @import "./layout/hero-page";
