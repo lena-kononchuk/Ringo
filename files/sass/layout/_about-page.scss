@@ -23,7 +23,7 @@
    }
 }
 .video-card {
-   @media screen and (max-width: 1440px) {
+   @media screen and (max-width: 1200px) {
       display: none;
    }
    // .video-card__left
@@ -31,8 +31,12 @@
    &__left {
       @media screen and (min-width: 1440px) {
          position: absolute;
-         left: 120px;
-         top: 100px;
+         left: 50px;
+         top: 140px;
+      }
+      @media screen and (min-width: 1600px) {
+         left: 96px;
+         top: 180px;
       }
    }
 
@@ -41,8 +45,12 @@
    &__right {
       @media screen and (min-width: 1440px) {
          position: absolute;
-         right: 120px;
-         bottom: 96px;
+         right: 60px;
+         bottom: 50px;
+      }
+      @media screen and (min-width: 1600px) {
+         right: 96px;
+         bottom: 50px;
       }
    }
 }

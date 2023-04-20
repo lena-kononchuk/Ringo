@@ -1189,7 +1189,7 @@ Pagination Styles
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1200px) {
   .video-card {
     display: none;
   }
@@ -1197,15 +1197,27 @@ Pagination Styles
 @media screen and (min-width: 1440px) {
   .video-card__left {
     position: absolute;
-    left: 120px;
-    top: 100px;
+    left: 50px;
+    top: 140px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .video-card__left {
+    left: 96px;
+    top: 180px;
   }
 }
 @media screen and (min-width: 1440px) {
   .video-card__right {
     position: absolute;
-    right: 120px;
-    bottom: 96px;
+    right: 60px;
+    bottom: 50px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .video-card__right {
+    right: 96px;
+    bottom: 50px;
   }
 }
 
