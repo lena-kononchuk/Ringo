@@ -32,11 +32,11 @@
       @media screen and (min-width: 1440px) {
          position: absolute;
          left: 50px;
-         top: 140px;
+         bottom: 160px;
       }
       @media screen and (min-width: 1600px) {
-         left: 96px;
-         top: 180px;
+         left: 110px;
+         bottom: 160px;
       }
    }
 
@@ -46,11 +46,11 @@
       @media screen and (min-width: 1440px) {
          position: absolute;
          right: 60px;
-         bottom: 50px;
+         bottom: 20px;
       }
       @media screen and (min-width: 1600px) {
-         right: 96px;
-         bottom: 50px;
+         right: 110px;
+         bottom: 20px;
       }
    }
 }

@@ -50,3 +50,12 @@ function handleFileSelect(event) {
 }
 
 document.getElementById('file-input').addEventListener('change', handleFileSelect);
+
+// // video play
+// const videoFirst = document.getElementById("myVideo");
+// const videoSecond = document.getElementById("myVideoSec");
+
+// window.addEventListener('load', (event) => {
+//    videoFirst.play();
+//    // videoSecond.play();
+// });
