@@ -1284,6 +1284,7 @@ Pagination Styles
 .card-set {
   border-top: 1px solid #e7e7e6;
   border-bottom: 1px solid #e7e7e6;
+  cursor: pointer;
 }
 .card-set :hover .card-set__title {
   color: #ae7b3c;
@@ -1291,8 +1292,20 @@ Pagination Styles
 }
 .card-set :hover .card-set__images {
   opacity: 1;
-  transform: translate(100px, 18px) scale(1.2);
+  transform: translateY(5%) scale(1.2);
   transition: transform 500ms ease-in-out;
+}
+@media screen and (min-width: 1200px) {
+  .card-set :hover .card-set__images {
+    transform: translate(20%, 8%) scale(1.2);
+    transition: transform 500ms ease-in-out;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .card-set :hover .card-set__images {
+    transform: translate(30%, 8%) scale(1.2);
+    transition: transform 500ms ease-in-out;
+  }
 }
 .card-set :hover .card-set__number {
   color: #ae7b3c;
@@ -1444,7 +1457,7 @@ Pagination Styles
   opacity: 0.8;
 }
 .contact-body__background {
-  background-image: url("/files/images/background/form-bg.jpg");
+  background-image: url("../../files/images/background/form-bg.jpg");
   width: 100%;
   min-height: 280px;
   background-repeat: no-repeat;
@@ -1786,7 +1799,7 @@ Pagination Styles
   opacity: 0.8;
 }
 .body-discuss__background {
-  background-image: url("/files/images/background/feedback-bg.jpg");
+  background-image: url("../../files/images/background/feedback-bg.jpg");
   width: 100%;
   min-height: 260px;
   background-repeat: no-repeat;

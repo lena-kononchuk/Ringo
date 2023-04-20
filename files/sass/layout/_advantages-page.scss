@@ -24,6 +24,7 @@
 .card-set {
    border-top: 1px solid #e7e7e6;
    border-bottom: 1px solid #e7e7e6;
+   cursor: pointer;
    :hover {
       .card-set__title {
          color: $mainBrownColor;
@@ -32,9 +33,16 @@
       .card-set__images {
          // padding-top: 20px;
          opacity: 1;
-         // transform: scale(1.1);
-         transform: translate(100px, 18px) scale(1.2);
+         transform: translateY(5%) scale(1.2);
          transition: transform 500ms ease-in-out;
+         @media screen and (min-width: 1200px) {
+            transform: translate(20%, 8%) scale(1.2);
+            transition: transform 500ms ease-in-out;
+         }
+         @media screen and (min-width: 1600px) {
+            transform: translate(30%, 8%) scale(1.2);
+            transition: transform 500ms ease-in-out;
+         }
       }
       .card-set__number {
          color: $mainBrownColor;
