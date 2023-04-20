@@ -36,11 +36,11 @@
          transform: translateY(5%) scale(1.2);
          transition: transform 500ms ease-in-out;
          @media screen and (min-width: 1200px) {
-            transform: translate(20%, 8%) scale(1.2);
+            transform: translate(11%, 8%) scale(1.2);
             transition: transform 500ms ease-in-out;
          }
          @media screen and (min-width: 1600px) {
-            transform: translate(30%, 8%) scale(1.2);
+            transform: translate(8%, 8%) scale(1.2);
             transition: transform 500ms ease-in-out;
          }
       }
@@ -116,6 +116,10 @@
          font-size: 28px;
          line-height: 36px;
          cursor: pointer;
+      }
+      @media screen and (min-width: 1000px) {
+         font-size: 32px;
+         line-height: 42px;
       }
    }
 

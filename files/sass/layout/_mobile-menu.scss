@@ -45,7 +45,7 @@
 .menu-toggle {
    position: absolute;
    right: 10px;
-   top: 27px;
+   top: 14px;
    background-color: transparent;
    cursor: pointer;
    border: none;
@@ -58,12 +58,13 @@
 
 .menu-container .menu-toggle {
    position: absolute;
-   top: 29px;
+   top: 18px;
    right: 17px;
    color: #fff;
+   cursor: pointer;
 }
 .menu-container .logo__icon {
-   padding: 20px;
+   padding: 15px 0 15px 20px;
 }
 .menu-container .mobile-body {
    padding: 54px 20px 40px 20px;

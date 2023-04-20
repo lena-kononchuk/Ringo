@@ -326,7 +326,7 @@ html {
 }
 @media screen and (min-width: 1600px) {
   .container {
-    width: 1410px;
+    width: 1159px;
   }
 }
 @media screen and (min-width: 1700px) {
@@ -352,8 +352,10 @@ html {
   color: #ffffff;
   background-color: #ae7b3c;
   box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 .form-label__button:hover, .form-label__button:focus {
+  color: #ffffff;
   background: #cc9654;
   box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
   transition: background 250ms ease-in-out;
@@ -411,11 +413,12 @@ html {
 }
 .modal__icon-close {
   position: absolute;
-  right: 7px;
-  top: -34px;
+  right: 5px;
+  top: 7px;
   border: none;
   background-color: inherit;
   fill: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .form__title {
@@ -798,6 +801,7 @@ Pagination Styles
     -moz-column-gap: 30px;
          column-gap: 30px;
     padding: 30px 0;
+    padding: 27px 0;
   }
 }
 @media screen and (min-width: 1000px) and (min-width: 1440px) {
@@ -835,36 +839,24 @@ Pagination Styles
 @media screen and (min-width: 640px) {
   .page-header .profile-header {
     position: absolute;
-    top: 30px;
+    top: 22px;
     right: 80px;
     z-index: 9999;
   }
 }
-@media screen and (min-width: 992px) {
-  .page-header .profile-header {
-    right: 90px;
-    top: 32px;
-  }
-}
 @media screen and (min-width: 1000px) {
   .page-header .profile-header {
-    right: 44px;
-    top: 25px;
+    right: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
   .page-header .profile-header {
-    right: 181px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .page-header .profile-header {
-    right: 220px;
+    right: 140px;
   }
 }
 @media screen and (min-width: 1600px) {
   .page-header .profile-header {
-    right: 200px;
+    right: 220px;
   }
 }
 @media screen and (min-width: 640px) {
@@ -889,6 +881,11 @@ Pagination Styles
     padding-left: 0px;
   }
 }
+.page-header .profile-header__phone :hover {
+  color: #ae7b3c;
+  fill: #ae7b3c;
+  transition: color 250ms ease-out;
+}
 @media screen and (min-width: 640px) {
   .page-header .profile-header__links {
     font-family: "Lato";
@@ -898,9 +895,16 @@ Pagination Styles
     padding-bottom: 10px;
   }
 }
+.page-header .profile-header__link {
+  fill: #ae7b3c;
+}
+.page-header .profile-header__link :hover {
+  fill: #3d4a39;
+  transition: fill 250ms ease-in-out;
+}
 @media screen and (min-width: 640px) {
   .page-header .profile-header__icon {
-    vertical-align: -5px;
+    vertical-align: -3px;
   }
 }
 
@@ -1028,6 +1032,13 @@ Pagination Styles
          column-gap: 20px;
   }
 }
+@media screen and (min-width: 768px) {
+  .card-product {
+    justify-content: space-evenly;
+    -moz-column-gap: 46px;
+         column-gap: 46px;
+  }
+}
 @media screen and (min-width: 992px) {
   .card-product {
     -moz-column-gap: 46px;
@@ -1064,6 +1075,12 @@ Pagination Styles
 @media screen and (min-width: 768px) {
   .card-product__item {
     padding-top: 40px;
+    padding-left: 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-product__item {
+    padding-left: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1180,46 +1197,36 @@ Pagination Styles
 }
 @media screen and (min-width: 640px) {
   .about-page__title {
-    font-size: 36px;
-    line-height: 47px;
+    font-size: 28px;
+    line-height: 36px;
   }
 }
 @media screen and (min-width: 1000px) {
   .about-page__title {
+    font-size: 36px;
+    line-height: 47px;
     max-width: 814px;
     margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .video-card {
     display: none;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1400px) {
   .video-card__left {
     position: absolute;
     left: 50px;
-    bottom: 160px;
+    top: 62px;
   }
 }
-@media screen and (min-width: 1600px) {
-  .video-card__left {
-    left: 110px;
-    bottom: 160px;
-  }
-}
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1400px) {
   .video-card__right {
     position: absolute;
-    right: 60px;
-    bottom: 20px;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .video-card__right {
-    right: 110px;
-    bottom: 20px;
+    right: 50px;
+    top: 180px;
   }
 }
 
@@ -1237,7 +1244,7 @@ Pagination Styles
     display: none;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1400px) {
   .content-list {
     max-width: 926px;
     margin: 0 auto;
@@ -1257,15 +1264,15 @@ Pagination Styles
   padding-left: 38px;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  line-height: 23px;
+  font-size: 16px;
+  padding-left: 28px;
   color: rgb(40, 43, 34);
   opacity: 0.8;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1000px) {
   .content-list__text {
     font-size: 18px;
     line-height: 27px;
-    padding-left: 28px;
   }
 }
 
@@ -1311,13 +1318,13 @@ Pagination Styles
 }
 @media screen and (min-width: 1200px) {
   .card-set :hover .card-set__images {
-    transform: translate(20%, 8%) scale(1.2);
+    transform: translate(11%, 8%) scale(1.2);
     transition: transform 500ms ease-in-out;
   }
 }
 @media screen and (min-width: 1600px) {
   .card-set :hover .card-set__images {
-    transform: translate(30%, 8%) scale(1.2);
+    transform: translate(8%, 8%) scale(1.2);
     transition: transform 500ms ease-in-out;
   }
 }
@@ -1387,6 +1394,12 @@ Pagination Styles
     cursor: pointer;
   }
 }
+@media screen and (min-width: 1000px) {
+  .card-set__title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
 .card-set__text {
   font-weight: 400;
   font-size: 16px;
@@ -1454,8 +1467,8 @@ Pagination Styles
 }
 @media screen and (min-width: 640px) {
   .contact-body__title {
-    font-size: 35px;
-    line-height: 46px;
+    font-size: 36px;
+    line-height: 45px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -1894,6 +1907,14 @@ Pagination Styles
     bottom: 59px;
   }
 }
+.profile-menu__link {
+  fill: #ae7b3c;
+}
+.profile-menu__link :hover {
+  fill: #3d4a39;
+  transition: color 250ms ease-out;
+}
+
 .footer-nav {
   display: flex;
   justify-content: space-between;
@@ -1981,6 +2002,11 @@ Pagination Styles
   .footer-connect__button {
     padding: 22px 56px;
   }
+}
+.footer-connect :hover {
+  fill: #ae7b3c;
+  color: #ae7b3c;
+  transition: color 250ms ease-in-out;
 }
 .brands-body__title {
   padding: 50px 0 30px 0;
@@ -2064,6 +2090,14 @@ Pagination Styles
     bottom: 59px;
   }
 }
+.profile-menu__link {
+  fill: #ae7b3c;
+}
+.profile-menu__link :hover {
+  fill: #3d4a39;
+  transition: color 250ms ease-out;
+}
+
 .footer-nav {
   display: flex;
   justify-content: space-between;
@@ -2152,6 +2186,11 @@ Pagination Styles
     padding: 22px 56px;
   }
 }
+.footer-connect :hover {
+  fill: #ae7b3c;
+  color: #ae7b3c;
+  transition: color 250ms ease-in-out;
+}
 .brands-body__title {
   padding: 50px 0 30px 0;
   font-size: 18px;
@@ -2221,7 +2260,7 @@ Pagination Styles
 .menu-toggle {
   position: absolute;
   right: 10px;
-  top: 27px;
+  top: 14px;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -2234,13 +2273,14 @@ Pagination Styles
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: 29px;
+  top: 18px;
   right: 17px;
   color: #fff;
+  cursor: pointer;
 }
 
 .menu-container .logo__icon {
-  padding: 20px;
+  padding: 15px 0 15px 20px;
 }
 
 .menu-container .mobile-body {
@@ -2433,6 +2473,7 @@ Pagination Styles
   line-height: 16px;
   color: #ffffff;
   padding-left: 20px;
+  cursor: pointer;
 }
 
 .policy__checkbox:checked ~ .policy__icon {

@@ -78,6 +78,11 @@
    // .profile-menu__link
 
    &__link {
+      fill: $mainBrownColor;
+      :hover {
+         fill: $mainGreenColor;
+         transition: color 250ms ease-out;
+      }
    }
 }
 .footer-nav {
@@ -129,7 +134,6 @@
    @media screen and (min-width: 992px) {
       display: block;
    }
-
    // .footer-connect__link
 
    &__link {
@@ -141,6 +145,7 @@
       line-height: 20px;
       text-transform: uppercase;
       color: #3d4a39;
+
       @media screen and (min-width: 640px) {
          padding-top: 27px;
       }
@@ -157,7 +162,11 @@
          padding: 22px 56px;
       }
    }
-   &__phone {
+
+   :hover {
+      fill: $mainBrownColor;
+      color: $mainBrownColor;
+      transition: color 250ms ease-in-out;
    }
 
    // .footer-connec__button

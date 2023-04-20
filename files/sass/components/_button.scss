@@ -19,8 +19,10 @@
       color: #ffffff;
       background-color: $mainBrownColor;
       box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
       &:hover,
       &:focus {
+         color: #ffffff;
          background: #cc9654;
          box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
          transition: background 250ms ease-in-out;
