@@ -30,9 +30,10 @@
          transition: color 500ms ease-in;
       }
       .card-set__images {
-         padding-top: 20px;
+         // padding-top: 20px;
          opacity: 1;
-         transform: scale(1.1);
+         // transform: scale(1.1);
+         transform: translate(100px, 18px) scale(1.2);
          transition: transform 500ms ease-in-out;
       }
       .card-set__number {
