@@ -60,8 +60,7 @@
          padding: 0 80px;
          &__left {
             ::before {
-               content: " ";
-               background: url("../../files/images/present/toaster-min.png");
+               content: url("../../files/images/present/toaster-min.png");
                position: absolute;
                bottom: 40px;
                left: 44px;
@@ -71,8 +70,7 @@
          }
          &__right {
             ::before {
-               content: " ";
-               background: url("../../files/images/present/microwave-min.png");
+               content: url("../../files/images/present/microwave-min.png");
                position: absolute;
                bottom: 40px;
                right: 44px;

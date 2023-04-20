@@ -1673,8 +1673,7 @@ Pagination Styles
     padding: 0 80px;
   }
   .benefit-page .gift-card__left ::before {
-    content: " ";
-    background: url("../../files/images/present/toaster-min.png");
+    content: url("../../files/images/present/toaster-min.png");
     position: absolute;
     bottom: 40px;
     left: 44px;
@@ -1682,8 +1681,7 @@ Pagination Styles
     height: 130px;
   }
   .benefit-page .gift-card__right ::before {
-    content: " ";
-    background: url("../../files/images/present/microwave-min.png");
+    content: url("../../files/images/present/microwave-min.png");
     position: absolute;
     bottom: 40px;
     right: 44px;
