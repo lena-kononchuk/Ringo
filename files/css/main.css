@@ -601,6 +601,7 @@ Pagination Styles
   padding-bottom: 30px;
   min-height: 220px;
   width: 100%;
+  cursor: grabbing;
 }
 @media screen and (min-width: 640px) {
   .works-page .swiper-wrapper img {
@@ -699,6 +700,7 @@ Pagination Styles
   max-width: 142px;
   height: 56px;
   width: 100%;
+  cursor: grabbing;
 }
 .partners-page .swiper-slide img {
   height: 44px;
@@ -1630,6 +1632,10 @@ Pagination Styles
     line-height: 58px;
   }
 }
+.works-page__slider {
+  cursor: move;
+}
+
 .slider__body {
   padding-top: 40px;
 }
@@ -2297,7 +2303,6 @@ Pagination Styles
   text-align: center;
   font-weight: 700;
   text-decoration: none;
-  font-family: "Raleway";
   line-height: 16px;
   color: rgb(255, 255, 255);
 }
