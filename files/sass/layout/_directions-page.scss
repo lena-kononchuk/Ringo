@@ -5,7 +5,7 @@
    &__title {
       text-align: center;
       font-weight: 700;
-      font-family: "Lato";
+      font-family: "Lato", sans-serif;
       font-size: 28px;
       line-height: 34px;
       text-transform: uppercase;
@@ -84,7 +84,7 @@
 
    &__subtitle {
       padding-top: 20px;
-      font-family: "Raleway";
+      // font-family: "Raleway";
       color: $mainGreenColor;
       @media screen and (min-width: 640px) {
          flex: 1 1 auto;

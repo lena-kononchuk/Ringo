@@ -50,7 +50,7 @@
       font-size: 16px;
       line-height: 23px;
       opacity: 0.8;
-      font-family: "Raleway", sans-serif;
+      // font-family: "Raleway", sans-serif;
       @media screen and (min-width: 640px) {
          font-size: 18px;
          line-height: 27px;
@@ -78,7 +78,7 @@
    &__link {
       font-weight: 700;
       text-decoration: none;
-      font-family: "Raleway";
+      // font-family: "Raleway", sans-serif;
       line-height: 16px;
       color: $mainWhiteColor;
    }
