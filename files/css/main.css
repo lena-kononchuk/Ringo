@@ -223,7 +223,7 @@ img {
 
 body {
   margin: 0;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-style: normal;
   color: rgb(40, 43, 34);
@@ -238,7 +238,7 @@ html {
 
 @font-face {
   font-family: "Lato";
-  src: local("Lato Medium"), local("Lato-Medium"), url("/files/fonts/Lato-Medium.woff2") format("woff2"), url("/files/fonts/Lato-Medium.woff") format("woff"), url("/files/fonts/Lato-Medium.ttf") format("truetype");
+  src: local("Lato Medium"), local("Lato-Medium"), url("/files/fonts/Lato-Medium.woff2") format("woff2"), url("../../fonts/Lato-Medium.woff") format("woff"), url("../../fonts/Lato-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
@@ -274,7 +274,7 @@ html {
 }
 @font-face {
   font-family: "Raleway";
-  src: local("Raleway Bold"), local("Raleway-Bold"), url("/files/fonts/Raleway-Bold.woff2") format("woff2"), url("/files/fonts/Raleway-Bold.woff") format("woff"), url("/files/fonts/Raleway-Bold.ttf") format("truetype");
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("../../fonts/Raleway-Bold.woff2") format("woff2"), url("../../fonts/Raleway-Bold.woff") format("woff"), url("../../fonts/Raleway-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }

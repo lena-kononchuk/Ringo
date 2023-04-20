@@ -1,7 +1,7 @@
 @font-face {
    font-family: "Lato";
    src: local("Lato Medium"), local("Lato-Medium"), url("/files/fonts/Lato-Medium.woff2") format("woff2"),
-      url("/files/fonts/Lato-Medium.woff") format("woff"), url("/files/fonts/Lato-Medium.ttf") format("truetype");
+      url("../../fonts/Lato-Medium.woff") format("woff"), url("../../fonts/Lato-Medium.ttf") format("truetype");
    font-weight: 500;
    font-style: normal;
 }
@@ -45,8 +45,8 @@
 }
 @font-face {
    font-family: "Raleway";
-   src: local("Raleway Bold"), local("Raleway-Bold"), url("/files/fonts/Raleway-Bold.woff2") format("woff2"),
-      url("/files/fonts/Raleway-Bold.woff") format("woff"), url("/files/fonts/Raleway-Bold.ttf") format("truetype");
+   src: local("Raleway Bold"), local("Raleway-Bold"), url("../../fonts/Raleway-Bold.woff2") format("woff2"),
+      url("../../fonts/Raleway-Bold.woff") format("woff"), url("../../fonts/Raleway-Bold.ttf") format("truetype");
    font-weight: 700;
    font-style: normal;
 }
