@@ -244,7 +244,7 @@ html {
 }
 @font-face {
   font-family: "Lato";
-  src: local("/files/fonts/Lato Semi Bold"), local("Lato-Semi-Bold"), url("/files/fonts/Lato-Semibold.woff2") format("woff2"), url("/files/fonts/Lato-Semibold.woff") format("woff"), url("/files/fonts/Lato-Semibold.ttf") format("truetype");
+  src: local("Lato Semi Bold"), local("Lato-Semi-Bold"), url("/files/fonts/Lato-Semibold.woff2") format("woff2"), url("/files/fonts/Lato-Semibold.woff") format("woff"), url("/files/fonts/Lato-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
@@ -818,6 +818,7 @@ Pagination Styles
   .page-header .navigation-list__link {
     text-decoration: none;
     font-weight: 500;
+    font-family: "Raleway";
     font-size: 16px;
     line-height: 16px;
     color: #282b22;
@@ -903,7 +904,7 @@ Pagination Styles
 }
 
 .hero-page {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url("/files/images/background/bg-hero.jpg");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url("/files/images/background/bg-hero.jpg");
   background-repeat: no-repeat;
   background-size: auto auto;
   width: 100%;
@@ -935,7 +936,7 @@ Pagination Styles
   font-size: 28px;
   line-height: 34px;
   text-transform: uppercase;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
@@ -952,23 +953,23 @@ Pagination Styles
     margin-right: auto;
   }
 }
-.hero-page__subtitle {
+.hero-page__subtitle p {
   padding-top: 28px;
   padding-bottom: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
   opacity: 0.8;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
 }
 @media screen and (min-width: 640px) {
-  .hero-page__subtitle {
+  .hero-page__subtitle p {
     font-size: 18px;
     line-height: 27px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .hero-page__subtitle {
+  .hero-page__subtitle p {
     max-width: 537px;
     margin-left: auto;
     margin-right: auto;
@@ -1295,7 +1296,7 @@ Pagination Styles
 .card-set :hover .card-set__images {
   padding-top: 20px;
   opacity: 1;
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: transform 500ms ease-in-out;
 }
 .card-set :hover .card-set__number {

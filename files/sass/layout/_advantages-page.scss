@@ -32,7 +32,7 @@
       .card-set__images {
          padding-top: 20px;
          opacity: 1;
-         transform: scale(1.2);
+         transform: scale(1.1);
          transition: transform 500ms ease-in-out;
       }
       .card-set__number {
@@ -65,6 +65,9 @@
          display: flex;
       }
       border-bottom: 1px solid #e7e7e6;
+      // :nth-child(5) {
+      //    padding-bottom: 0px;
+      // }
    }
 
    // .card-set__number
