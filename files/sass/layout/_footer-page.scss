@@ -104,6 +104,8 @@
       @media screen and (min-width: 640px) {
          padding-bottom: 30px;
       }
+   }
+   &__item {
       :hover {
          transition: color 250ms ease-in-out;
          color: $mainBrownColor;
@@ -135,7 +137,6 @@
       display: block;
    }
    // .footer-connect__link
-
    &__link {
       display: flex;
       text-decoration: none;
@@ -162,17 +163,17 @@
          padding: 22px 56px;
       }
    }
-
+   button:hover {
+      color: $mainWhiteColor;
+      transition: color 250ms ease-in-out;
+   }
    :hover {
       fill: $mainBrownColor;
       color: $mainBrownColor;
+      transition: fill 250ms ease-in-out;
       transition: color 250ms ease-in-out;
    }
-
    // .footer-connec__button
-
-   &__button {
-   }
 }
 
 .brands-body {
@@ -199,6 +200,9 @@
    &__list {
       width: 110px;
       padding-right: 18px;
+      @media screen and (min-width: 1400px) {
+         min-width: 126px;
+      }
    }
    &__list:not(:last-child) {
       padding-bottom: 25px;

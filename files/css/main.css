@@ -1943,7 +1943,7 @@ Pagination Styles
     padding-bottom: 30px;
   }
 }
-.navigation-menu__item:not(:last-child) :hover {
+.navigation-menu__item :hover {
   transition: color 250ms ease-in-out;
   color: #ae7b3c;
 }
@@ -2003,11 +2003,17 @@ Pagination Styles
     padding: 22px 56px;
   }
 }
+.footer-connect button:hover {
+  color: rgb(255, 255, 255);
+  transition: color 250ms ease-in-out;
+}
 .footer-connect :hover {
   fill: #ae7b3c;
   color: #ae7b3c;
+  transition: fill 250ms ease-in-out;
   transition: color 250ms ease-in-out;
 }
+
 .brands-body__title {
   padding: 50px 0 30px 0;
   font-size: 18px;
@@ -2023,6 +2029,11 @@ Pagination Styles
 .brands-body__list {
   width: 110px;
   padding-right: 18px;
+}
+@media screen and (min-width: 1400px) {
+  .brands-body__list {
+    min-width: 126px;
+  }
 }
 .brands-body__list:not(:last-child) {
   padding-bottom: 25px;
@@ -2126,7 +2137,7 @@ Pagination Styles
     padding-bottom: 30px;
   }
 }
-.navigation-menu__item:not(:last-child) :hover {
+.navigation-menu__item :hover {
   transition: color 250ms ease-in-out;
   color: #ae7b3c;
 }
@@ -2186,11 +2197,17 @@ Pagination Styles
     padding: 22px 56px;
   }
 }
+.footer-connect button:hover {
+  color: rgb(255, 255, 255);
+  transition: color 250ms ease-in-out;
+}
 .footer-connect :hover {
   fill: #ae7b3c;
   color: #ae7b3c;
+  transition: fill 250ms ease-in-out;
   transition: color 250ms ease-in-out;
 }
+
 .brands-body__title {
   padding: 50px 0 30px 0;
   font-size: 18px;
@@ -2206,6 +2223,11 @@ Pagination Styles
 .brands-body__list {
   width: 110px;
   padding-right: 18px;
+}
+@media screen and (min-width: 1400px) {
+  .brands-body__list {
+    min-width: 126px;
+  }
 }
 .brands-body__list:not(:last-child) {
   padding-bottom: 25px;
@@ -2408,6 +2430,7 @@ Pagination Styles
   background-color: inherit;
   color: #ffffff;
   opacity: 0.5;
+  cursor: pointer;
 }
 @media screen and (min-width: 1000px) {
   .form__input {
