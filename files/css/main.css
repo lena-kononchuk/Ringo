@@ -355,7 +355,6 @@ html {
   cursor: pointer;
 }
 .form-label__button:hover, .form-label__button:focus {
-  color: #ffffff;
   background: #cc9654;
   box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
   transition: background 250ms ease-in-out;
@@ -368,8 +367,6 @@ html {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  -webkit-backdrop-filter: blur(2.5px);
-          backdrop-filter: blur(2.5px);
   z-index: 999;
 }
 
@@ -437,7 +434,7 @@ html {
   min-height: 620px;
   background: #3d4a39;
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
-  color: rgb(255, 255, 255);
+  color: white;
 }
 @media screen and (min-width: 280px) {
   .is-modal {
@@ -474,19 +471,15 @@ html {
 }
 .is-modal .textarea :focus {
   outline: none;
-  color: #ffffff;
-  opacity: 0.5;
 }
 .is-modal .textarea ::-moz-placeholder {
   color: #ffffff;
-  opacity: 0.5;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 .is-modal .textarea ::placeholder {
   color: #ffffff;
-  opacity: 0.5;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -980,8 +973,7 @@ Pagination Styles
   }
 }
 .hero-page__button {
-  background-color: #ae7b3c;
-  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+  pointer-events: auto;
 }
 @media screen and (min-width: 640px) {
   .hero-page__button {
@@ -992,8 +984,23 @@ Pagination Styles
 .hero-page__link {
   font-weight: 700;
   text-decoration: none;
+  width: 100%;
+  display: block;
+  padding: 22px 0 22px 0;
+  margin-top: 35px;
+  outline: none;
+  border: none;
+  font-weight: 700;
   line-height: 16px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
+  background-color: #ae7b3c;
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.hero-page__link:hover, .hero-page__link:focus {
+  background: #cc9654;
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+  transition: background 250ms ease-in-out;
 }
 .hero-page .hero-break {
   margin: 62px 0 30px 0;
@@ -2461,14 +2468,6 @@ Pagination Styles
   color: #cc9654;
 }
 
-.form__input::-moz-placeholder {
-  opacity: 0;
-}
-
-.form__input::placeholder {
-  opacity: 0;
-}
-
 .policy {
   padding-top: 40px;
   position: relative;
@@ -2566,4 +2565,42 @@ Pagination Styles
 
 .just-validate-error-label {
   font-size: 12px;
+}
+
+.textarea {
+  padding-top: 10px;
+}
+.textarea__input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.textarea__label {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  transform: translateY(-30%);
+  transition: transform 250ms linear;
+  opacity: 0.5;
+}
+.textarea :focus {
+  outline: none;
+}
+
+.form__field:focus-within > .textarea__label {
+  transform: translateY(-30px);
+  color: #cc9654;
+}
+
+.textarea__input:not(:-moz-placeholder-shown) + .textarea__label {
+  transform: translateY(-30px);
+  color: #cc9654;
+}
+
+.textarea__input:not(:placeholder-shown) + .textarea__label {
+  transform: translateY(-30px);
+  color: #cc9654;
 }/*# sourceMappingURL=main.css.map */

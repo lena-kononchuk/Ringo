@@ -65,8 +65,7 @@
    // .hero-page__button
 
    &__button {
-      background-color: $mainBrownColor;
-      box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+      pointer-events: auto;
       @media screen and (min-width: 640px) {
          max-width: 260px;
          margin: 0 auto;
@@ -79,8 +78,24 @@
       font-weight: 700;
       text-decoration: none;
       // font-family: "Raleway", sans-serif;
+      width: 100%;
+      display: block;
+      padding: 22px 0 22px 0;
+      margin-top: 35px;
+      outline: none;
+      border: none;
+      font-weight: 700;
       line-height: 16px;
-      color: $mainWhiteColor;
+      color: #ffffff;
+      background-color: $mainBrownColor;
+      box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      &:hover,
+      &:focus {
+         background: #cc9654;
+         box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+         transition: background 250ms ease-in-out;
+      }
    }
    .hero-break {
       margin: 62px 0 30px 0;

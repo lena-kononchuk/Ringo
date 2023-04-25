@@ -56,7 +56,7 @@
    color: #cc9654;
 }
 .form__input::placeholder {
-   opacity: 0;
+   // opacity: 0;
 }
 // input.form__input:focus-within > .just-validate-error-label + .form__label {
 //    transform: translateY(-30px);
@@ -163,4 +163,41 @@
 }
 .just-validate-error-label {
    font-size: 12px;
+}
+// textarea scss
+.textarea {
+   padding-top: 10px;
+   // .textarea__input
+
+   &__input {
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #ffffff;
+      color: #ffffff;
+      opacity: 0.5;
+      cursor: pointer;
+   }
+
+   // .textarea__label
+
+   &__label {
+      position: absolute;
+      left: 0;
+      top: 40px;
+      transform: translateY(-30%);
+      transition: transform 250ms linear;
+      opacity: 0.5;
+   }
+   :focus {
+      outline: none;
+   }
+}
+
+.form__field:focus-within > .textarea__label {
+   transform: translateY(-30px);
+   color: #cc9654;
+}
+.textarea__input:not(:placeholder-shown) + .textarea__label {
+   transform: translateY(-30px);
+   color: #cc9654;
 }
